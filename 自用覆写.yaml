@@ -1,5 +1,3 @@
-name：代理组规则
-desc：个人使用
 # 通用设置
 mode: rule
 log-level: info
