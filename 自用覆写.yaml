@@ -30,7 +30,7 @@ proxy-groups:
     proxies:
       - Proxy
       - DIRECT
-  - name: Proxy
+  - name: PROXY
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
