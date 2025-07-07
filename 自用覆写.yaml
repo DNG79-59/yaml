@@ -15,7 +15,7 @@ dns:
     - +.lan
     - +.local
   follow-rule: true
-# PROXY-providers:
+# proxy-providers:
 #   Subscribe:
 #     type: file
 #     url: http://www.gstatic.com/generate_204 # 用你的订阅链接替换
@@ -23,14 +23,14 @@ dns:
 #     benchmark-url: http://www.gstatic.com/generate_204
 #     benchmark-timeout: 5
     # 功能分组
-PROXY-groups:
+proxy-groups:
   - name: Final
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - PROXY
+      - proxy
       - DIRECT
-  - name: PROXY
+  - name: proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
@@ -54,7 +54,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -67,7 +67,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -80,7 +80,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -93,7 +93,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -108,7 +108,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -128,7 +128,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -147,7 +147,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -160,7 +160,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -173,7 +173,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -187,7 +187,7 @@ PROXY-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
     proxies:
       - DIRECT
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -200,7 +200,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -215,7 +215,7 @@ PROXY-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
     proxies:
       - DIRECT
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -228,7 +228,7 @@ PROXY-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
-      - PROXY
+      - proxy
       - HongKong
       - TaiWan
       - Japan
@@ -476,18 +476,18 @@ rules:
   - "RULE-SET,bilibili,bilibili"
   - "RULE-SET,Spotify,Spotify"
   - "RULE-SET,NetEaseMusic,NetEaseMusic"
-  - "RULE-SET,PROXYMedia,Streaming"
+  - "RULE-SET,proxyMedia,Streaming"
   - "RULE-SET,WeChat,DIRECT"
   - "RULE-SET,Telegram,Telegram"
-  - "RULE-SET,GitHub,PROXY"
+  - "RULE-SET,GitHub,proxy"
   - "RULE-SET,Twitter,X"
-  - "RULE-SET,ApplePROXYService,America"
+  - "RULE-SET,AppleproxyService,America"
   - "RULE-SET,Apple,Apple"
   - "RULE-SET,Google,Google"
   - "RULE-SET,Microsoft,Microsoft"
   - "RULE-SET,Games,Games"
-  - "RULE-SET,PROXYGFW,PROXY"
-  - "GEOIP,MO,PROXY"
+  - "RULE-SET,proxyGFW,proxy"
+  - "GEOIP,MO,proxy"
   - "GEOIP,HK,HongKong"
   - "GEOIP,US,America"
   - "RULE-SET,CN_Mainland,DIRECT"
@@ -554,12 +554,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/NetEaseMusic.list
-  PROXYMedia:
+  proxyMedia:
     behavior: classical
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/PROXYMedia.list
+    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/proxyMedia.list
   WeChat:
     behavior: classical
     format: text
@@ -584,12 +584,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Twitter.list
-  ApplePROXYService:
+  AppleproxyService:
     behavior: classical
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/ApplePROXYService.list
+    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/AppleproxyService.list
   Apple:
     behavior: classical
     format: text
@@ -620,9 +620,9 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/ChinaDomain.list
-  PROXYGFW:
+  proxyGFW:
     behavior: classical
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/PROXYGFW.list
+    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/proxyGFW.list
