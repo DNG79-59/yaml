@@ -241,7 +241,7 @@ proxy-groups:
       - HK-FallBack
       - HK-LoadBalance
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
-    include-all: false
+    include-all: true
   - name: TaiWan
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
