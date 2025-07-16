@@ -28,9 +28,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - proxy
+      - Proxy
       - DIRECT
-  - name: proxy
+  - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
@@ -69,7 +69,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -82,7 +82,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -95,7 +95,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -110,7 +110,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -130,7 +130,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -149,7 +149,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -162,7 +162,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -175,7 +175,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -189,7 +189,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
     proxies:
       - DIRECT
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -202,7 +202,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -217,7 +217,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
     proxies:
       - DIRECT
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
@@ -230,7 +230,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
-      - proxy
+      - Proxy
       - HongKong
       - TaiWan
       - Japan
