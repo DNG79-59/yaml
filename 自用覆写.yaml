@@ -45,10 +45,12 @@ proxy-groups:
       - DIRECT
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: url-test
+    type: load-balance
     include-all: true
     interval: 300
     tolerance: 50
+    lazy: true
+    strategy: consistent-hashing
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: AI
     type: select
@@ -464,35 +466,26 @@ proxy-groups:
     lazy: true
     # 规则引用
 rules:
-  - "DOMAIN,steamserver.net,DIRECT"
-  - "GEOSITE,steam@cn,DIRECT"
-  - "RULE-SET,AI,AI"
-  - "RULE-SET,YouTube,YouTube"
-  - "RULE-SET,Netflix,NETFLIX"
-  - "RULE-SET,Emby,Emby"
-  - "DOMAIN-KEYWORD,tiktok,TikTok"
-  - "RULE-SET,Bahamut,TaiWan"
-  - "RULE-SET,BiliIntl,Streaming"
-  - "RULE-SET,bilibili,bilibili"
-  - "RULE-SET,Spotify,Spotify"
-  - "RULE-SET,NetEaseMusic,NetEaseMusic"
-  - "RULE-SET,proxyMedia,Streaming"
-  - "RULE-SET,WeChat,DIRECT"
-  - "RULE-SET,Telegram,Telegram"
-  - "RULE-SET,GitHub,proxy"
-  - "RULE-SET,Twitter,X"
-  - "RULE-SET,AppleproxyService,America"
-  - "RULE-SET,Apple,Apple"
-  - "RULE-SET,Google,Google"
-  - "RULE-SET,Microsoft,Microsoft"
-  - "RULE-SET,Games,Games"
-  - "RULE-SET,proxyGFW,proxy"
-  - "GEOIP,MO,proxy"
-  - "GEOIP,HK,HongKong"
-  - "GEOIP,US,America"
-  - "RULE-SET,CN_Mainland,DIRECT"
-  - "GEOIP,LAN,DIRECT"
-  - "MATCH,Final"
+  - GEOSITE,category-ads-all,REJECT
+  - RULE-SET,个人直连,DIRECT
+  - DOMAIN,emby1.69yun69.com,Emby
+  - RULE-SET,Apple,Apple,no-resolve
+  - RULE-SET,Spotify,Spotify,no-resolve
+  - RULE-SET,Google,Google,no-resolve
+  - RULE-SET,GitHub,Proxy,no-resolve
+  - RULE-SET,Telegram,Telegram,no-resolve
+  - RULE-SET,Twitter,X,no-resolve
+  - RULE-SET,YouTube,YouTube,no-resolve
+  - RULE-SET,Emby,Emby,no-resolve
+  - RULE-SET,Games,Games,no-resolve
+  - RULE-SET,AI,AI,no-resolve
+  - GEOSITE,geolocation-!cn@cn,DIRECT
+  - GEOSITE,geolocation-!cn,PROXY,no-resolve
+  - GEOSITE,geolocation-cn@!cn,PROXY,no-resolve
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,tld-cn,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
+  - MATCH,Final
 rule-providers:
   AI:
     behavior: classical
@@ -626,3 +619,15 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/proxyGFW.list
+  个人直连:
+    behavior: classical
+    format: text
+    interval: 0
+    type: http
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+  个人代理:
+    behavior: classical
+    format: text
+    interval: 0
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
