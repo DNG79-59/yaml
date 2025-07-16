@@ -481,8 +481,8 @@ rules:
   - RULE-SET,Games,Games,no-resolve
   - RULE-SET,AI,AI,no-resolve
   - GEOSITE,geolocation-!cn@cn,DIRECT
-  - GEOSITE,geolocation-!cn,PROXY
-  - GEOSITE,geolocation-cn@!cn,PROXY
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,geolocation-cn@!cn,Proxy
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,tld-cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
