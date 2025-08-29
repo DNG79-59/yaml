@@ -158,19 +158,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
     proxies:
       - DIRECT
-  - name: Streaming
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
-    proxies:
-      - Proxy
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
