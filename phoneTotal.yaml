@@ -643,7 +643,7 @@ rule-providers:
     format: text
     interval: 0
     type: http
-    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
   个人代理:
     behavior: classical
     format: text
