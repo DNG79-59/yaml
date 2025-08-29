@@ -596,18 +596,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Twitter.list
-  AppleproxyService:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/AppleproxyService.list
   Apple:
     behavior: classical
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Apple.list
+    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
   Google:
     behavior: classical
     format: text
