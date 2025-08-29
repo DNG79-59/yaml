@@ -250,8 +250,7 @@ proxy-groups:
       - HK-FallBack
       - HK-LoadBalance
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
-    # use:
-    #   - Subscribe
+    include-all: true
   - name: TaiWan
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
@@ -260,7 +259,7 @@ proxy-groups:
       - TW-FallBack
       - TW-LoadBalance
     filter: (?i)台|新北|彰化|TW|Taiwan
-    # include-all: true
+    include-all: true
   - name: Japan
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -269,7 +268,7 @@ proxy-groups:
       - JP-FallBack
       - JP-LoadBalance
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
-    # include-all: true
+    include-all: true
   - name: Korea
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
@@ -278,7 +277,7 @@ proxy-groups:
       - KR-FallBack
       - KR-LoadBalance
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
-    # include-all: true
+    include-all: true
   - name: Singapore
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -287,7 +286,7 @@ proxy-groups:
       - SG-FallBack
       - SG-LoadBalance
     filter: (?i)新加坡|坡|狮城|SG|Singapore
-    # include-all: true
+    include-all: true
   - name: America
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -296,7 +295,7 @@ proxy-groups:
       - US-FallBack
       - US-LoadBalance
     filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
-    # include-all: true
+    include-all: true
   - name: UnitedKingdom
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
@@ -305,7 +304,7 @@ proxy-groups:
       - UK-FallBack
       - UK-LoadBalance
     filter: (?i)英|🇬🇧|英国|UK|United Kingdom
-    # include-all: true
+    include-all: true
   - name: AllServer
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
@@ -638,4 +637,5 @@ rule-providers:
     interval: 0
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
