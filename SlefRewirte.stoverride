@@ -18,14 +18,7 @@ dns:
     - +.lan
     - +.local
   follow-rule: true
-proxy-providers:
-  Subscribe:
-    type: file
-    path: ./total
-    url: http://www.gstatic.com/generate_204 # 用你的订阅链接替换
-    interval: 86400
-    benchmark-url: http://www.gstatic.com/generate_204
-    benchmark-timeout: 5
+
     # 功能分组
 proxy-groups:
   - name: Final
