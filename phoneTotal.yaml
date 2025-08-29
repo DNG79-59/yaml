@@ -499,6 +499,7 @@ proxy-groups:
 rules:
   - GEOSITE,category-ads-all,REJECT
   - RULE-SET,个人直连,DIRECT
+  - RULE-SET,AppleService,Apple,no-resolve
   - RULE-SET,Apple,Apple,no-resolve
   - RULE-SET,Spotify,Spotify,no-resolve
   - RULE-SET,Google,Google,no-resolve
@@ -609,6 +610,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
+  AppleService:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
   Google:
     behavior: classical
     format: text
