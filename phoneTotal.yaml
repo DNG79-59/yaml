@@ -566,12 +566,6 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/NetEaseMusic.list
-  proxyMedia:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/proxyMedia.list
   WeChat:
     behavior: classical
     format: text
