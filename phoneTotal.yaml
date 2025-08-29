@@ -30,6 +30,7 @@ dns:
   respect-rules: false
 proxy-providers:
   Subscribe:
+    tpye: http
     url: http://sub.store/download/collection/TOTAL # 用你的订阅链接替换
     interval: 86400
     benchmark-url: http://cp.cloudflare.com
