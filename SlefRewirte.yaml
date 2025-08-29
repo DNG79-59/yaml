@@ -169,6 +169,7 @@ proxy-groups:
       - Japan
       - Korea
       - Singapore
+      - SG-T-Auto
       - America
       - UnitedKingdom
       - AllServer
@@ -345,6 +346,14 @@ proxy-groups:
     filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
+  - name: SG-T-Auto
+    type: url-test
+    url: "http://91.108.56.200"
+    hidden: true
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
   - name: US-Auto
     type: url-test
     hidden: true
@@ -464,6 +473,22 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+  - name: 69emby
+    type: url-test
+    include-all: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    url: "https://emby1.69yun69.com"
+    interval: 300
+    tolerance: 150
+    lazy: true
+  - name: embyTemp
+    type: url-test
+    include-all: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    url: "https://matrix.313445.xyz"
+    interval: 300
+    tolerance: 150
+    lazy: true
     # 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
@@ -475,7 +500,8 @@ rules:
   - RULE-SET,Telegram,Telegram,no-resolve
   - RULE-SET,Twitter,X,no-resolve
   - RULE-SET,YouTube,YouTube,no-resolve
-  - RULE-SET,个人emby,Emby
+  - DOMAIN,emby1.69yun69.com,69emby
+  - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby,no-resolve
   - RULE-SET,Games,Games,no-resolve
   - RULE-SET,AI,AI,no-resolve
@@ -571,6 +597,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Twitter.list
+  AppleService:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
   Apple:
     behavior: classical
     format: text
@@ -625,6 +657,7 @@ rule-providers:
     interval: 0
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
 
 
