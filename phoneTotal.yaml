@@ -492,6 +492,18 @@ proxy-groups:
     url: "https://matrix.313445.xyz"
     interval: 300
     lazy: true
+  - lazy: true
+    name: PROXY
+    proxies:
+      - TaiWan
+      - HongKong
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - 自动选择
+    type: fallback
     # 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
