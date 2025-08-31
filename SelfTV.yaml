@@ -29,27 +29,13 @@ dns:
     - 233.6.6.6
   respect-rules: false
 proxy-providers:
-  Airport_01:
-    <<: *PProviders
-    url: "https://checkhere.top/link/5WROlEWS1T35SxP9?list=clash"
-    override:
-      additional-prefix: '[机场名称1]'
-      skip-cert-verify: true
-      udp: true
-  Airport_02:
-    <<: *PProviders
-    url: "https://theqipilangjichang.net/sub/81e78db9147c5b23/clash"
-    override:
-      additional-prefix: '[机场名称2]'
-      skip-cert-verify: true
-      udp: true
-  Airport_03:
-    <<: *PProviders
-    url: "https://neo.facal.one/api/v1/client/subscribe?token=f1de3b8b42be0cb71661a56a44aa022d"
-    override:
-      additional-prefix: '[机场名称3]'
-      skip-cert-verify: true
-      udp: true
+  Subscribe:
+    type: http
+    url: https://cf-workers-sub-4ze.pages.dev/123456?clash # 用你的订阅链接替换
+    interval: 86400
+    benchmark-url: http://www.gstatic.com/generate_204
+    benchmark-timeout: 5
+      
     # 功能分组
 proxy-groups:
   - name: Final
@@ -681,6 +667,7 @@ rule-providers:
     interval: 0
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
 
 
