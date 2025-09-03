@@ -615,7 +615,7 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Twitter.list
   Apple:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
@@ -651,8 +651,8 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/ChinaDomain.list
   proxyGFW:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
