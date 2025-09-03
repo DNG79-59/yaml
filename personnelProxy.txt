@@ -1,1 +1,2 @@
 DOMAIN-KEYWORD,ouonet
+DOMAIN-SUFFIX,pages.dev
