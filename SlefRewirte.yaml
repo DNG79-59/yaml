@@ -26,7 +26,7 @@ dns:
       - '+.linkedin.com'
   follow-rule: true
   default-nameserver:
-    - 233.6.6.6
+    - 223.6.6.6
   respect-rules: false
 proxy-providers:
   Subscribe:
@@ -667,6 +667,7 @@ rule-providers:
     interval: 0
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
 
 
