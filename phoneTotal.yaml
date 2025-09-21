@@ -9,7 +9,7 @@ dns:
   use-hosts: false
   use-system-hosts: false
   nameserver:
-    - https://1.2.4.8/dns-query
+    - https://223.6.6.6/dns-query
   fallback:
     - tls://1.0.0.1:853
     - tls://dns.google:853
@@ -26,7 +26,7 @@ dns:
       - '+.linkedin.com'
   follow-rule: true
   default-nameserver:
-    - 1.2.4.8
+    - 223.6.6.6
   respect-rules: false
 proxy-providers:
   Subscribe:
