@@ -2,4 +2,4 @@ DOMAIN-SUFFIX,api.wizconnected.cn
 DOMAIN-SUFFIX,sodalife.xyz
 DOMAIN-SUFFIX,hnnx.com
 DOMAIN-SUFFIX,battleofballs.com
-DOMAIN-KEYWORD,ali
+DOMAIN-KEYWORD,wanmei
