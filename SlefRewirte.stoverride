@@ -31,6 +31,15 @@ dns:
   default-nameserver:
     - 223.6.6.6
   respect-rules: false
+proxy-providers:
+  Subscribe:
+    type: file
+    path: ./total
+    url: http://www.gstatic.com/generate_204 # 用你的订阅链接替换
+    interval: 86400
+    benchmark-url: http://cp.cloudflare.com
+    benchmark-timeout: 5
+    # 功能分组
     # 功能分组
 proxy-groups:
   - name: Final
