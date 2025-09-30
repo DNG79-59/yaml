@@ -497,7 +497,7 @@ proxy-groups:
   - name: 69emby
     type: url-test
     include-all: true
-    filter: (?i)69emby
+    filter: ^(?=.*69)(?=.*2x).*$
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
