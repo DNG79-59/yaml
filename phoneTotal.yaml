@@ -674,18 +674,18 @@ rule-providers:
   个人直连:
     behavior: classical
     format: text
-    interval: 0
+    interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
   个人代理:
     behavior: classical
     format: text
-    interval: 0
+    interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
   个人emby:
     behavior: classical
     format: text
-    interval: 0
+    interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
