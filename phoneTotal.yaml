@@ -166,11 +166,6 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - DIRECT
-  - name: NetEaseMusic
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
-    proxies:
-      - DIRECT
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
@@ -501,6 +496,15 @@ proxy-groups:
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
+    hidden: true
+  - name: 69emby3
+    type: url-test
+    include-all: true
+    filter: ^(?=.*69emby)(?=.*2×).*$
+    url: "https://emby3.69yun69.com"
+    interval: 300
+    lazy: true
+    hidden: true
   - name: embyTemp
     type: url-test
     include-all: true
@@ -508,6 +512,7 @@ proxy-groups:
     url: "https://matrix.313445.xyz"
     interval: 300
     lazy: true
+    hidden: true
   - lazy: true
     name: PROXY
     proxies:
@@ -520,6 +525,7 @@ proxy-groups:
       - UnitedKingdom
       - 自动选择
     type: fallback
+    hidden: true
     # 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
@@ -533,6 +539,7 @@ rules:
   - RULE-SET,Twitter,X,no-resolve
   - RULE-SET,YouTube,YouTube,no-resolve
   - DOMAIN,emby1.69yun69.com,69emby
+  - DOMAIN,emby3.69yun69.com,69emby3
   - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby,no-resolve
   - RULE-SET,Games,Games,no-resolve
