@@ -153,11 +153,6 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - DIRECT
-  - name: NetEaseMusic
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
-    proxies:
-      - DIRECT
   - name: Streaming
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
@@ -496,7 +491,7 @@ proxy-groups:
   - name: 69emby3
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby)(?=.*2×).*$
+    filter: ^(?=.*69)(?=.*2×).*$
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
@@ -678,6 +673,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
 
 
