@@ -10,9 +10,8 @@ dns:
   use-system-hosts: false
   nameserver:
     - https://223.6.6.6/dns-query
-    - https://cloudflare-dns.com/dns-query
   fallback:
-    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
     - tls://dns.google:853
   fallback-filter:
     geoip: true
@@ -20,14 +19,14 @@ dns:
     ipcidr:
       - 240.0.0.0/4
     domain:
-      # - '+.google.com'
+      - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
       - '+.instagram.com'
       - '+.linkedin.com'
   follow-rule: true
   default-nameserver:
-    - 223.6.6.6
+    https://cloudflare-dns.com/dns-query
   respect-rules: true
 proxy-providers:
   Subscribe:
