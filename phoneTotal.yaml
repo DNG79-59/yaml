@@ -26,7 +26,7 @@ dns:
       - '+.linkedin.com'
   follow-rule: true
   default-nameserver:
-    https://cloudflare-dns.com/dns-query
+    223.6.6.6
   respect-rules: true
 proxy-providers:
   Subscribe:
