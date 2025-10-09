@@ -10,8 +10,9 @@ dns:
   use-system-hosts: false
   nameserver:
     - https://223.6.6.6/dns-query
+    - https://cloudflare-dns.com/dns-query
   fallback:
-    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
     - tls://dns.google:853
   fallback-filter:
     geoip: true
@@ -27,7 +28,7 @@ dns:
   follow-rule: true
   default-nameserver:
     - 223.6.6.6
-  respect-rules: false
+  respect-rules: true
 proxy-providers:
   Subscribe:
     type: http
