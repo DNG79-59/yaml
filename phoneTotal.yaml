@@ -334,6 +334,8 @@ proxy-groups:
     filter: (?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: TW-Auto
     type: url-test
     hidden: true
@@ -341,6 +343,8 @@ proxy-groups:
     filter: (?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: JP-Auto
     type: url-test
     hidden: true
@@ -348,6 +352,8 @@ proxy-groups:
     filter: (?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: KR-Auto
     type: url-test
     hidden: true
@@ -355,6 +361,8 @@ proxy-groups:
     filter: (?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: SG-Auto
     type: url-test
     hidden: true
@@ -362,6 +370,8 @@ proxy-groups:
     filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: SG-T-Auto
     type: url-test
     url: "http://91.108.56.200"
@@ -370,6 +380,8 @@ proxy-groups:
     filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: US-Auto
     type: url-test
     hidden: true
@@ -377,6 +389,8 @@ proxy-groups:
     filter: (?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: UK-Auto
     type: url-test
     hidden: true
@@ -384,6 +398,8 @@ proxy-groups:
     filter: (?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: HK-FallBack
     type: fallback
     hidden: true
@@ -391,6 +407,8 @@ proxy-groups:
     filter: (?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: TW-FallBack
     type: fallback
     hidden: true
@@ -398,6 +416,8 @@ proxy-groups:
     filter: (?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: JP-FallBack
     type: fallback
     hidden: true
@@ -405,6 +425,8 @@ proxy-groups:
     filter: (?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: KR-FallBack
     type: fallback
     hidden: true
@@ -412,6 +434,8 @@ proxy-groups:
     filter: (?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: SG-FallBack
     type: fallback
     hidden: true
@@ -419,6 +443,8 @@ proxy-groups:
     filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: US-FallBack
     type: fallback
     hidden: true
@@ -426,6 +452,8 @@ proxy-groups:
     filter: (?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: UK-FallBack
     type: fallback
     hidden: true
@@ -433,6 +461,8 @@ proxy-groups:
     filter: (?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
@@ -441,6 +471,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: TW-LoadBalance
     type: load-balance
     hidden: true
@@ -449,6 +481,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: JP-LoadBalance
     type: load-balance
     hidden: true
@@ -457,6 +491,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: KR-LoadBalance
     type: load-balance
     hidden: true
@@ -465,6 +501,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: SG-LoadBalance
     type: load-balance
     hidden: true
@@ -473,6 +511,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: US-LoadBalance
     type: load-balance
     hidden: true
@@ -481,6 +521,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: UK-LoadBalance
     type: load-balance
     hidden: true
@@ -489,6 +531,8 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
+    use:
+      - Subscribe
   - name: 69emby
     type: url-test
     include-all: true
@@ -497,6 +541,8 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    use:
+      - Subscribe
   - name: 69emby3
     type: url-test
     include-all: true
@@ -505,6 +551,8 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    use:
+      - Subscribe
   - name: embyTemp
     type: url-test
     include-all: true
@@ -513,6 +561,8 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    use:
+      - Subscribe
   - lazy: true
     name: PROXY
     proxies:
