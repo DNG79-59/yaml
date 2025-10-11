@@ -576,7 +576,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - 自动选择
+      - 手动选择
     type: fallback
     hidden: true
     # 规则引用
