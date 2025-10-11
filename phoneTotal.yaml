@@ -68,9 +68,9 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - DIRECT
-  - name: 自动选择
+  - name: 手动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: load-balance
+    type: select
     # include-all: true
     use:
       - Subscribe
@@ -130,7 +130,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - 手动选择
       - DIRECT
   - name: TikTok
     type: select
@@ -192,6 +192,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 手动选择
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
@@ -219,6 +220,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 手动选择
       - DIRECT
   - name: Microsoft
     type: select
@@ -247,6 +249,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 手动选择
       - DIRECT
   # 基于地区分组
   - name: HongKong
