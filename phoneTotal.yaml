@@ -244,6 +244,14 @@ proxy-groups:
       - AllServer
       - 手动选择
       - DIRECT
+  - name: 69emby
+    type: select
+    proxies:
+      - 69emby-Auto
+      - 手动选择
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
+    use:
+      - 69Emby
   # 基于地区分组
   - name: HongKong
     type: select
@@ -529,26 +537,24 @@ proxy-groups:
     lazy: true
     use:
       - Subscribe
-  - name: 69emby
+  - name: 69emby-Auto
     type: url-test
     include-all: true
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
-    proxies:
-      - Emby
+    hidden: true
     use:
       - Subscribe
-  - name: 69emby3
+  - name: 69emby3-Auto
     type: url-test
     include-all: true
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
-    proxies:
-      - Emby
+    hidden: true
     use:
       - Subscribe
   - name: embyTemp
