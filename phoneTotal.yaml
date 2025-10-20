@@ -145,13 +145,6 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-  - name: bilibili
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
-    proxies:
-      - DIRECT
-      - HongKong
-      - TaiWan
   - name: Spotify
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
@@ -539,21 +532,23 @@ proxy-groups:
   - name: 69emby
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby).*$
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
-    hidden: true
+    proxies:
+      - Emby
     use:
       - Subscribe
   - name: 69emby3
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby).*$
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
-    hidden: true
+    proxies:
+      - Emby
     use:
       - Subscribe
   - name: embyTemp
