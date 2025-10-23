@@ -249,6 +249,13 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - DIRECT
+  - name: 69emby
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+    proxies:
+      - 69emby-Auto
+      - 手动选择
+    filter: ^(?!.*(5×|美国|日本)).*$
   # 基于地区分组
   - name: HongKong
     type: select
@@ -480,18 +487,18 @@ proxy-groups:
     strategy: consistent-hashing
     interval: 300
     lazy: true
-  - name: 69emby
+  - name: 69emby-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69)(?=.*2×)(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: ^(?!.*(5×|美国|日本)).*$
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
     hidden: true
-  - name: 69emby3
+  - name: 69emby3-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69)(?=.*2×).*$
+    filter: ^(?!.*(5×|美国|日本)).*$
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
@@ -499,7 +506,7 @@ proxy-groups:
   - name: embyTemp
     type: url-test
     include-all: true
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: (?i)tempEmby
     url: "https://matrix.313445.xyz"
     interval: 300
     lazy: true
@@ -673,6 +680,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
 
 
