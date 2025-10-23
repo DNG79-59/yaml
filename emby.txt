@@ -1,2 +1,1 @@
-DOMAIN,matrix.313445.xyz,
-DOMAIN,emby1.69yun69.com
+DOMAIN,matrix.313445.xyz
