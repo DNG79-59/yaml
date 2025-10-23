@@ -114,7 +114,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - 手动选择
       - DIRECT
   - name: TikTok
     type: select
@@ -677,6 +677,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
 
 
 
