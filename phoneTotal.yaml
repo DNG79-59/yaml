@@ -527,6 +527,11 @@ proxy-groups:
     lazy: true
     use:
       - Subscribe
+
+
+#自己写的自动测速
+
+
   - name: 69emby-Auto
     type: url-test
     include-all: true
@@ -570,7 +575,10 @@ proxy-groups:
       - 手动选择
     type: fallback
     hidden: true
-    # 规则引用
+
+
+    
+# 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
   - RULE-SET,个人直连,DIRECT
@@ -582,8 +590,7 @@ rules:
   - RULE-SET,Telegram,Telegram,no-resolve
   - RULE-SET,Twitter,X,no-resolve
   - RULE-SET,YouTube,YouTube,no-resolve
-  - DOMAIN,emby1.69yun69.com,69emby
-  - DOMAIN,emby3.69yun69.com,69emby3
+  - RULE-SET,69emby,69emby
   - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby,no-resolve
   - RULE-SET,Games,Games,no-resolve
@@ -595,6 +602,9 @@ rules:
   - GEOSITE,tld-cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,Final
+
+
+  
 rule-providers:
   AI:
     behavior: classical
@@ -740,3 +750,9 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+  69emby:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
