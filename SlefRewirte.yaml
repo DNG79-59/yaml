@@ -253,6 +253,7 @@ proxy-groups:
       - 69emby-Auto
       - 手动选择
     filter: ^(?!.*(5×|美国|日本)).*$
+    include-all: true
   # 基于地区分组
   - name: HongKong
     type: select
@@ -519,8 +520,7 @@ rules:
   - RULE-SET,Telegram,Telegram,no-resolve
   - RULE-SET,Twitter,X,no-resolve
   - RULE-SET,YouTube,YouTube,no-resolve
-  - DOMAIN,emby1.69yun69.com,69emby
-  - DOMAIN,emby3.69yun69.com,69emby3
+  - DOMAIN,69emby,69emby
   - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby,no-resolve
   - RULE-SET,Games,Games,no-resolve
@@ -677,6 +677,13 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+  69emby:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+
 
 
 
