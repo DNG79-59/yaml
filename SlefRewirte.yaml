@@ -520,7 +520,7 @@ rules:
   - RULE-SET,Telegram,Telegram,no-resolve
   - RULE-SET,Twitter,X,no-resolve
   - RULE-SET,YouTube,YouTube,no-resolve
-  - DOMAIN,69emby,69emby
+  - RULE-SET,69emby,69emby
   - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby,no-resolve
   - RULE-SET,Games,Games,no-resolve
@@ -683,6 +683,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+
 
 
 
