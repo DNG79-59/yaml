@@ -7,27 +7,44 @@ dns:
   listen: 0.0.0.0:53
   ipv6: true
   use-hosts: false
-  use-system-hosts: false
+  use-system-hosts: true
   nameserver:
-    - https://223.6.6.6/dns-query
+    - https://120.53.53.53/dns-query
+    - https://223.5.5.5/dns-query
+    - tls://223.6.6.6
   fallback:
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - tls://9.9.9.9
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
     domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
-      - '+.instagram.com'
-      - '+.linkedin.com'
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+      - +.twitter.com
+      - +.github.com
+      - +.wikipedia.org
+      - +.cloudflare.com
+      - +.openai.com
   follow-rule: true
   default-nameserver:
     - 223.6.6.6
-  respect-rules: true
+    - 119.29.29.29
+  respect-rules: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*"
+    - +.lan
+    - +.local
+    - time.*.com
+    - ntp.*.com
+  proxy-server-nameserver: []
+  direct-nameserver: []
 proxy-providers:
   Subscribe:
     type: http
