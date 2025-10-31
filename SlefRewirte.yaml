@@ -4,7 +4,7 @@ log-level: error
 # DNS模块
 dns:
   enable: true
-  listen: 0.0.0.0:7874
+  listen: 0.0.0.0:53
   ipv6: true
   use-hosts: false
   use-system-hosts: true
@@ -700,6 +700,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+
 
 
 
