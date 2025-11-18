@@ -7,9 +7,8 @@ dns:
   listen: 0.0.0.0:53
   ipv6: true
   use-hosts: false
-  use-system-hosts: true
+  use-system-hosts: false
   nameserver:
-    - https://120.53.53.53/dns-query
     - https://223.6.6.6/dns-query
   fallback:
     - https://1.1.1.1/dns-query
@@ -35,7 +34,6 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - "*"
     - +.lan
     - +.local
     - time.*.com
