@@ -1,0 +1,178 @@
+网址：https://surge.tel/22/2953/
+
+关于
+Sub-Store：
+项目仓库：https://github.com/sub-store-org/Sub-Store
+
+sub-store最早是Peng-YM在loon平台推出的高级订阅管理工具。完全本地解析，无订阅泄露的风险。经过后续发展，现在已经适配了Surge 和 Quantumult X 以及 Shadowrocket、Clash。
+
+主要功能
+订阅转换
+组合订阅
+订阅过滤
+订阅重命名
+订阅排序
+订阅同步
+需要的
+一台VPS（配置不建议太低）
+拥有自己的域名并且已经托管到了CloudFlare（其它地方的也行，但是习惯了CloudFlare，并且很良心也很方便）
+SSH 工具（强烈推荐Termius）
+部署过程
+更新系统
+sudo -i
+apt-get update && apt-get full-upgrade -y
+Copy
+如果系统里面没有Docker，那么需要安装Docker
+
+安装Docker
+国外vps：
+
+curl -fsSL https://get.docker.com | bash -s docker 
+Copy
+国内vps：
+
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 
+Copy
+如果想手动安装Docker，请参照官方文档
+
+安装Sub-Store镜像
+此处采用的是目前 Sub-Store 当前主要维护者之一 @xream （小一）的docker镜像
+
+启动
+数据文件夹: /root/sub-store-data
+
+端口: 3001
+
+监听: 127.0.0.1
+
+后端前缀（API）: /2cXaAxRGfddmGz2yx1wA
+定时任务:: 0 0 *
+
+复制下面指令一键运行即可
+
+请将其中的 2cXaAxRGfddmGz2yx1wA 字段改为其它复杂字符串；
+本示例中演示的定时任务环境变量为 SUB_STORE_CRON, 此时使用的是系统的 crond; 如果有问题, 可以使用 SUB_STORE_BACKEND_CRON, 此时将使用 Node 版 node-cron
+推送服务: https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png
+
+支持 Bark/PushPlus 等服务. 形如: https://api.day.app/XXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive 或 http://www.pushplus.plus/send?token=XXXXXXXXX&title=[推送标题]&content=[推送内容]&channel=wechat 的 URL, [推送标题] 和 [推送内容] 会被自动替换.
+
+下面的是完全功能版，带推送和定时（下面有不带通知版指令）
+
+docker run -it -d --restart=always -e "SUB_STORE_PUSH_SERVICE=https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png"  -e "SUB_STORE_CRON=0 0 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 127.0.0.1:3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
+Copy
+不带通知版：
+
+docker run -it -d --restart=always -e "SUB_STORE_CRON=0 0 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
+Copy
+CC2023-12-14at22.49.56@2x
+
+按照上面一键指令运行后的sub-store地址为： 本地前端+本地后端+API
+
+http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
+Copy
+Tips:可以通过 docker help 查看docker的各项指令
+docker stats 指令查看当前运行中的docker状态
+
+有人提出不使用反向代理的方式，直接使用IP+端口直接访问，开发者让我补充一点：处于安全性考虑，建议还是使用反向代理以及配置较为复杂的API（也就是上面2cXaAxRGfddmGz2yx1wA这一串换成别的复杂字符）
+(将其中的x.x.x.x换成你的VPS IP）如果想使用域名并使用ssl，请接着往下看。
+
+如果你跟示例一样,只监听了 127.0.0.1,这样是无法从本地机器外使用 IP+端口 来访问容器内的服务的。
+
+建议的做法是:
+
+不要直接暴露容器的端口到宿主机,而是设置反向代理。比如可以使用 Nginx 作为反代,并配置域名访问容器内服务。
+如果就是想直接通过 IP+端口访问,可以在 docker run 时使用 -p 参数,比如 -p 3001:3001 来将容器端口映射到宿主机端口。但是直接暴露端口有安全风险,还是建议使用反向代理的方式。这时候运行指令如下：
+
+docker run -it -d --restart=always -e "SUB_STORE_CRON=0 0 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
+Copy
+如果设置了端口映射但是无法访问,可以检查下面的常见情况:
+• 使用 docker ps 查看容器是否正确启动并监听了端口。
+
+• 使用 lsof -i:3001 等命令检查宿主机上是否已占用目标端口。
+
+• 检查本地防火墙规则,是否屏蔽了访问的端口。
+
+• 如果是远程访问,检查网络安全组或云平台防火墙设置。
+
+根据检查结果,进一步排查并调整容器端口暴露或防火墙设置,以允许访问容器服务。
+
+域名设置：
+在cloudflare的域名DNS记录里面添加一个A记录
+substore.domain.com
+
+实际A记录的名字随意，只要你能区分就行
+
+如下图例：
+
+CC 2023-12-13 at 09.21.18@2x
+
+备注：后面的代理黄云勾不勾随意，如果你用其它第三方ssl证书可以不勾，如果用CF的证书就勾上。
+
+nginx部署过程
+安装nginx
+sudo apt install nginx -y
+Copy
+编辑nginx配置
+sudo vim /etc/nginx/sites-enabled/sub-store.conf
+Copy
+根据自己的前面域名设置将以下内容改好后复制进去并保存
+
+server {
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+  server_name substore.yourdomain.com;  //将此处改为你自己的域名
+  ssl_certificate /root/cert/ssl.pem;    //将此处改为你自己ssl公钥证书位置和名字
+  ssl_certificate_key /root/cert/ssl.key; //将此处改为你自己ssl私钥
+  location / {
+    proxy_pass http://127.0.0.1:3001;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
+Copy
+编写完毕保存后输入：nginx -t 查看配置是否正确，如果正确输入：nginx -s reload重载配置，如果出现错误输入：nginx -s stop 停止nginx运行， 并根据提示信息进行排查。
+
+使用CloudFlare的15年ssl证书步骤
+将域名托管到cloudflare后，将旁边那朵云点上变为黄色
+在左侧的SSL/TLS栏目下概述中，将加密模式改为完全（严格）
+CC2023-12-13at15.37.35@2x
+点击左侧的源服务器，在源证书中选择创建证书
+选择 RSA（2048），并创建证书
+CC2023-12-13at15.40.57@2x
+将随后出现的私钥和公钥，分别复制并保存下来
+请注意，私钥仅显示一次，请务必保存好
+
+打开ssh软件，并且链接上VPS后
+创建文件夹 cert
+mkdir cert
+cd cert
+创建公钥文件
+vim ssl.pem
+将上面的cloudflare证书公钥内容粘贴进去并保存
+CC2023-12-13at15.45.31@2x
+创建私钥文件
+vim ssl.key
+将上面的cloudflare证书私钥内容粘贴进去并保存
+CC2023-12-13at15.44.15@2x
+至此整个Docker版的sub-store服务搭建完成。
+
+访问的地址是
+
+https://substore.yourdomain.com?api=https://substore.yourdomain.com/2cXaAxRGfddmGz2yx1wA
+
+本教程编写过程中受到小一 @xream 大力指导，十分感谢。
+如果在部署使用过程中有疑问，可以进他的telegram群 https://t.me/zhetengsha_group 交流沟通。
+
+此种方法只使用了一个域名
+如果想两个域名都用上
+docker 那部分启动改为
+
+docker run -it -d --restart=always -p 127.0.0.1:3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
+Copy
+nginx部分则参照之前的方法即可。
+
+
+部署完docker上的sub后，下载nat123，完成端口映射。
+如完整的substore地址：http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
+将ip部分改为端口映射后给出的地址如http://25101a8b.nat123.top:40200?api=http://25101a8b.nat123.top:40200/2cXaAxRGfddmGz2yx1wA
