@@ -493,6 +493,7 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    timeout: 1000
   - name: 69emby3-Auto
     type: url-test
     include-all: true
@@ -501,6 +502,7 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    timeout: 1000
   - name: embyTemp
     type: url-test
     include-all: true
@@ -683,6 +685,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+
 
 
 
