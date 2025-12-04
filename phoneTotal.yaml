@@ -46,13 +46,13 @@ proxy-providers:
     url: http://sub.store/download/collection/TOTAL # 用你的订阅链接替换
     interval: 86400
     benchmark-url: http://cp.cloudflare.com
-    benchmark-timeout: 5
+    benchmark-timeout: 3
   69Emby:
     type: http
     url: http://sub.store/download/69emby # 用你的订阅链接替换
     interval: 86400
     benchmark-url: https://emby1.69yun69.com
-    benchmark-timeout: 5
+    benchmark-timeout: 2
   TempEmby:
     type: http
     url: http://sub.store/download/tempEmby # 用你的订阅链接替换
@@ -553,6 +553,7 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: null
+    tolerance: 100
     use:
       - Subscribe
       - 69Emby
@@ -564,6 +565,7 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    tolerance: 100
     use:
       - Subscribe
   - name: embyTemp
@@ -574,6 +576,7 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    tolerance: 100
     use:
       - Subscribe
   - lazy: true
