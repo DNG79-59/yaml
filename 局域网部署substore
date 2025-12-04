@@ -172,6 +172,47 @@ docker run -it -d --restart=always -p 127.0.0.1:3001:3001 -v /root/sub-store-dat
 Copy
 nginx部分则参照之前的方法即可。
 
+适配 yandf 用户的完整操作流程（非 root 目录）
+步骤 1：创建并配置 yandf 专属数据目录
+bash
+运行
+# 1. 确认 yandf 用户存在（不存在则先创建：sudo useradd -m yandf）
+id yandf
+
+# 2. 创建数据目录（宿主机）
+sudo mkdir -p /data/sub-store
+
+# 3. 更改目录归属为 yandf 用户/用户组
+sudo chown -R yandf:yandf /data/sub-store
+
+# 4. 设置权限（yandf 可读写，其他用户只读，兼顾安全）
+sudo chmod -R 755 /data/sub-store
+步骤 2：最终启动命令（基于 yandf 用户）
+bash
+运行
+docker run -it -d --restart=always \
+  -e "SUB_STORE_CRON=0 0 * * *" \
+  -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA \
+  -p 3001:3001 \
+  # 挂载 yandf 专属目录到容器内数据路径
+  -v /data/sub-store:/opt/app/data:rw \
+  --name sub-store \
+  # 指定容器内以 yandf 的 UID/GID 运行（避免 root 权限）
+  --user $(id -u yandf):$(id -g yandf) \
+  xream/sub-store
+步骤 3：验证配置有效性（yandf 用户操作）
+bash
+运行
+# 切换到 yandf 用户（若当前是 root）
+su - yandf
+
+# 写入测试文件（无需 sudo，因目录归属 yandf）
+echo "yandf test data" > /data/sub-store/test.txt
+
+# 查看容器内是否能读取到（需 root 权限执行 docker 命令，或给 yandf 配置 docker 权限）
+sudo docker exec sub-store cat /opt/app/data/test.txt
+若想让 yandf 用户无需 sudo 执行 docker 命令，执行：sudo usermod -aG docker yandf，然后重新登录 yandf 用户。
+
 
 部署完docker上的sub后，下载nat123，完成端口映射。
 如完整的substore地址：http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
