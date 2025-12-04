@@ -4,3 +4,4 @@ DOMAIN-SUFFIX,hnnx.com
 DOMAIN-SUFFIX,battleofballs.com
 DOMAIN-SUFFIX,59wanmei.com
 DOMAIN-SUFFIX,17wanxiao.com
+DOMAIN,updates.cdn-apple.com
