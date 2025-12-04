@@ -330,6 +330,7 @@ proxy-groups:
     filter: (?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     lazy: true
+    tolerance: 100
   - name: TW-Auto
     type: url-test
     hidden: true
@@ -337,6 +338,7 @@ proxy-groups:
     filter: (?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
     lazy: true
+    tolerance: 100
   - name: JP-Auto
     type: url-test
     hidden: true
@@ -344,6 +346,7 @@ proxy-groups:
     filter: (?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
     lazy: true
+    tolerance: 100
   - name: KR-Auto
     type: url-test
     hidden: true
@@ -351,6 +354,7 @@ proxy-groups:
     filter: (?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
     lazy: true
+    tolerance: 100
   - name: SG-Auto
     type: url-test
     hidden: true
@@ -358,6 +362,7 @@ proxy-groups:
     filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
+    tolerance: 100
   - name: SG-T-Auto
     type: url-test
     url: "http://91.108.56.200"
@@ -366,6 +371,7 @@ proxy-groups:
     filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
+    tolerance: 100
   - name: US-Auto
     type: url-test
     hidden: true
@@ -373,6 +379,7 @@ proxy-groups:
     filter: (?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     lazy: true
+    tolerance: 100
   - name: UK-Auto
     type: url-test
     hidden: true
@@ -380,6 +387,7 @@ proxy-groups:
     filter: (?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
     lazy: true
+    tolerance: 100
   - name: HK-FallBack
     type: fallback
     hidden: true
@@ -494,6 +502,7 @@ proxy-groups:
     lazy: true
     hidden: true
     timeout: 1000
+    tolerance: 100
   - name: 69emby3-Auto
     type: url-test
     include-all: true
@@ -503,6 +512,7 @@ proxy-groups:
     lazy: true
     hidden: true
     timeout: 1000
+    tolerance: 100
   - name: embyTemp
     type: url-test
     include-all: true
@@ -511,6 +521,8 @@ proxy-groups:
     interval: 300
     lazy: true
     hidden: true
+    timeout: 1000
+    tolerance: 100
     # 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
@@ -685,6 +697,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+
 
 
 
