@@ -43,13 +43,13 @@ dns:
 proxy-providers:
   Subscribe:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL # 用你的订阅链接替换
+    url: http://127.0.0.1:38324/download/collection/TOTAL # 用你的订阅链接替换
     interval: 86400
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 3
   69Emby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby # 用你的订阅链接替换
+    url: http://127.0.0.1:38324/download/69emby # 用你的订阅链接替换
     interval: 86400
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 2
