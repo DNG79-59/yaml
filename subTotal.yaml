@@ -554,6 +554,9 @@ proxy-groups:
     lazy: true
     hidden: null
     tolerance: 100
+    timeout: 2
+    proxys:
+      - DIRECT
     use:
       - Subscribe
       - 69Emby
@@ -564,8 +567,9 @@ proxy-groups:
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
-    hidden: true
+    hidden: unll
     tolerance: 100
+    timeout: 2
     use:
       - Subscribe
   - name: embyTemp
