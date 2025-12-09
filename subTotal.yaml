@@ -567,7 +567,7 @@ proxy-groups:
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
-    hidden: unll
+    hidden: null
     tolerance: 100
     timeout: 2
     use:
