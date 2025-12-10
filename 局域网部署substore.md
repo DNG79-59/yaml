@@ -1,38 +1,40 @@
-网址：https://surge.tel/22/2953/
+# 采录于：(https://surge.tel/22/2953/)
 
-关于
-Sub-Store：
-项目仓库：https://github.com/sub-store-org/Sub-Store
+## 关于  
+Sub-Store：  
+项目仓库：https://github.com/sub-store-org/Sub-Store  
 
-sub-store最早是Peng-YM在loon平台推出的高级订阅管理工具。完全本地解析，无订阅泄露的风险。经过后续发展，现在已经适配了Surge 和 Quantumult X 以及 Shadowrocket、Clash。
+sub-store最早是Peng-YM在loon平台推出的高级订阅管理工具。完全本地解析，无订阅泄露的风险。经过后续发展，现在已经适配了Surge 和 Quantumult X 以及 Shadowrocket、Clash。  
 
-主要功能
-订阅转换
-组合订阅
-订阅过滤
-订阅重命名
-订阅排序
-订阅同步
-需要的
-一台VPS（配置不建议太低）
-拥有自己的域名并且已经托管到了CloudFlare（其它地方的也行，但是习惯了CloudFlare，并且很良心也很方便）
-SSH 工具（强烈推荐Termius）
-部署过程
+## 主要功能
+- 订阅转换
+- 组合订阅
+- 订阅过滤
+- 订阅重命名
+- 订阅排序
+- 订阅同步
+## 需要的
+- 一台VPS（配置不建议太低）
+- 拥有自己的域名并且已经托管到了CloudFlare（其它地方的也行，但是习惯了CloudFlare，并且很良心也很方便）
+- SSH 工具（强烈推荐Termius）
+## 部署过程
 更新系统
+```ssh
 sudo -i
 apt-get update && apt-get full-upgrade -y
-Copy
-如果系统里面没有Docker，那么需要安装Docker
+```  
+
+如果系统里面没有Docker，那么需要安装Docker  
 
 安装Docker
 国外vps：
-
+```
 curl -fsSL https://get.docker.com | bash -s docker 
-Copy
+```  
 国内vps：
-
+```
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 
-Copy
+```  
 如果想手动安装Docker，请参照官方文档
 
 安装Sub-Store镜像
@@ -57,21 +59,23 @@ Copy
 支持 Bark/PushPlus 等服务. 形如: https://api.day.app/XXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive 或 http://www.pushplus.plus/send?token=XXXXXXXXX&title=[推送标题]&content=[推送内容]&channel=wechat 的 URL, [推送标题] 和 [推送内容] 会被自动替换.
 
 下面的是完全功能版，带推送和定时（下面有不带通知版指令）
-
+```
 docker run -it -d --restart=always -e "SUB_STORE_PUSH_SERVICE=https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png"  -e "SUB_STORE_CRON=0 0 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 127.0.0.1:3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
-Copy
+```  
 不带通知版：
-
+```
 docker run -it -d --restart=always -e "SUB_STORE_CRON=0 0 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
-Copy
+```  
 CC2023-12-14at22.49.56@2x
 
 按照上面一键指令运行后的sub-store地址为： 本地前端+本地后端+API
-
+```
 http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
-Copy
+```  
 Tips:可以通过 docker help 查看docker的各项指令
-docker stats 指令查看当前运行中的docker状态
+```
+docker stats 
+```  指令查看当前运行中的docker状态
 
 有人提出不使用反向代理的方式，直接使用IP+端口直接访问，开发者让我补充一点：处于安全性考虑，建议还是使用反向代理以及配置较为复杂的API（也就是上面2cXaAxRGfddmGz2yx1wA这一串换成别的复杂字符）
 (将其中的x.x.x.x换成你的VPS IP）如果想使用域名并使用ssl，请接着往下看。
@@ -116,7 +120,7 @@ Copy
 sudo vim /etc/nginx/sites-enabled/sub-store.conf
 Copy
 根据自己的前面域名设置将以下内容改好后复制进去并保存
-
+```
 server {
   listen 443 ssl http2;
   listen [::]:443 ssl http2;
@@ -130,7 +134,7 @@ server {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   }
 }
-Copy
+```  
 编写完毕保存后输入：nginx -t 查看配置是否正确，如果正确输入：nginx -s reload重载配置，如果出现错误输入：nginx -s stop 停止nginx运行， 并根据提示信息进行排查。
 
 使用CloudFlare的15年ssl证书步骤
