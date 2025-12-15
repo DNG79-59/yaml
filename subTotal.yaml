@@ -79,8 +79,9 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
       - DIRECT
-  - name: 手动选择
+  - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: select
     # include-all: true
@@ -89,7 +90,7 @@ proxy-groups:
     interval: 300
     lazy: true
     strategy: consistent-hashing
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -103,6 +104,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: YouTube
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
@@ -116,6 +118,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: NETFLIX
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
@@ -129,6 +132,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: Emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
@@ -142,7 +146,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
       - DIRECT
   - name: TikTok
     type: select
@@ -157,6 +161,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: Spotify
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
@@ -170,6 +175,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
       - DIRECT
   - name: Telegram
     type: select
@@ -184,6 +190,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: X
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
@@ -197,7 +204,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
@@ -212,6 +219,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
@@ -225,7 +233,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
       - DIRECT
   - name: Microsoft
     type: select
@@ -241,6 +249,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
@@ -254,14 +263,15 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
       - DIRECT
   - name: 69emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
       - 69emby-Auto
-      - 手动选择
+      - 自动选择
+      - DIRECT
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     use:
       - 69Emby
@@ -274,7 +284,7 @@ proxy-groups:
       - HK-Auto
       - HK-FallBack
       - HK-LoadBalance
-    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    filter: ^(?!.*emby).*(?i)港|HK|hk|Hong Kong|HongKong|hongkong
     use:
       - Subscribe
   - name: TaiWan
@@ -284,7 +294,7 @@ proxy-groups:
       - TW-Auto
       - TW-FallBack
       - TW-LoadBalance
-    filter: (?i)台|新北|彰化|TW|Taiwan
+    filter: ^(?!.*emby).*(?i)台|新北|彰化|TW|Taiwan
     use:
       - Subscribe
   - name: Japan
@@ -294,7 +304,7 @@ proxy-groups:
       - JP-Auto
       - JP-FallBack
       - JP-LoadBalance
-    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    filter: ^(?!.*emby).*(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     use:
       - Subscribe
   - name: Korea
@@ -304,7 +314,7 @@ proxy-groups:
       - KR-Auto
       - KR-FallBack
       - KR-LoadBalance
-    filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    filter: ^(?!.*emby).*(?i)KR|Korea|KOR|首尔|韩|韓
     use:
       - Subscribe
   - name: Singapore
@@ -314,7 +324,7 @@ proxy-groups:
       - SG-Auto
       - SG-FallBack
       - SG-LoadBalance
-    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|SG|Singapore
     use:
       - Subscribe
   - name: America
@@ -324,7 +334,7 @@ proxy-groups:
       - US-Auto
       - US-FallBack
       - US-LoadBalance
-    filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     use:
       - Subscribe
   - name: UnitedKingdom
@@ -334,7 +344,7 @@ proxy-groups:
       - UK-Auto
       - UK-FallBack
       - UK-LoadBalance
-    filter: (?i)英|🇬🇧|英国|UK|United Kingdom
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     use:
       - Subscribe
   - name: AllServer
@@ -343,12 +353,12 @@ proxy-groups:
     # include-all: true
     use:
       - Subscribe
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: HK-Auto
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)港|🇭🇰|HK|(?i)Hong
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     lazy: true
     use:
@@ -357,7 +367,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
     lazy: true
     use:
@@ -366,7 +376,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)日|🇯🇵|东京|JP|(?i)Japan
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
     lazy: true
     use:
@@ -375,7 +385,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)韓|🇰🇷|韩国|KR|Korea
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
     lazy: true
     use:
@@ -384,7 +394,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
     use:
@@ -393,7 +403,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)美|🇺🇲|US|(?i)States|American
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     lazy: true
     use:
@@ -402,7 +412,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    filter: (?i)英|🇬🇧|英国|UK|United Kingdom
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
     lazy: true
     use:
@@ -411,7 +421,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)港|🇭🇰|HK|(?i)Hong
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     lazy: true
     use:
@@ -420,7 +430,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
     lazy: true
     use:
@@ -429,7 +439,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)日|🇯🇵|东京|JP|(?i)Japan
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
     lazy: true
     use:
@@ -438,7 +448,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)韓|🇰🇷|韩国|KR|Korea
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
     lazy: true
     use:
@@ -447,7 +457,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     lazy: true
     use:
@@ -456,7 +466,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)美|🇺🇲|US|(?i)States|American
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     lazy: true
     use:
@@ -465,7 +475,7 @@ proxy-groups:
     type: fallback
     hidden: true
     include-all: true
-    filter: (?i)英|🇬🇧|英国|UK|United Kingdom
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
     lazy: true
     use:
@@ -474,7 +484,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)港|🇭🇰|HK|(?i)Hong
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -484,7 +494,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -494,7 +504,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)日|🇯🇵|东京|JP|(?i)Japan
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -504,7 +514,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)韓|🇰🇷|韩国|KR|Korea
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -514,7 +524,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -524,7 +534,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)美|🇺🇲|US|(?i)States|American
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -534,7 +544,7 @@ proxy-groups:
     type: load-balance
     hidden: true
     include-all: true
-    filter: (?i)英|🇬🇧|英国|UK|United Kingdom
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     strategy: consistent-hashing
     interval: 300
     lazy: true
@@ -572,6 +582,7 @@ proxy-groups:
     timeout: 2
     use:
       - Subscribe
+      - 69emby
   - name: embyTemp
     type: url-test
     include-all: true
@@ -586,6 +597,7 @@ proxy-groups:
   - lazy: true
     name: PROXY
     proxies:
+      - 自动选择
       - TaiWan
       - HongKong
       - Japan
@@ -593,7 +605,6 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - 手动选择
     type: fallback
     hidden: true
 
