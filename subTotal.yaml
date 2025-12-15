@@ -80,11 +80,14 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - 自动选择
+      - 带宽优先
       - DIRECT
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: select
-    # include-all: true
+    type: url-test
+    timeout: 2
+    tolerance: 150
+    include-all: true
     use:
       - Subscribe
     interval: 300
@@ -607,7 +610,14 @@ proxy-groups:
       - UnitedKingdom
     type: fallback
     hidden: true
-
+  - name: 带宽优先 
+    type: url-test
+    include-all: true
+    url: "https://speed.cloudflare.com/__down?bytes=5000000"  # 10MB文件测速（更贴近实际下载）
+    interval: 600
+    timeout: 5        # 影音测速超时放宽到10秒
+    tolerance: 500
+    lazy: true
 
     
 # 规则引用
