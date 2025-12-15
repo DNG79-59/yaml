@@ -548,7 +548,7 @@ proxy-groups:
   - name: 69emby-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|台湾)).*$
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
@@ -563,7 +563,7 @@ proxy-groups:
   - name: 69emby3-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|台湾)).*$
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
