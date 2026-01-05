@@ -56,7 +56,7 @@ proxy-providers:
   TempEmby:
     type: http
     url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby # 用你的订阅链接替换
-    interval: 86400
+    interval: 7200
     benchmark-url: https://matrix.313445.xyz
     benchmark-timeout: 5
     # 功能分组
@@ -65,12 +65,13 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - Proxy
       - DIRECT
+      - Proxy
   - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
+      - 自动选择
       - HongKong
       - TaiWan
       - Japan
@@ -79,7 +80,6 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
       - 带宽优先
       - DIRECT
   - name: 自动选择
@@ -98,6 +98,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
+      - AllServer
       - Proxy
       - HongKong
       - TaiWan
@@ -106,7 +107,6 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
       - 自动选择
   - name: YouTube
     type: select
@@ -126,13 +126,13 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     proxies:
+      - America
       - Proxy
       - HongKong
       - TaiWan
       - Japan
       - Korea
       - Singapore
-      - America
       - UnitedKingdom
       - AllServer
       - 自动选择
@@ -140,6 +140,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
+      - 自动选择
       - Proxy
       - HongKong
       - TaiWan
@@ -149,14 +150,13 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
       - DIRECT
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
-      - Proxy
       - HongKong
+      - Proxy
       - TaiWan
       - Japan
       - Korea
@@ -169,12 +169,12 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     proxies:
+      - Singapore
       - Proxy
       - HongKong
       - TaiWan
       - Japan
       - Korea
-      - Singapore
       - America
       - UnitedKingdom
       - AllServer
@@ -184,12 +184,12 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
+      - Singapore
       - Proxy
       - HongKong
       - TaiWan
       - Japan
       - Korea
-      - Singapore
       - America
       - UnitedKingdom
       - AllServer
@@ -198,10 +198,10 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
+      - Japan
       - Proxy
       - HongKong
       - TaiWan
-      - Japan
       - Korea
       - Singapore
       - America
@@ -227,13 +227,13 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
+      - America
       - Proxy
       - HongKong
       - TaiWan
       - Japan
       - Korea
       - Singapore
-      - America
       - UnitedKingdom
       - AllServer
       - 自动选择
@@ -257,8 +257,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
-      - Proxy
       - HongKong
+      - Proxy
       - TaiWan
       - Japan
       - Korea
