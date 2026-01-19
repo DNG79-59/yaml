@@ -85,9 +85,9 @@ proxy-groups:
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
-    timeout: 2
+    timeout: 3
     tolerance: 150
-    include-all: true
+    include-all: false
     use:
       - Subscribe
     interval: 300
