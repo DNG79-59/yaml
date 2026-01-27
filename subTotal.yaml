@@ -43,23 +43,23 @@ dns:
 proxy-providers:
   Subscribe:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
-    path: "/"
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL # 用你的订阅链接替换
     interval: 7200
+    path: ./proxy_providers/Subscribe.yaml  # 新增
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
   69Emby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby
-    path: "/"
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby # 用你的订阅链接替换
     interval: 7200
+    path: ./proxy_providers/69Emby.yaml     # 新增
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
   TempEmby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby
-    path: "/"
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby # 用你的订阅链接替换
     interval: 7200
+    path: ./proxy_providers/TempEmby.yaml   # 新增
     benchmark-url: https://matrix.313445.xyz
     benchmark-timeout: 5
     # 功能分组
