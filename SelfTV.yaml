@@ -33,7 +33,7 @@ proxy-providers:
     type: http
     url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2
     interval: 7200
-    path: ./proxy_providers/69Emby.yaml
+    path: ./proxy_providers/Subscribe.yaml  # 改为与提供商名一致
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 2
       
@@ -49,6 +49,7 @@ proxy-groups:
   - name: 69emby
     type: url-test
     include-all: true
+    use: [Subscribe]  # 新增，引用提供商
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     url: "https://emby1.69yun69.com"
     interval: 300
@@ -56,6 +57,7 @@ proxy-groups:
   - name: embyTemp
     type: url-test
     include-all: true
+    use: [Subscribe]  # 新增，引用提供商
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     url: "https://matrix.313445.xyz"
     interval: 300
@@ -67,8 +69,8 @@ rules:
   - DOMAIN,emby3.69yun69.com,69emby
   - DOMAIN,matrix.313445.xyz,embyTemp
   - GEOSITE,geolocation-!cn@cn,DIRECT
-  - GEOSITE,geolocation-!cn,Proxy
-  - GEOSITE,geolocation-cn@!cn,Proxy
+  - GEOSITE,geolocation-!cn,69emby
+  - GEOSITE,geolocation-cn@!cn,69emby
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,tld-cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
