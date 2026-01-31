@@ -1,2 +1,3 @@
 DOMAIN-KEYWORD,ouonet
 DOMAIN-SUFFIX,pages.dev
+DOMAIN-SUFFIX,substack.com
