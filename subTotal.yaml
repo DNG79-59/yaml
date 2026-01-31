@@ -626,6 +626,7 @@ proxy-groups:
 # 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
+  - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
   - RULE-SET,AppleService,Apple,no-resolve
   - RULE-SET,Apple,Apple,no-resolve
