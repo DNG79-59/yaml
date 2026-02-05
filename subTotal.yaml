@@ -640,7 +640,7 @@ rules:
   - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
-  - RULE-SET,AI,AI,no-resolve
+  - RULE-SET,AI,AI
   - GEOSITE,geolocation-!cn@cn,DIRECT
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,geolocation-cn@!cn,Proxy
