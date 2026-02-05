@@ -38,11 +38,8 @@ dns:
     - +.local
     - time.*.com
     - ntp.*.com
-    - +.aihuoshi.net
   proxy-server-nameserver: []
   direct-nameserver: []
-  nameserver-policy:
-    "+.aihuoshi.net": [ "udp://192.168.220.1:53" ]
 proxy-providers:
   Subscribe:
     type: http
