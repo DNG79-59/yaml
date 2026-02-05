@@ -38,8 +38,11 @@ dns:
     - +.local
     - time.*.com
     - ntp.*.com
+    - +.aihuoshi.net
   proxy-server-nameserver: []
   direct-nameserver: []
+  nameserver-policy:
+    "+.aihuoshi.net": [ "udp://192.168.220.1:53" ]
 proxy-providers:
   Subscribe:
     type: http
@@ -626,28 +629,28 @@ proxy-groups:
 # 规则引用
 rules:
   - GEOSITE,category-ads-all,REJECT
-  - RULE-SET,个人代理,Proxy,no-resolve
-  - RULE-SET,个人直连,DIRECT,no-resolve
-  - RULE-SET,AppleService,Apple,no-resolve
-  - RULE-SET,Apple,Apple,no-resolve
-  - RULE-SET,Spotify,Spotify,no-resolve
-  - RULE-SET,Google,Google,no-resolve
-  - RULE-SET,GitHub,Proxy,no-resolve
-  - RULE-SET,Telegram,Telegram,no-resolve
-  - RULE-SET,Twitter,X,no-resolve
-  - RULE-SET,YouTube,YouTube,no-resolve
-  - RULE-SET,69emby,69emby,no-resolve
-  - DOMAIN,matrix.313445.xyz,embyTemp,no-resolve
-  - RULE-SET,Emby,Emby,no-resolve
-  - RULE-SET,Games,Games,no-resolve
+  - RULE-SET,个人代理,Proxy
+  - RULE-SET,个人直连,DIRECT
+  - RULE-SET,AppleService,Apple
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Google,Google
+  - RULE-SET,GitHub,Proxy
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,X
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,69emby,69emby
+  - DOMAIN,matrix.313445.xyz,embyTemp
+  - RULE-SET,Emby,Emby
+  - RULE-SET,Games,Games
   - RULE-SET,AI,AI,no-resolve
-  - GEOSITE,geolocation-!cn@cn,DIRECT,no-resolve
-  - GEOSITE,geolocation-!cn,Proxy,no-resolve
-  - GEOSITE,geolocation-cn@!cn,Proxy,no-resolve
-  - GEOSITE,geolocation-cn,DIRECT,no-resolve
-  - GEOSITE,tld-cn,DIRECT,no-resolve
-  - GEOIP,CN,DIRECT,no-resolve
-  - MATCH,Final,no-resolve
+  - GEOSITE,geolocation-!cn@cn,DIRECT
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,geolocation-cn@!cn,Proxy
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,tld-cn,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Final
 
 
   
