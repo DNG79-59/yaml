@@ -561,27 +561,31 @@ proxy-groups:
   - name: 69emby-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
     hidden: null
     tolerance: 100
+    timeout: 2
+    proxys:
+      - DIRECT
     use:
       - Subscribe
       - 69Emby
   - name: 69emby3-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
-    hidden: true
+    hidden: null
     tolerance: 100
+    timeout: 2
     use:
       - Subscribe
-      - 69Emby
+      - 69emby
   - name: embyTemp
     type: url-test
     include-all: true
@@ -596,6 +600,7 @@ proxy-groups:
   - lazy: true
     name: PROXY
     proxies:
+      - 自动选择
       - TaiWan
       - HongKong
       - Japan
@@ -603,13 +608,20 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - 自动选择
     type: fallback
     hidden: true
-
+  - name: 带宽优先 
+    type: url-test
+    include-all: true
+    url: "https://speed.cloudflare.com/__down?bytes=5000000"  # 10MB文件测速（更贴近实际下载）
+    interval: 600
+    timeout: 5        # 影音测速超时放宽到10秒
+    tolerance: 500
+    lazy: true
 
     
 # 规则引用
+rules:
   - GEOSITE,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
@@ -634,6 +646,8 @@ proxy-groups:
   - GEOIP,CN,DIRECT
   - MATCH,Final
 
+
+  
 rule-providers:
   AI:
     behavior: classical
