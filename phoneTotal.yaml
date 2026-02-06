@@ -71,6 +71,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
+      - 自动选择
       - HongKong
       - TaiWan
       - Japan
@@ -80,15 +81,17 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - DIRECT
-  - name: 手动选择
+  - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: select
-    # include-all: true
+    type: url-test
+    timeout: 3
+    tolerance: 150
+    include-all: false
     use:
       - Subscribe
     interval: 300
     lazy: true
-    strategy: consistent-hashing
+    # strategy: consistent-hashing
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: AI
     type: select
@@ -103,6 +106,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: YouTube
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
@@ -116,6 +120,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: NETFLIX
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
@@ -142,7 +147,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
       - DIRECT
   - name: TikTok
     type: select
@@ -197,7 +202,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
@@ -225,7 +230,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
       - DIRECT
   - name: Microsoft
     type: select
@@ -241,6 +246,7 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
+      - 自动选择
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
@@ -254,14 +260,14 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 手动选择
+      - 自动选择
       - DIRECT
   - name: 69emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
       - 69emby-Auto
-      - 手动选择
+      - 自动选择
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     use:
       - 69Emby
@@ -589,39 +595,37 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - 手动选择
+      - 自动选择
     type: fallback
     hidden: true
 
 
     
 # 规则引用
-rules:
   - GEOSITE,category-ads-all,REJECT
+  - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
-  - RULE-SET,AppleService,Apple,no-resolve
-  - RULE-SET,Apple,Apple,no-resolve
-  - RULE-SET,Spotify,Spotify,no-resolve
-  - RULE-SET,Google,Google,no-resolve
-  - RULE-SET,GitHub,Proxy,no-resolve
-  - RULE-SET,Telegram,Telegram,no-resolve
-  - RULE-SET,Twitter,X,no-resolve
-  - RULE-SET,YouTube,YouTube,no-resolve
+  - RULE-SET,AppleService,Apple
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Google,Google
+  - RULE-SET,GitHub,Proxy
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,X
+  - RULE-SET,YouTube,YouTube
   - RULE-SET,69emby,69emby
   - DOMAIN,matrix.313445.xyz,embyTemp
-  - RULE-SET,Emby,Emby,no-resolve
-  - RULE-SET,Games,Games,no-resolve
-  - RULE-SET,AI,AI,no-resolve
+  - RULE-SET,Emby,Emby
+  - RULE-SET,Games,Games
+  - RULE-SET,AI,AI
   - GEOSITE,geolocation-!cn@cn,DIRECT
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,geolocation-cn@!cn,Proxy
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,tld-cn,DIRECT
-  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT
   - MATCH,Final
 
-
-  
 rule-providers:
   AI:
     behavior: classical
