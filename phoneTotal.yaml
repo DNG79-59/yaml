@@ -6,7 +6,7 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   ipv6: true
-  use-hosts: false
+  use-hosts: true
   use-system-hosts: false
   nameserver:
     - https://223.6.6.6/dns-query
@@ -267,6 +267,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
       - 69emby-Auto
+      - 69emby3-Auto
       - 自动选择
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
     use:
@@ -574,6 +575,7 @@ proxy-groups:
     tolerance: 100
     use:
       - Subscribe
+      - 69Emby
   - name: embyTemp
     type: url-test
     include-all: true
