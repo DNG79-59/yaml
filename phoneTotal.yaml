@@ -7,7 +7,7 @@ dns:
   listen: 0.0.0.0:53
   ipv6: true
   use-hosts: true
-  use-system-hosts: false
+  use-system-hosts: true
   nameserver:
     - https://223.6.6.6/dns-query
   fallback:
