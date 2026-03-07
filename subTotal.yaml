@@ -625,7 +625,7 @@ proxy-groups:
     
 # 规则引用
 rules:
-  - GEOSITE,BanAD,REJECT
+  - RULE-SET,BanAD,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
   - RULE-SET,AppleService,Apple
