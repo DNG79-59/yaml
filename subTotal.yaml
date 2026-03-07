@@ -602,7 +602,7 @@ proxy-groups:
     url: "https://emby1.69yun69.com"
     interval: 300
     lazy: true
-    hidden: null
+    hidden: false
     tolerance: 100
     timeout: 2
     proxys:
@@ -617,7 +617,7 @@ proxy-groups:
     url: "https://emby3.69yun69.com"
     interval: 300
     lazy: true
-    hidden: null
+    hidden: false
     tolerance: 100
     timeout: 2
     use:
@@ -678,7 +678,7 @@ rules:
   - RULE-SET,AI,AI
   - RULE-SET,geolocation-cn,DIRECT
   - RULE-SET,tld-cn,DIRECT
-  - RULE-SET,geo-ip-cn,DIRECT,no-reslove
+  - RULE-SET,geo-ip-cn,DIRECT
   - RULE-SET,geolocation-not-cn,Proxy
   - MATCH,Final
 
