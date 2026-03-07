@@ -642,12 +642,12 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
   - RULE-SET,AI,AI
-  - RULE-SET,geolocation-!cn@cn,DIRECT
-  - RULE-SET,geolocation-!cn,Proxy
-  - RULE-SET,geolocation-cn@!cn,Proxy
-  - RULE-SET,geolocation-cn,DIRECT
-  - RULE-SET,tld-cn,DIRECT
-  - RULE-SET,CN,DIRECT
+  - GEOSITE,geolocation-!cn@cn,DIRECT
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,geolocation-cn@!cn,Proxy
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,tld-cn,DIRECT
+  - GEOIP,CN,DIRECT
   - MATCH,Final
 
 
