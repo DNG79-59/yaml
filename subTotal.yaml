@@ -642,12 +642,12 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
   - RULE-SET,AI,AI
-  - GEOSITE,geolocation-!cn@cn,DIRECT
-  - GEOSITE,geolocation-!cn,Proxy
-  - GEOSITE,geolocation-cn@!cn,Proxy
-  - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,tld-cn,DIRECT
-  - GEOIP,CN,DIRECT
+  - RULE-SET,geolocation-!cn@cn,DIRECT
+  - RULE-SET,geolocation-!cn,Proxy
+  - RULE-SET,geolocation-cn@!cn,Proxy
+  - RULE-SET,geolocation-cn,DIRECT
+  - RULE-SET,tld-cn,DIRECT
+  - RULE-SET,CN,DIRECT
   - MATCH,Final
 
 
@@ -785,6 +785,34 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+  # 对应 GEOSITE,geolocation-cn
+  geo-site-cn:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/geolocation-cn.txt
+    path: ./rules/geo-site-cn.yaml
+    interval: 86400
+  # 对应 GEOSITE,geolocation-!cn
+  geo-site-not-cn:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/geolocation-!cn.txt
+    path: ./rules/geo-site-not-cn.yaml
+    interval: 86400
+  # 对应 GEOSITE,tld-cn
+  geo-site-tld-cn:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-cn.txt
+    path: ./rules/geo-site-tld-cn.yaml
+    interval: 86400
+  # 对应 GEOIP,CN
+  geo-ip-cn:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/geoip-cn.txt
+    path: ./rules/geo-ip-cn.yaml
+    interval: 86400
   个人直连:
     behavior: classical
     format: text
