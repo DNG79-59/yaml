@@ -85,7 +85,7 @@ proxy-providers:
     path: ./proxy_providers/69Emby.yaml     # 新增
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
-  TempEmby:
+  tempEmby:
     type: http
     url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby # 用你的订阅链接替换
     interval: 7200
@@ -630,10 +630,10 @@ proxy-groups:
     url: "https://matrix.313445.xyz"
     interval: 300
     lazy: true
-    hidden: true
+    hidden: false
     tolerance: 100
     use:
-      - Subscribe
+      - tempEmby
   - lazy: true
     name: PROXY
     proxies:
