@@ -677,12 +677,6 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Emby.list
-  TikTok:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://whatshub.top/rule/TikTok.list
   Bahamut:
     behavior: classical
     format: text
