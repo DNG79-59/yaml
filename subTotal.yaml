@@ -90,7 +90,7 @@ proxy-providers:
     url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby # 用你的订阅链接替换
     interval: 7200
     path: ./proxy_providers/TempEmby.yaml   # 新增
-    benchmark-url: https://matrix.313445.xyz
+    benchmark-url: https://emby3.69yun69.com
     benchmark-timeout: 5
     # 功能分组
 proxy-groups:
@@ -672,7 +672,7 @@ rules:
   - RULE-SET,Twitter,X
   - RULE-SET,YouTube,YouTube
   - RULE-SET,69emby,69emby
-  - DOMAIN,matrix.313445.xyz,embyTemp
+  - DOMAIN,emby3.69yun69.com,embyTemp
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
   - RULE-SET,AI,AI
