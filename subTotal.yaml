@@ -360,6 +360,10 @@ proxy-groups:
     use:
       - Subscribe
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: GLOBAL
+    type: select
+    proxies:
+      - Proxy
   - name: HK-Auto
     type: url-test
     hidden: true
@@ -625,7 +629,7 @@ proxy-groups:
     
 # 规则引用
 rules:
-  - RULE-SET,BanAD,REJECT
+  - RULE-SET,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
   - RULE-SET,AppleService,Apple
@@ -649,18 +653,18 @@ rules:
   - MATCH,Final
 
 rule-providers:
-  BanAD:
-    behavior: classical
+  category-ads-all:
+    behavior: domain
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ads-all.list
   AI:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/AI.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.list
   YouTube:
     behavior: classical
     format: text
@@ -679,42 +683,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Emby.list
-  Bahamut:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Bahamut.list
-  BiliIntl:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/BiliBiliIntl.list
-  bilibili:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/bilibili.list
   Spotify:
     behavior: classical
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Spotify.list
-  NetEaseMusic:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/NetEaseMusic.list
-  WeChat:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/WeChat.list
   TikTok:
     behavior: classical
     format: text
@@ -768,19 +742,15 @@ rule-providers:
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Game.list
-  CN_Mainland:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/ChinaDomain.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games-!cn.list
+
   proxyGFW:
-    behavior: domain
-    format: yaml
-    interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    behavior: domain
+    format: text
+    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
   
   geolocation-cn:
     type: http
