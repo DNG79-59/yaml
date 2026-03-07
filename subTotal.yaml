@@ -642,16 +642,12 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
   - RULE-SET,AI,AI
-  - GEOSITE,geolocation-!cn@cn,DIRECT
-  - GEOSITE,geolocation-!cn,Proxy
-  - GEOSITE,geolocation-cn@!cn,Proxy
-  - GEOSITE,geolocation-cn,DIRECT
-  - GEOSITE,tld-cn,DIRECT
-  - GEOIP,CN,DIRECT
+  - RULE-SET,geolocation-cn,DIRECT
+  - RULE-SET,tld-cn,DIRECT
+  - RULE-SET,geo-ip-cn,DIRECT
+  - RULE-SET,geolocation-not-cn,Proxy
   - MATCH,Final
 
-
-  
 rule-providers:
   BanAD:
     behavior: classical
@@ -785,32 +781,35 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
-  # 对应 GEOSITE,geolocation-cn
-  geo-site-cn:
+  
+  geolocation-cn:
     type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/geolocation-cn.txt
-    path: ./rules/geo-site-cn.yaml
+    behavior: domain
+    format: yaml
     interval: 86400
-  # 对应 GEOSITE,geolocation-!cn
-  geo-site-not-cn:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.yaml
+    path: ./ruleset/geolocation-cn.yaml
+
+  geolocation-not-cn:
     type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/geolocation-!cn.txt
-    path: ./rules/geo-site-not-cn.yaml
+    behavior: domain
+    format: yaml
     interval: 86400
-  # 对应 GEOSITE,tld-cn
-  geo-site-tld-cn:
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+
+  tld-cn:
     type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-cn.txt
-    path: ./rules/geo-site-tld-cn.yaml
+    behavior: domain
+    format: yaml
     interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tld-cn.yaml
+    path: ./ruleset/tld-cn.yaml
   # 对应 GEOIP,CN
   geo-ip-cn:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/geoip-cn.txt
+    url: https://raw.githubusercontent.com/Loyalsoldier/geoip/refs/heads/release/text/cn.txt
     path: ./rules/geo-ip-cn.yaml
     interval: 86400
   个人直连:
