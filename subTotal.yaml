@@ -768,7 +768,7 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Microsoft.list
   Games:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
@@ -779,7 +779,6 @@ rule-providers:
     behavior: domain
     format: text
     url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/gfw.txt
-    path: ./ruleset/gfw.yaml
     interval: 86400
   
   geolocation-cn:
@@ -789,7 +788,6 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.yaml
     path: ./ruleset/geolocation-cn.yaml
-
   geolocation-not-cn:
     type: http
     behavior: domain
@@ -797,7 +795,6 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml
     path: ./ruleset/geolocation-!cn.yaml
-
   tld-cn:
     type: http
     behavior: domain
@@ -810,7 +807,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     url: https://raw.githubusercontent.com/Loyalsoldier/geoip/refs/heads/release/text/cn.txt
-    path: ./rules/geo-ip-cn.yaml
+    path: ./rules/geo-ip-cn.txt
     interval: 86400
   个人直连:
     behavior: classical
