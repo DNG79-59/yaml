@@ -633,6 +633,7 @@ rules:
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Google,Google
   - RULE-SET,GitHub,Proxy
+  - RULE-SET,TikTok,TikTok
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Twitter,X
   - RULE-SET,YouTube,YouTube
@@ -718,6 +719,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/WeChat.list
+  TikTok:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://yfamilys.com/rule/TikTok.list
   Telegram:
     behavior: classical
     format: text
