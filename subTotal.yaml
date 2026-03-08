@@ -671,8 +671,8 @@ rules:
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Twitter,X
   - RULE-SET,YouTube,YouTube
-  - RULE-SET,69emby,69emby
   - DOMAIN,emby3.69yun69.com,embyTemp
+  - RULE-SET,69emby,69emby
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
   - RULE-SET,AI,AI
