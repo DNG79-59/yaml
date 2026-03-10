@@ -806,6 +806,7 @@ rule-providers:
   geo-ip-cn:
     type: http
     behavior: ipcidr
+    format: text
     url: https://raw.githubusercontent.com/Loyalsoldier/geoip/refs/heads/release/text/cn.txt
     path: ./rules/geo-ip-cn.txt
     interval: 86400
