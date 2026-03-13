@@ -301,6 +301,21 @@ proxy-groups:
       - AllServer
       - 自动选择
       - DIRECT
+  - name: Whatsapp
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
+    proxies:
+      - HongKong
+      - Proxy
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
   - name: 69emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
@@ -671,6 +686,7 @@ rules:
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Twitter,X
   - RULE-SET,YouTube,YouTube
+  - RULE-SET,Whatsapp,Whatsapp
   - DOMAIN,emby3.69yun69.com,embyTemp
   - RULE-SET,69emby,69emby
   - RULE-SET,Emby,Emby
@@ -767,6 +783,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Microsoft.list
+  Whatsapp:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://yfamilys.com/rule/Whatsapp.list
   Games:
     behavior: domain
     format: text
