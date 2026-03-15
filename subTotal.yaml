@@ -13,63 +13,26 @@ dns:
   use-hosts: false
   use-system-hosts: false
 
-  # 启动阶段解析 DNS 服务器本身
   default-nameserver:
     - 223.5.5.5
-    - 1.1.1.1
+    - 119.29.29.29
 
-  # 国内 DNS（优先）
   nameserver:
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+
+  fallback:
     - https://223.5.5.5/dns-query
     - https://119.29.29.29/dns-query
-
-  # 国外 DNS（fallback）
-  fallback:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-    - https://dns.google/dns-query
 
   fallback-filter:
     geoip: true
     geoip-code: CN
 
-    # 防止异常IP
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-
-    # 国外域名直接走 fallback
-    domain:
-      - +.google.com
-      - +.facebook.com
-      - +.youtube.com
-      - +.twitter.com
-      - +.github.com
-      - +.wikipedia.org
-      - +.cloudflare.com
-      - +.openai.com
-      - +.telegram.org
-      - +.discord.com
-
-  # 根据规则决定 DNS
-  follow-rule: true
-
   respect-rules: true
 
-  fake-ip-filter:
-    - "*.lan"
-    - "*.local"
-    - time.*.com
-    - ntp.*.com
-    - "*.ntp.org"
-
-  # 节点解析 DNS（防止节点域名被污染）
   proxy-server-nameserver:
     - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-
-  direct-nameserver:
-    - https://223.5.5.5/dns-query
 proxy-providers:
   Subscribe:
     type: http
