@@ -16,40 +16,38 @@ tun:
 dns:
   enable: true
   listen: 0.0.0.0:53
+  ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-
-  # 1. 必须是纯 IP，用于解析 DoH/DoT 域名，防止死循环
+  
+  # 仅用于解析 DNS 服务器的域名，严禁放过多地址
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
 
-  # 2. 国内域名解析，建议混合 UDP 和 DoH
+  # 只有命中直连列表或 GeoIP-CN 的才走这里
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
     - https://223.5.5.5/dns-query
+    - https://119.29.29.29/dns-query
 
-  # 3. 专门解析代理服务器域名
-  proxy-server-nameserver:
-    - 223.5.5.5
-    - https://dns.google/dns-query
-
-  # 4. 海外域名解析 (必须开启，防止 DNS 污染影响分流)
+  # 只有非 CN 域名才走这里，且强制走加密协议
   fallback:
-    - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
-    - tls://8.8.8.8
+    - https://1.1.1.1/dns-query
+    - tls://dns.google
 
-  # 只有当域名不属于国内 GeoIP 时，才采用 fallback 的结果
+  # 核心防泄露开关
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+  
+  # 严格的分流逻辑
+  follow-rules: true
+  respect-rules: true
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-
-  respect-rules: true
-  follow-rules: true
 proxy-providers:
   Subscribe:
     type: http
@@ -104,7 +102,6 @@ proxy-groups:
     use:
       - Subscribe
     interval: 300
-    lazy: true
     # strategy: consistent-hashing
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: AI
