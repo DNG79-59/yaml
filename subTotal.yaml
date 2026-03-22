@@ -1,31 +1,52 @@
 # 通用设置
 mode: rule
 log-level: error
-# DNS模块
+ipv6: false
+
+# TUN 模块 - 针对 OpenClash 和 Mihomo 优化
 tun:
   enable: true
-  stack: system
+  stack: system # 兼容性最强的选择
+  auto-route: true
+  auto-detect-interface: true
   dns-hijack:
     - any:53
+
+# DNS 模块 - 核心兼容性逻辑
 dns:
   enable: true
   listen: 0.0.0.0:53
-  ipv6: false
-
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 
+  # 1. 必须是纯 IP，用于解析 DoH/DoT 域名，防止死循环
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
 
+  # 2. 国内域名解析，建议混合 UDP 和 DoH
   nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
     - https://223.5.5.5/dns-query
-    - https://119.29.29.29/dns-query
 
+  # 3. 专门解析代理服务器域名
   proxy-server-nameserver:
-    - https://1.1.1.1/dns-query
+    - 223.5.5.5
     - https://dns.google/dns-query
+
+  # 4. 海外域名解析 (必须开启，防止 DNS 污染影响分流)
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - tls://8.8.8.8
+
+  # 只有当域名不属于国内 GeoIP 时，才采用 fallback 的结果
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
 
   respect-rules: true
 proxy-providers:
