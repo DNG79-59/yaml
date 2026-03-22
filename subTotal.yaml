@@ -49,6 +49,7 @@ dns:
       - 240.0.0.0/4
 
   respect-rules: true
+  follow-rules: true
 proxy-providers:
   Subscribe:
     type: http
