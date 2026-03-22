@@ -27,7 +27,7 @@ dns:
 
   # 只有命中直连列表或 GeoIP-CN 的才走这里
   nameserver:
-    - 223.6.6.6
+    - https://223.6.6.6/dns-query
     - https://119.29.29.29/dns-query
 
   # 只有非 CN 域名才走这里，且强制走加密协议
