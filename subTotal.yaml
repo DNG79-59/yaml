@@ -97,7 +97,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     timeout: 3
-    tolerance: 150
+    # tolerance: 50
     include-all: false
     use:
       - Subscribe
@@ -582,11 +582,7 @@ proxy-groups:
     lazy: true
     use:
       - Subscribe
-
-
 #自己写的自动测速
-
-
   - name: 69emby-Auto
     type: url-test
     include-all: true
@@ -651,13 +647,17 @@ proxy-groups:
     
 # 规则引用
 rules:
+  - IP-CIDR,1.1.1.1/32,Proxy,no-resolve
+  - IP-CIDR,8.8.8.8/32,Proxy,no-resolve
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
+  - RULE-SET,AI,AI
   - RULE-SET,AppleService,Apple
   - RULE-SET,Apple,Apple
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Google,Google
+  - RULE-SET,Microsoft,Microsoft
   - RULE-SET,GitHub,Proxy
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Telegram,Telegram
@@ -668,7 +668,6 @@ rules:
   - RULE-SET,69emby,69emby
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
-  - RULE-SET,AI,AI
   - RULE-SET,geolocation-cn,DIRECT
   - RULE-SET,tld-cn,DIRECT
   - RULE-SET,geo-ip-cn,DIRECT
@@ -713,11 +712,12 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Spotify.list
   TikTok:
-    behavior: classical
-    format: text
-    interval: 86400
     type: http
-    url: https://yfamilys.com/rule/TikTok.list
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.yaml
+    path: ./ruleset/tiktok.yaml
+    interval: 86400
   Telegram:
     behavior: classical
     format: text
@@ -761,11 +761,10 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Microsoft.list
   Whatsapp:
-    behavior: classical
-    format: text
-    interval: 86400
     type: http
-    url: https://yfamilys.com/rule/Whatsapp.list
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.yaml
   Games:
     behavior: domain
     format: text
