@@ -1,76 +1,34 @@
-# 通用设置
 mode: rule
-log-level: error
-ipv6: false
-
-# TUN 模块 - 针对 OpenClash 和 Mihomo 优化
-tun:
-  enable: true
-  stack: system # 兼容性最强的选择
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - any:53
-
-# DNS 模块 - 核心兼容性逻辑
+log-level: info
+ipv6: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  
-  # 仅用于解析 DNS 服务器的域名，严禁放过多地址
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-
-  # 只有命中直连列表或 GeoIP-CN 的才走这里
   nameserver:
-    - https://223.6.6.6/dns-query
-    - https://119.29.29.29/dns-query
-
-  # 只有非 CN 域名才走这里，且强制走加密协议
-  fallback:
-    - https://8.8.8.8/dns-query
-    - https://1.1.1.1/dns-query
-    - tls://dns.google
-
-  # 核心防泄露开关
-  proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
-  
-  # 严格的分流逻辑
-  respect-rules: true
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-  follow-rule: true
+    - 223.5.5.5
 proxy-providers:
   Subscribe:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL # 用你的订阅链接替换
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
     interval: 7200
-    path: ./proxy_providers/Subscribe.yaml  # 新增
+    path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
   69Emby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby # 用你的订阅链接替换
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby
     interval: 7200
-    path: ./proxy_providers/69Emby.yaml     # 新增
+    path: ./proxy_providers/69Emby.yaml
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
   tempEmby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby # 用你的订阅链接替换
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby
     interval: 7200
-    path: ./proxy_providers/TempEmby.yaml   # 新增
+    path: ./proxy_providers/TempEmby.yaml
     benchmark-url: https://emby3.69yun69.com
     benchmark-timeout: 5
-    # 功能分组
 proxy-groups:
   - name: Final
     type: select
@@ -97,12 +55,10 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     timeout: 3
-    # tolerance: 50
     include-all: false
     use:
       - Subscribe
     interval: 300
-    # strategy: consistent-hashing
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: AI
     type: select
@@ -304,7 +260,6 @@ proxy-groups:
     use:
       - 69Emby
       - Subscribe
-  # 基于地区分组
   - name: HongKong
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -362,7 +317,8 @@ proxy-groups:
       - US-Auto
       - US-FallBack
       - US-LoadBalance
-    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United
+      States
     use:
       - Subscribe
   - name: UnitedKingdom
@@ -378,7 +334,6 @@ proxy-groups:
   - name: AllServer
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
-    # include-all: true
     use:
       - Subscribe
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
@@ -582,18 +537,17 @@ proxy-groups:
     lazy: true
     use:
       - Subscribe
-#自己写的自动测速
   - name: 69emby-Auto
     type: url-test
     include-all: true
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
-    url: "https://emby1.69yun69.com"
+    url: https://emby1.69yun69.com
     interval: 300
     lazy: true
     hidden: false
     tolerance: 100
     timeout: 2
-    proxys:
+    proxies:
       - DIRECT
     use:
       - Subscribe
@@ -602,7 +556,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
-    url: "https://emby3.69yun69.com"
+    url: https://emby3.69yun69.com
     interval: 300
     lazy: true
     hidden: false
@@ -615,7 +569,7 @@ proxy-groups:
     type: url-test
     include-all: true
     filter: (?i)tempEmby
-    url: "https://matrix.313445.xyz"
+    url: https://matrix.313445.xyz
     interval: 300
     lazy: true
     hidden: false
@@ -635,23 +589,18 @@ proxy-groups:
       - UnitedKingdom
     type: fallback
     hidden: true
-  - name: 带宽优先 
+  - name: 带宽优先
     type: url-test
     include-all: true
-    url: "https://speed.cloudflare.com/__down?bytes=5000000"  # 10MB文件测速（更贴近实际下载）
+    url: https://speed.cloudflare.com/__down?bytes=5000000
     interval: 600
-    timeout: 5        # 影音测速超时放宽到10秒
+    timeout: 5
     tolerance: 500
     lazy: true
-
-    
-# 规则引用
 rules:
-  - IP-CIDR,1.1.1.1/32,Proxy,no-resolve
-  - IP-CIDR,8.8.8.8/32,Proxy,no-resolve
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
-  - RULE-SET,个人直连,DIRECT
+  - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,AI,AI
   - RULE-SET,AppleService,Apple
   - RULE-SET,Apple,Apple
@@ -668,12 +617,11 @@ rules:
   - RULE-SET,69emby,69emby
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
-  - RULE-SET,geolocation-cn,DIRECT
-  - RULE-SET,tld-cn,DIRECT
-  - RULE-SET,geo-ip-cn,DIRECT
+  - RULE-SET,geolocation-cn,DIRECT,no-resolve
+  - RULE-SET,tld-cn,DIRECT,no-resolve
+  - RULE-SET,geo-ip-cn,DIRECT,no-resolve
   - RULE-SET,geolocation-not-cn,Proxy
   - MATCH,Final
-
 rule-providers:
   category-ads-all:
     behavior: domain
@@ -771,14 +719,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games-!cn.list
-
   proxyGFW:
     type: http
     behavior: domain
     format: text
     url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/gfw.txt
     interval: 86400
-  
   geolocation-cn:
     type: http
     behavior: domain
@@ -800,7 +746,6 @@ rule-providers:
     interval: 86400
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tld-cn.yaml
     path: ./ruleset/tld-cn.yaml
-  # 对应 GEOIP,CN
   geo-ip-cn:
     type: http
     behavior: ipcidr
@@ -832,3 +777,44 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+external-controller: ""
+mixed-port: 7890
+socks-port: 7891
+port: 7892
+redir-port: 0
+tproxy-port: 0
+allow-lan: false
+unified-delay: true
+tcp-concurrent: false
+find-process-mode: strict
+bind-address: "*"
+lan-allowed-ips:
+  - 0.0.0.0/0
+  - ::/0
+lan-disallowed-ips: []
+authentication: []
+skip-auth-prefixes:
+  - 127.0.0.1/32
+  - ::1/128
+tun:
+  enable: true
+  device: Mihomo
+  stack: mixed
+  auto-route: true
+  auto-redirect: false
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+  route-exclude-address: []
+  mtu: 1500
+profile:
+  store-selected: true
+  store-fake-ip: true
+geo-auto-update: false
+geo-update-interval: 24
+geodata-mode: false
+geox-url:
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
+  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
+  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
