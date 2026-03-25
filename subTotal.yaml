@@ -587,7 +587,6 @@ rules:
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,AI,AI
-  - RULE-SET,AppleService,Apple
   - RULE-SET,Apple,Apple
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Google,Google
