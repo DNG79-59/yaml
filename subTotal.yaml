@@ -587,6 +587,7 @@ rules:
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,AI,AI
+  - RULE-SET,AppleService,Apple
   - RULE-SET,Apple,Apple
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Google,Google
@@ -661,6 +662,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.yaml
+  AppleService:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
   Apple:
     behavior: domain
     format: text
