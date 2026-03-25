@@ -668,12 +668,6 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
-  AppleService:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
   Google:
     behavior: domain
     format: yaml
