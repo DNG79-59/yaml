@@ -6,3 +6,4 @@ DOMAIN-SUFFIX,59wanmei.com
 DOMAIN-SUFFIX,17wanxiao.com
 DOMAIN,updates.cdn-apple.com
 DOMAIN-SUFFIX,aihuoshi.net
+DOMAIN-SUFFIX,hsmap.com
