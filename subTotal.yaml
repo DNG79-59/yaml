@@ -34,8 +34,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - DIRECT
       - Proxy
+      - DIRECT
   - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -102,21 +102,6 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - 自动选择
-  - name: Emby
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-    proxies:
-      - 自动选择
-      - Proxy
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
-      - DIRECT
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
@@ -615,13 +600,12 @@ rules:
   - RULE-SET,Whatsapp,Whatsapp
   - DOMAIN,emby3.69yun69.com,embyTemp
   - RULE-SET,69emby,69emby
-  - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
   - RULE-SET,geolocation-cn,DIRECT,no-resolve
   - RULE-SET,tld-cn,DIRECT,no-resolve
-  - RULE-SET,geo-ip-cn,DIRECT,no-resolve
   - RULE-SET,geolocation-not-cn,Proxy
-  - RULE-SET,lan-ip,DIRECT,no-resolve
+  - RULE-SET,geo-ip-cn,DIRECT
+  - RULE-SET,lan-ip,DIRECT
   - MATCH,Final
 rule-providers:
   category-ads-all:
@@ -637,54 +621,47 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.list
   YouTube:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/YouTube.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
   Netflix:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Netflix.list
-  Emby:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Emby.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
   Spotify:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Spotify.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.yaml
   TikTok:
     type: http
     behavior: domain
     format: yaml
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.yaml
-    path: ./ruleset/tiktok.yaml
     interval: 86400
   Telegram:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Telegram.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml
   GitHub:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Github.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml
   Twitter:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Twitter.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.yaml
   Apple:
     behavior: domain
     format: text
@@ -698,17 +675,17 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
   Google:
-    behavior: classical
-    format: text
+    behavior: domain
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Google.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
   Microsoft:
     behavior: classical
-    format: text
+    format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Stash/Rules/Microsoft.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.yaml
   Whatsapp:
     type: http
     behavior: domain
@@ -762,67 +739,26 @@ rule-providers:
     path: ./ruleset/lan-ip.txt  # 本地缓存路径
     interval: 86400  # 每天更新一次
   个人直连:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
   个人代理:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
   个人emby:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
   69emby:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
-external-controller: ""
-mixed-port: 7890
-socks-port: 7891
-port: 7892
-redir-port: 0
-tproxy-port: 0
-allow-lan: false
-unified-delay: true
-tcp-concurrent: false
-find-process-mode: strict
-bind-address: "*"
-lan-allowed-ips:
-  - 0.0.0.0/0
-  - ::/0
-lan-disallowed-ips: []
-authentication: []
-skip-auth-prefixes:
-  - 127.0.0.1/32
-  - ::1/128
-tun:
-  enable: true
-  device: Mihomo
-  stack: mixed
-  auto-route: true
-  auto-redirect: false
-  auto-detect-interface: true
-  dns-hijack:
-    - any:53
-  route-exclude-address: []
-  mtu: 1500
-profile:
-  store-selected: true
-  store-fake-ip: true
-geo-auto-update: false
-geo-update-interval: 24
-geodata-mode: false
-geox-url:
-  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
-  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
-  mmdb: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.metadb
-  asn: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb
