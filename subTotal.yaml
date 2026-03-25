@@ -621,6 +621,7 @@ rules:
   - RULE-SET,tld-cn,DIRECT,no-resolve
   - RULE-SET,geo-ip-cn,DIRECT,no-resolve
   - RULE-SET,geolocation-not-cn,Proxy
+  - RULE-SET,lan-ip,DIRECT,no-resolve
   - MATCH,Final
 rule-providers:
   category-ads-all:
@@ -753,6 +754,13 @@ rule-providers:
     url: https://raw.githubusercontent.com/Loyalsoldier/geoip/refs/heads/release/text/cn.txt
     path: ./rules/geo-ip-cn.txt
     interval: 86400
+  lan-ip:
+    type: http
+    format: yaml
+    behavior: ipcidr  # 必须是ipcidr，匹配IP段
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lan-ip.txt  # 本地缓存路径
+    interval: 86400  # 每天更新一次
   个人直连:
     behavior: classical
     format: text
