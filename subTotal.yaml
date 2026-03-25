@@ -681,7 +681,7 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
   Microsoft:
-    behavior: classical
+    behavior: domain
     format: yaml
     interval: 86400
     type: http
