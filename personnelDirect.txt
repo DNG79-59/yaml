@@ -1,3 +1,6 @@
+DOMAIN,steamcdn-a.akamaihd.net
+DOMAIN-SUFFIX,cm.steampowered.com
+DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,api.wizconnected.cn
 DOMAIN-SUFFIX,sodalife.xyz
 DOMAIN-SUFFIX,hnnx.com
