@@ -1,5 +1,5 @@
 mode: rule
-log-level: info
+log-level: warning
 ipv6: true
 dns:
   enable: true
@@ -238,6 +238,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
+      - 69emby-LoadBalance   # 新增的负载均衡
       - 69emby-Auto
       - 自动选择
       - DIRECT
@@ -550,15 +551,24 @@ proxy-groups:
     use:
       - Subscribe
       - 69emby
+  - name: 69emby-LoadBalance
+    type: load-balance
+    strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
+    url: https://emby1.69yun69.com
+    interval: 300
+    hidden: true
+    use:
+      - 69Emby
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
   - name: embyTemp
-    type: url-test
+    type: load-balance
     include-all: true
     filter: (?i)tempEmby
-    url: https://matrix.313445.xyz
-    interval: 300
-    lazy: true
+    # url: https://matrix.313445.xyz
+    # interval: 300
+    # lazy: true
     hidden: false
-    tolerance: 100
+    # tolerance: 100
     use:
       - tempEmby
   - lazy: true
@@ -585,13 +595,15 @@ proxy-groups:
 rules:
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
-  - RULE-SET,个人直连,DIRECT,no-resolve
+  - RULE-SET,个人直连,DIRECT
   - RULE-SET,AI,AI
-  - RULE-SET,AppleService,Apple
+  - RULE-SET,Apple@cn,DIRECT
+  - RULE-SET,AppleService,Apple,no-resolve
   - RULE-SET,Apple,Apple
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Google,Google
   - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Steam@cn,DIRECT
   - RULE-SET,GitHub,Proxy
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Telegram,Telegram
@@ -600,7 +612,7 @@ rules:
   - RULE-SET,Whatsapp,Whatsapp
   - DOMAIN,emby3.69yun69.com,embyTemp
   - RULE-SET,69emby,69emby
-  - RULE-SET,Steam@cn,DIRECT
+  - RULE-SET,GameDownload,DIRECT
   - RULE-SET,Games,Games
   - RULE-SET,geolocation-cn,DIRECT,no-resolve
   - RULE-SET,tld-cn,DIRECT,no-resolve
@@ -669,6 +681,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
+  Apple@cn:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
   Apple:
     behavior: domain
     format: text
@@ -692,11 +710,19 @@ rule-providers:
     behavior: domain
     format: yaml
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.yaml
+    interval: 86400
   Steam@cn:
     type: http
-    behavior: domain
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
+  GameDownload:
+    type: http
+    behavior: classical
     format: yaml
-    url: https://cdn.jsdelivr.net/gh/Femoon/clash-rules/steam.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
+    interval: 86400
   Games:
     behavior: domain
     format: text
@@ -745,25 +771,25 @@ rule-providers:
     path: ./ruleset/lan-ip.txt  # 本地缓存路径
     interval: 86400  # 每天更新一次
   个人直连:
-    behavior: domain
+    behavior: classical
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
   个人代理:
-    behavior: domain
+    behavior: classical
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
   个人emby:
-    behavior: domain
+    behavior: classical
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
   69emby:
-    behavior: domain
+    behavior: classical
     format: text
     interval: 86400
     type: http
