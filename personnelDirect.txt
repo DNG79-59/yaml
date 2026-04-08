@@ -11,3 +11,4 @@ DOMAIN,updates.cdn-apple.com
 DOMAIN-SUFFIX,aihuoshi.net
 DOMAIN-SUFFIX,hsmap.com
 DOMAIN-SUFFIX,vicp.fun
+DOMAIN-SUFFIX,checkhere.top
