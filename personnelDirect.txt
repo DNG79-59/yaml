@@ -12,3 +12,4 @@ DOMAIN-SUFFIX,aihuoshi.net
 DOMAIN-SUFFIX,hsmap.com
 DOMAIN-SUFFIX,vicp.fun
 DOMAIN-SUFFIX,checkhere.top
+DOMAIN-SUFFIX,vicp.fun
