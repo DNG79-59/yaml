@@ -607,6 +607,7 @@ rules:
   - RULE-SET,GitHub,Proxy
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Telegram,Telegram
+  - RULE-SET,telegramcidr,Telegram,no-resolve
   - RULE-SET,Twitter,X
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Whatsapp,Whatsapp
@@ -663,6 +664,12 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
   GitHub:
     behavior: domain
     format: yaml
