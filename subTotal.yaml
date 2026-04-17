@@ -610,7 +610,7 @@ rules:
   - RULE-SET,Twitter,X
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Whatsapp,Whatsapp
-  - RULE-SET,Tempemby.69yun69.com,embyTemp
+  - RULE-SET,Tempemby,embyTemp
   - RULE-SET,69emby,69emby
   - RULE-SET,GameDownload,DIRECT
   - RULE-SET,Games,Games
@@ -783,7 +783,7 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
   Tempemby:
-    behavior: classical
+    behavior: domain
     format: yaml
     interval: 86400
     type: http
