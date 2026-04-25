@@ -1,0 +1,816 @@
+mode: rule
+log-level: warning
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  nameserver:
+    - system
+    - 223.6.6.6
+proxy-providers:
+  Subscribe:
+    type: http
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
+    interval: 7200
+    path: ./proxy_providers/Subscribe.yaml
+    benchmark-url: http://cp.cloudflare.com
+    benchmark-timeout: 2
+  69Emby:
+    type: http
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby
+    interval: 7200
+    path: ./proxy_providers/69Emby.yaml
+    benchmark-url: https://emby1.69yun69.com
+    benchmark-timeout: 1
+  tempEmby:
+    type: http
+    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby
+    interval: 7200
+    path: ./proxy_providers/TempEmby.yaml
+    benchmark-url: https://emby3.69yun69.com
+    benchmark-timeout: 5
+proxy-groups:
+  - name: Final
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    proxies:
+      - Proxy
+      - DIRECT
+  - name: Proxy
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    proxies:
+      - 自动选择
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 带宽优先
+      - DIRECT
+  - name: 自动选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    type: url-test
+    timeout: 3
+    include-all: false
+    use:
+      - Subscribe
+    interval: 300
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: AI
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+    proxies:
+      - AllServer
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - 自动选择
+  - name: YouTube
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    proxies:
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: NETFLIX
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+    proxies:
+      - America
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: TikTok
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    proxies:
+      - HongKong
+      - Proxy
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Spotify
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    proxies:
+      - Singapore
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: Telegram
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+    proxies:
+      - Singapore
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: X
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
+    proxies:
+      - Japan
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+    proxies:
+      - America
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: Microsoft
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Games
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    proxies:
+      - HongKong
+      - Proxy
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: Whatsapp
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
+    proxies:
+      - HongKong
+      - Proxy
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: 69emby
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+    proxies:
+      - 69emby-LoadBalance   # 新增的负载均衡
+      - 69emby-Auto
+      - 自动选择
+      - DIRECT
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
+    use:
+      - 69Emby
+      - Subscribe
+  - name: HongKong
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    proxies:
+      - HK-Auto
+      - HK-FallBack
+      - HK-LoadBalance
+    filter: ^(?!.*emby).*(?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    use:
+      - Subscribe
+  - name: TaiWan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    proxies:
+      - TW-Auto
+      - TW-FallBack
+      - TW-LoadBalance
+    filter: ^(?!.*emby).*(?i)台|新北|彰化|TW|Taiwan
+    use:
+      - Subscribe
+  - name: Japan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    proxies:
+      - JP-Auto
+      - JP-FallBack
+      - JP-LoadBalance
+    filter: ^(?!.*emby).*(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    use:
+      - Subscribe
+  - name: Korea
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    proxies:
+      - KR-Auto
+      - KR-FallBack
+      - KR-LoadBalance
+    filter: ^(?!.*emby).*(?i)KR|Korea|KOR|首尔|韩|韓
+    use:
+      - Subscribe
+  - name: Singapore
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    proxies:
+      - SG-Auto
+      - SG-FallBack
+      - SG-LoadBalance
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|SG|Singapore
+    use:
+      - Subscribe
+  - name: America
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    proxies:
+      - US-Auto
+      - US-FallBack
+      - US-LoadBalance
+    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United
+      States
+    use:
+      - Subscribe
+  - name: UnitedKingdom
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
+    proxies:
+      - UK-Auto
+      - UK-FallBack
+      - UK-LoadBalance
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    use:
+      - Subscribe
+  - name: AllServer
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    use:
+      - Subscribe
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: GLOBAL
+    type: select
+    proxies:
+      - Proxy
+  - name: HK-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: TW-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: JP-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: KR-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: SG-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: US-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: UK-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: HK-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: TW-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: JP-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: KR-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: SG-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: US-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: UK-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: HK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: TW-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: JP-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: KR-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: SG-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: US-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: UK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    strategy: consistent-hashing
+    interval: 300
+    lazy: true
+    use:
+      - Subscribe
+  - name: 69emby-Auto
+    type: url-test
+    include-all: true
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
+    url: https://emby1.69yun69.com
+    interval: 300
+    lazy: true
+    hidden: false
+    tolerance: 100
+    timeout: 2
+    proxies:
+      - DIRECT
+    use:
+      - Subscribe
+      - 69Emby
+  - name: 69emby3-Auto
+    type: url-test
+    include-all: true
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
+    url: https://emby3.69yun69.com
+    interval: 300
+    lazy: true
+    hidden: false
+    tolerance: 100
+    timeout: 2
+    use:
+      - Subscribe
+      - 69emby
+  - name: 69emby-LoadBalance
+    type: load-balance
+    strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
+    url: https://emby1.69yun69.com
+    interval: 300
+    hidden: true
+    use:
+      - 69Emby
+    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
+  - name: embyTemp
+    type: load-balance
+    include-all: true
+    filter: (?i)tempEmby
+    # url: https://matrix.313445.xyz
+    # interval: 300
+    # lazy: true
+    hidden: false
+    # tolerance: 100
+    use:
+      - tempEmby
+  - lazy: true
+    name: PROXY
+    proxies:
+      - 自动选择
+      - TaiWan
+      - HongKong
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+    type: fallback
+    hidden: true
+  - name: 带宽优先
+    type: url-test
+    include-all: true
+    url: https://speed.cloudflare.com/__down?bytes=5000000
+    interval: 600
+    timeout: 5
+    tolerance: 500
+    lazy: true
+rules:
+  # 广告拦截
+  - GEOSITE,category-ads-all,REJECT
+
+  # 自定义规则（由于是外部链接，仍保留 RULE-SET）
+  - RULE-SET,个人代理,Proxy
+  - RULE-SET,个人直连,DIRECT
+
+  # 常用服务优化为 GEOSITE
+  - GEOSITE,category-ai-!cn,AI
+  - GEOSITE,apple@cn,DIRECT
+  - GEOSITE,apple,Apple
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,google,Google
+  - GEOSITE,microsoft@cn,DIRECT
+  - GEOSITE,github,Proxy
+  - GEOSITE,tiktok,TikTok
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,twitter,X
+  - GEOSITE,telegram,Telegram
+  - GEOSITE,whatsapp,Whatsapp
+
+  # 游戏相关
+  - GEOSITE,steam@cn,DIRECT
+  - RULE-SET,GameDownload,DIRECT
+  - GEOSITE,category-games-!cn,Games
+
+  # Emby（保留您的自定义规则集）
+  - RULE-SET,69emby,69emby
+
+  # 地理位置与 IP 分流
+  - GEOSITE,cn,DIRECT
+  - GEOSITE,geolocation-!cn,Proxy
+  
+  # GEOIP 优化
+  - GEOIP,telegram,Telegram,no-resolve
+  - GEOIP,lan,DIRECT,no-resolve
+  - GEOIP,cn,DIRECT
+
+  # 兜底规则
+  - MATCH,Final
+rule-providers:
+  category-ads-all:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ads-all.list
+  AI:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.list
+  YouTube:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
+  Netflix:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
+  Spotify:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.yaml
+  TikTok:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.yaml
+    interval: 86400
+  Telegram:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  GitHub:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml
+  Twitter:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.yaml
+  AppleService:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
+  Apple@cn:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
+  Apple:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
+  Google:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
+  Microsoft:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft@cn.yaml
+  Whatsapp:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.yaml
+    interval: 86400
+  Steam@cn:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
+  GameDownload:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
+    interval: 86400
+  Games:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games-!cn.list
+  proxyGFW:
+    type: http
+    behavior: domain
+    format: text
+    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/gfw.txt
+    interval: 86400
+  geolocation-cn:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.yaml
+    path: ./ruleset/geolocation-cn.yaml
+  geolocation-not-cn:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+  tld-cn:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tld-cn.yaml
+    path: ./ruleset/tld-cn.yaml
+  geo-ip-cn:
+    type: http
+    behavior: ipcidr
+    format: text
+    url: https://raw.githubusercontent.com/Loyalsoldier/geoip/refs/heads/release/text/cn.txt
+    path: ./rules/geo-ip-cn.txt
+    interval: 86400
+  lan-ip:
+    type: http
+    format: yaml
+    behavior: ipcidr  # 必须是ipcidr，匹配IP段
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lan-ip.txt  # 本地缓存路径
+    interval: 86400  # 每天更新一次
+  个人直连:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
+  个人代理:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
+  Tempemby:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+  69emby:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
