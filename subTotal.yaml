@@ -1,11 +1,12 @@
 mode: rule
 log-level: warning
-ipv6: true
+ipv6: false
 dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
   nameserver:
+    - system
     - 223.6.6.6
 proxy-providers:
   Subscribe:
