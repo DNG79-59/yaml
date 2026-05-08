@@ -11,21 +11,21 @@ dns:
 proxy-providers:
   Subscribe:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
+    url: https://sub3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
     interval: 7200
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
   69Emby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby
+    url: https://sub3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/69emby
     interval: 7200
     path: ./proxy_providers/69Emby.yaml
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
   tempEmby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby
+    url: https://sub3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/tempEmby
     interval: 7200
     path: ./proxy_providers/TempEmby.yaml
     benchmark-url: https://emby3.69yun69.com
