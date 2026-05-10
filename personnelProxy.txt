@@ -2,3 +2,4 @@ DOMAIN-KEYWORD,ouonet
 DOMAIN-SUFFIX,pages.dev
 DOMAIN-SUFFIX,yfamilys.com
 DOMAIN-SUFFIX,substack.com
+DOMAIN-SUFFIX,dpdns.org
