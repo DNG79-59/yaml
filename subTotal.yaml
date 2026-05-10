@@ -334,7 +334,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: TW-Auto
@@ -343,7 +342,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: JP-Auto
@@ -352,7 +350,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: KR-Auto
@@ -361,7 +358,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: SG-Auto
@@ -370,7 +366,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: US-Auto
@@ -379,7 +374,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: UK-Auto
@@ -388,7 +382,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: HK-FallBack
@@ -397,7 +390,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: TW-FallBack
@@ -406,7 +398,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: JP-FallBack
@@ -415,7 +406,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: KR-FallBack
@@ -424,7 +414,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: SG-FallBack
@@ -433,7 +422,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: US-FallBack
@@ -442,7 +430,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: UK-FallBack
@@ -451,7 +438,6 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: HK-LoadBalance
@@ -461,7 +447,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: TW-LoadBalance
@@ -471,7 +456,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: JP-LoadBalance
@@ -481,7 +465,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: KR-LoadBalance
@@ -491,7 +474,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: SG-LoadBalance
@@ -501,7 +483,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: US-LoadBalance
@@ -511,7 +492,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: UK-LoadBalance
@@ -521,7 +501,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: 69emby-Auto
@@ -530,7 +509,6 @@ proxy-groups:
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: https://emby1.69yun69.com
     interval: 300
-    lazy: true
     hidden: false
     tolerance: 100
     timeout: 2
@@ -545,7 +523,6 @@ proxy-groups:
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: https://emby3.69yun69.com
     interval: 300
-    lazy: true
     hidden: false
     tolerance: 100
     timeout: 2
@@ -572,8 +549,7 @@ proxy-groups:
     # tolerance: 100
     use:
       - tempEmby
-  - lazy: true
-    name: PROXY
+  - name: PROXY
     proxies:
       - 自动选择
       - TaiWan
@@ -592,7 +568,6 @@ proxy-groups:
     interval: 600
     timeout: 5
     tolerance: 500
-    lazy: true
 rules:
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
