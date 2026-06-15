@@ -18,7 +18,7 @@ proxy-providers:
     benchmark-timeout: 2
   69Emby:
     type: http
-    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/69emby
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/69yunemby
     interval: 7200
     path: ./proxy_providers/69Emby.yaml
     benchmark-url: https://emby1.69yun69.com
