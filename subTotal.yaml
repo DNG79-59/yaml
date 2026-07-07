@@ -11,25 +11,33 @@ dns:
 proxy-providers:
   Subscribe:
     type: http
-    url: https://6-1-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
     interval: 7200
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
   69Emby:
     type: http
-    url: https://6-1-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/69emby
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/69yunemby
     interval: 7200
     path: ./proxy_providers/69Emby.yaml
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
   tempEmby:
     type: http
-    url: https://6-1-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/tempEmby
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/tempEmby
     interval: 7200
     path: ./proxy_providers/TempEmby.yaml
     benchmark-url: https://emby3.69yun69.com
     benchmark-timeout: 5
+  # 新增 leaf3 订阅
+  leaf3:
+    type: http
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/leaf*3
+    interval: 7200
+    path: ./proxy_providers/leaf3.yaml
+    benchmark-url: http://cp.cloudflare.com
+    benchmark-timeout: 2
 proxy-groups:
   - name: Final
     type: select
@@ -42,6 +50,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
       - 自动选择
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -52,6 +61,17 @@ proxy-groups:
       - AllServer
       - 带宽优先
       - DIRECT
+  # 新增 leaf 顶层选择组
+  - name: leaf
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf-Auto
+      - leaf-FallBack
+      - leaf-LoadBalance
+    filter: ^(?!.*emby).*$
+    use:
+      - leaf3
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
@@ -68,6 +88,7 @@ proxy-groups:
     proxies:
       - AllServer
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -81,6 +102,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -96,6 +118,7 @@ proxy-groups:
     proxies:
       - America
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -110,6 +133,7 @@ proxy-groups:
     proxies:
       - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -124,6 +148,7 @@ proxy-groups:
     proxies:
       - Singapore
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -139,6 +164,7 @@ proxy-groups:
     proxies:
       - Singapore
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -153,6 +179,7 @@ proxy-groups:
     proxies:
       - Japan
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Korea
@@ -167,6 +194,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -182,6 +210,7 @@ proxy-groups:
     proxies:
       - America
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -197,6 +226,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -212,6 +242,7 @@ proxy-groups:
     proxies:
       - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -227,6 +258,7 @@ proxy-groups:
     proxies:
       - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -241,6 +273,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
       - 69emby-LoadBalance   # 新增的负载均衡
+      - leaf
       - 69emby-Auto
       - 自动选择
       - DIRECT
@@ -305,8 +338,7 @@ proxy-groups:
       - US-Auto
       - US-FallBack
       - US-LoadBalance
-    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United
-      States
+    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     use:
       - Subscribe
   - name: UnitedKingdom
@@ -322,13 +354,17 @@ proxy-groups:
   - name: AllServer
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf
     use:
       - Subscribe
+      - leaf3
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: GLOBAL
     type: select
     proxies:
       - Proxy
+      - leaf
   - name: HK-Auto
     type: url-test
     hidden: true
@@ -518,6 +554,34 @@ proxy-groups:
     interval: 300
     use:
       - Subscribe
+  # leaf3 配套测速/负载均衡子组
+  - name: leaf-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*$
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    use:
+      - leaf3
+  - name: leaf-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*$
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    use:
+      - leaf3
+  - name: leaf-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*$
+    strategy: consistent-hashing
+    interval: 300
+    use:
+      - leaf3
   - name: 69emby-Auto
     type: url-test
     include-all: true
@@ -567,6 +631,7 @@ proxy-groups:
   - name: PROXY
     proxies:
       - 自动选择
+      - leaf
       - TaiWan
       - HongKong
       - Japan
@@ -696,7 +761,7 @@ rule-providers:
     format: yaml
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/google.yaml
   Microsoft:
     behavior: domain
     format: yaml
