@@ -558,7 +558,6 @@ proxy-groups:
   - name: leaf-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*$
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
@@ -567,7 +566,6 @@ proxy-groups:
   - name: leaf-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*$
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
@@ -576,7 +574,6 @@ proxy-groups:
   - name: leaf-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*$
     strategy: consistent-hashing
     interval: 300
