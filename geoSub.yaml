@@ -64,9 +64,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
     proxies:
-      - leaf-Auto
-      - leaf-FallBack
       - leaf-LoadBalance
+      - leaf-FallBack
+      - leaf-Auto
     filter: ^(?!.*emby).*$
     use:
       - leaf3
