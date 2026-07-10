@@ -109,21 +109,6 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - 自动选择
-  - name: NETFLIX
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-    proxies:
-      - America
-      - Proxy
-      - leaf
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - UnitedKingdom
-      - AllServer
-      - 自动选择
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
@@ -670,6 +655,7 @@ rules:
   - GEOSITE,Spotify,Spotify
   - GEOSITE,category-games@cn,DIRECT
   - GEOSITE,Steam,DIRECT
+  - GEOSITE,category-games-!cn,Games
   - GEOSITE,TikTok,TikTok
   - GEOSITE,Telegram,Telegram
   - GEOSITE,Twitter,X
