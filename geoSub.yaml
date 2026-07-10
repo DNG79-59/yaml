@@ -2,7 +2,7 @@ mode: rule
 log-level: warning
 ipv6: false
 dns:
-  enable: true
+  enable: false
   ipv6: false
   enhanced-mode: fake-ip
   nameserver:
@@ -11,25 +11,32 @@ dns:
 proxy-providers:
   Subscribe:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
     interval: 7200
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
   69Emby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/69emby
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/69yunemby
     interval: 7200
     path: ./proxy_providers/69Emby.yaml
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
   tempEmby:
     type: http
-    url: http://386ddox87802.vicp.fun/2cXaAxRGfddmGz2yx1wA/download/tempEmby
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/tempEmby
     interval: 7200
     path: ./proxy_providers/TempEmby.yaml
     benchmark-url: https://emby3.69yun69.com
     benchmark-timeout: 5
+  leaf3:
+    type: http
+    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/leaf*3
+    interval: 7200
+    path: ./proxy_providers/leaf3.yaml
+    benchmark-url: http://cp.cloudflare.com
+    benchmark-timeout: 2
 proxy-groups:
   - name: Final
     type: select
@@ -42,6 +49,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
       - 自动选择
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -52,14 +60,24 @@ proxy-groups:
       - AllServer
       - 带宽优先
       - DIRECT
+  - name: leaf
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf-Auto
+      - leaf-FallBack
+      - leaf-LoadBalance
+    filter: ^(?!.*emby).*$
+    use:
+      - leaf3
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     timeout: 3
-    include-all: false
     use:
       - Subscribe
     interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: AI
     type: select
@@ -67,6 +85,7 @@ proxy-groups:
     proxies:
       - AllServer
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -80,6 +99,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -95,6 +115,7 @@ proxy-groups:
     proxies:
       - America
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -109,6 +130,7 @@ proxy-groups:
     proxies:
       - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -123,6 +145,7 @@ proxy-groups:
     proxies:
       - Singapore
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -138,6 +161,7 @@ proxy-groups:
     proxies:
       - Singapore
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -152,6 +176,7 @@ proxy-groups:
     proxies:
       - Japan
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Korea
@@ -166,6 +191,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -181,6 +207,7 @@ proxy-groups:
     proxies:
       - America
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -196,6 +223,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -211,6 +239,7 @@ proxy-groups:
     proxies:
       - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -226,6 +255,7 @@ proxy-groups:
     proxies:
       - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -240,6 +270,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
       - 69emby-LoadBalance   # 新增的负载均衡
+      - leaf
       - 69emby-Auto
       - 自动选择
       - DIRECT
@@ -247,6 +278,8 @@ proxy-groups:
     use:
       - 69Emby
       - Subscribe
+
+
   - name: HongKong
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -304,8 +337,7 @@ proxy-groups:
       - US-Auto
       - US-FallBack
       - US-LoadBalance
-    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United
-      States
+    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     use:
       - Subscribe
   - name: UnitedKingdom
@@ -321,83 +353,101 @@ proxy-groups:
   - name: AllServer
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf
     use:
       - Subscribe
+      - leaf3
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: GLOBAL
     type: select
     proxies:
       - Proxy
+      - leaf
   - name: HK-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: TW-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: JP-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: KR-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: SG-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: US-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: UK-Auto
     type: url-test
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: HK-FallBack
     type: fallback
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: TW-FallBack
@@ -406,7 +456,7 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: JP-FallBack
@@ -415,7 +465,7 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: KR-FallBack
@@ -424,7 +474,7 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: SG-FallBack
@@ -433,7 +483,7 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: US-FallBack
@@ -442,7 +492,7 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: UK-FallBack
@@ -451,7 +501,7 @@ proxy-groups:
     include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     interval: 300
-    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: HK-LoadBalance
@@ -461,7 +511,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: TW-LoadBalance
@@ -471,7 +520,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: JP-LoadBalance
@@ -481,7 +529,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: KR-LoadBalance
@@ -491,7 +538,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: SG-LoadBalance
@@ -501,7 +547,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: US-LoadBalance
@@ -511,7 +556,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
   - name: UK-LoadBalance
@@ -521,16 +565,39 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     strategy: consistent-hashing
     interval: 300
-    lazy: true
     use:
       - Subscribe
+  # leaf3 配套测速/负载均衡子组
+  - name: leaf-Auto
+    type: url-test
+    hidden: true
+    filter: ^(?!.*emby).*$
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    use:
+      - leaf3
+  - name: leaf-FallBack
+    type: fallback
+    hidden: true
+    filter: ^(?!.*emby).*$
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    use:
+      - leaf3
+  - name: leaf-LoadBalance
+    type: load-balance
+    hidden: true
+    filter: ^(?!.*emby).*$
+    strategy: consistent-hashing
+    interval: 300
+    use:
+      - leaf3
   - name: 69emby-Auto
     type: url-test
     include-all: true
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: https://emby1.69yun69.com
     interval: 300
-    lazy: true
     hidden: false
     tolerance: 100
     timeout: 2
@@ -545,7 +612,6 @@ proxy-groups:
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
     url: https://emby3.69yun69.com
     interval: 300
-    lazy: true
     hidden: false
     tolerance: 100
     timeout: 2
@@ -572,10 +638,10 @@ proxy-groups:
     # tolerance: 100
     use:
       - tempEmby
-  - lazy: true
-    name: PROXY
+  - name: PROXY
     proxies:
       - 自动选择
+      - leaf
       - TaiWan
       - HongKong
       - Japan
@@ -592,204 +658,31 @@ proxy-groups:
     interval: 600
     timeout: 5
     tolerance: 500
-    lazy: true
 rules:
-  # 广告拦截
   - GEOSITE,category-ads-all,REJECT
-
-  # 自定义规则（由于是外部链接，仍保留 RULE-SET）
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
-
-  # 常用服务优化为 GEOSITE
   - GEOSITE,category-ai-!cn,AI
-  - GEOSITE,apple@cn,DIRECT
-  - GEOSITE,apple,Apple
-  - GEOSITE,spotify,Spotify
-  - GEOSITE,google,Google
-  - GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE,github,Proxy
-  - GEOSITE,tiktok,TikTok
-  - GEOSITE,youtube,YouTube
-  - GEOSITE,twitter,X
-  - GEOSITE,telegram,Telegram
-  - GEOSITE,whatsapp,Whatsapp
-
-  # 游戏相关
-  - GEOSITE,steam@cn,DIRECT
-  - RULE-SET,GameDownload,DIRECT
-  - GEOSITE,category-games-!cn,Games
-
-  # Emby（保留您的自定义规则集）
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,Google,Google
+  - GEOSITE,GitHub,Proxy
+  - GEOSITE,Microsoft,Microsoft
+  - GEOSITE,Spotify,Spotify
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,Steam,DIRECT
+  - GEOSITE,TikTok,TikTok
+  - GEOSITE,Telegram,Telegram
+  - GEOSITE,Twitter,X
+  - GEOSITE,YouTube,YouTube
+  - GEOSITE,Whatsapp,Whatsapp
+  - RULE-SET,Tempemby,embyTemp
   - RULE-SET,69emby,69emby
-
-  # 地理位置与 IP 分流
-  - GEOSITE,cn,DIRECT
   - GEOSITE,geolocation-!cn,Proxy
-  
-  # GEOIP 优化
-  - GEOIP,telegram,Telegram,no-resolve
-  - GEOIP,lan,DIRECT,no-resolve
-  - GEOIP,cn,DIRECT
-
-  # 兜底规则
+  - GEOSITE,cn,DIRECT
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOIP,cn,DIRECT,no-resolve
   - MATCH,Final
 rule-providers:
-  category-ads-all:
-    behavior: domain
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ads-all.list
-  AI:
-    behavior: domain
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.list
-  YouTube:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
-  Netflix:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
-  Spotify:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.yaml
-  TikTok:
-    type: http
-    behavior: domain
-    format: yaml
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.yaml
-    interval: 86400
-  Telegram:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml
-  telegramcidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
-    interval: 86400
-  GitHub:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml
-  Twitter:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.yaml
-  AppleService:
-    behavior: classical
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/mphin/proxy_tools/main/rules/Apple.list
-  Apple@cn:
-    behavior: domain
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
-  Apple:
-    behavior: domain
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
-  Google:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.yaml
-  Microsoft:
-    behavior: domain
-    format: yaml
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft@cn.yaml
-  Whatsapp:
-    type: http
-    behavior: domain
-    format: yaml
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/whatsapp.yaml
-    interval: 86400
-  Steam@cn:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    interval: 86400
-  GameDownload:
-    type: http
-    behavior: classical
-    format: yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload.yaml
-    interval: 86400
-  Games:
-    behavior: domain
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games-!cn.list
-  proxyGFW:
-    type: http
-    behavior: domain
-    format: text
-    url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/refs/heads/release/gfw.txt
-    interval: 86400
-  geolocation-cn:
-    type: http
-    behavior: domain
-    format: yaml
-    interval: 86400
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.yaml
-    path: ./ruleset/geolocation-cn.yaml
-  geolocation-not-cn:
-    type: http
-    behavior: domain
-    format: yaml
-    interval: 86400
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml
-    path: ./ruleset/geolocation-!cn.yaml
-  tld-cn:
-    type: http
-    behavior: domain
-    format: yaml
-    interval: 86400
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tld-cn.yaml
-    path: ./ruleset/tld-cn.yaml
-  geo-ip-cn:
-    type: http
-    behavior: ipcidr
-    format: text
-    url: https://raw.githubusercontent.com/Loyalsoldier/geoip/refs/heads/release/text/cn.txt
-    path: ./rules/geo-ip-cn.txt
-    interval: 86400
-  lan-ip:
-    type: http
-    format: yaml
-    behavior: ipcidr  # 必须是ipcidr，匹配IP段
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
-    path: ./ruleset/lan-ip.txt  # 本地缓存路径
-    interval: 86400  # 每天更新一次
   个人直连:
     behavior: classical
     format: text
