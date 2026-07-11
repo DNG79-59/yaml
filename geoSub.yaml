@@ -651,22 +651,17 @@ rules:
   - RULE-SET,69emby,69emby
   - GEOSITE,category-ai-!cn,AI
   - GEOSITE,Telegram,Telegram
-  - GEOIP,telegram,Telegram,no-resolve  # 补全：精准捕获电报的专属数据中心 IP 段
+  - RULE-SET,telegramcidr,Telegram,no-resolve  # 补全：精准捕获电报的专属数据中心 IP 段
   - GEOSITE,YouTube,YouTube
   - GEOSITE,Google,Google
-  - GEOIP,google,Google,no-resolve
   - GEOSITE,TikTok,TikTok
-  - GEOIP,tiktok,TikTok,no-resolve
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,apple,Apple
-  - GEOIP,apple,DIRECT,no-resolve
   - GEOSITE,GitHub,Proxy
   - GEOSITE,Microsoft,Microsoft
-  - GEOIP,microsoft,Microsoft,no-resolve
   - GEOSITE,category-games@cn,DIRECT
   - GEOSITE,Steam,DIRECT
   - GEOSITE,Twitter,X
-  - GEOIP,twitter,X,no-resolve
   - GEOSITE,Whatsapp,Whatsapp
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
@@ -674,14 +669,56 @@ rules:
   - GEOIP,cn,DIRECT,no-resolve
   - MATCH,Final
 rule-providers:
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
   个人直连:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
   个人代理:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
@@ -693,7 +730,7 @@ rule-providers:
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
   69emby:
-    behavior: classical
+    behavior: domain
     format: text
     interval: 86400
     type: http
