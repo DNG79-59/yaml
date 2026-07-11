@@ -648,7 +648,7 @@ rules:
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
   - GEOSITE,category-ai-!cn,AI
-  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,DIRECT
   - GEOSITE,Google,Google
   - GEOSITE,GitHub,Proxy
   - GEOSITE,Microsoft,Microsoft
