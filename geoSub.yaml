@@ -647,22 +647,27 @@ rules:
   - GEOSITE,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
-  - GEOSITE,category-ai-!cn,AI
-  - GEOSITE,apple,DIRECT
-  - GEOSITE,Google,Google
-  - GEOSITE,GitHub,Proxy
-  - GEOSITE,Microsoft,Microsoft
-  - GEOSITE,Spotify,Spotify
-  - GEOSITE,category-games@cn,DIRECT
-  - GEOSITE,Steam,DIRECT
-  - GEOSITE,category-games-!cn,Games
-  - GEOSITE,TikTok,TikTok
-  - GEOSITE,Telegram,Telegram
-  - GEOSITE,Twitter,X
-  - GEOSITE,YouTube,YouTube
-  - GEOSITE,Whatsapp,Whatsapp
   - RULE-SET,Tempemby,embyTemp
   - RULE-SET,69emby,69emby
+  - GEOSITE,category-ai-!cn,AI
+  - GEOSITE,Telegram,Telegram
+  - GEOIP,telegram,Telegram,no-resolve  # 补全：精准捕获电报的专属数据中心 IP 段
+  - GEOSITE,YouTube,YouTube
+  - GEOSITE,Google,Google
+  - GEOIP,google,Google,no-resolve
+  - GEOSITE,TikTok,TikTok
+  - GEOIP,tiktok,TikTok,no-resolve
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,Apple
+  - GEOIP,apple,DIRECT,no-resolve
+  - GEOSITE,GitHub,Proxy
+  - GEOSITE,Microsoft,Microsoft
+  - GEOIP,microsoft,Microsoft,no-resolve
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,Steam,DIRECT
+  - GEOSITE,Twitter,X
+  - GEOIP,twitter,X,no-resolve
+  - GEOSITE,Whatsapp,Whatsapp
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
   - GEOIP,private,DIRECT,no-resolve
