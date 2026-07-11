@@ -651,7 +651,6 @@ rules:
   - RULE-SET,69emby,69emby
   - GEOSITE,category-ai-!cn,AI
   - GEOSITE,Telegram,Telegram
-  - RULE-SET,telegramcidr,Telegram,no-resolve  # 补全：精准捕获电报的专属数据中心 IP 段
   - GEOSITE,YouTube,YouTube
   - GEOSITE,Google,Google
   - GEOSITE,TikTok,TikTok
@@ -663,10 +662,14 @@ rules:
   - GEOSITE,Steam,DIRECT
   - GEOSITE,Twitter,X
   - GEOSITE,Whatsapp,Whatsapp
+  - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,cncidr,DIRECT,no-resolve
   - GEOIP,private,DIRECT,no-resolve
-  - GEOIP,cn,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,Final
 rule-providers:
   private:
