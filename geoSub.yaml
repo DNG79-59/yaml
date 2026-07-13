@@ -668,7 +668,7 @@ rules:
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
   - RULE-SET,privatecidr,DIRECT
   - MATCH,Final
 rule-providers:
@@ -679,20 +679,6 @@ rule-providers:
     path: ./ruleset/private.yaml
     interval: 86400
 
-  gfw:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-    path: ./ruleset/gfw.yaml
-    interval: 86400
-
-  tld-not-cn:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
-    path: ./ruleset/tld-not-cn.yaml
-    interval: 86400
-
   telegramcidr:
     type: http
     behavior: ipcidr
@@ -700,25 +686,11 @@ rule-providers:
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
-  cncidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
-    path: ./ruleset/cncidr.yaml
-    interval: 86400
-    
   privatecidr:
     type: http
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
     path: ./ruleset/private.yaml
-    interval: 86400
-    
-  lancidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./ruleset/lancidr.yaml
     interval: 86400
 
   个人直连:
