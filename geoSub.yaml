@@ -2,12 +2,15 @@ mode: rule
 log-level: warning
 ipv6: false
 dns:
-  enable: false
+  enable: true              # 必须改为 true，否则配置不生效
   ipv6: false
   enhanced-mode: fake-ip
+  nameserver-policy:
+    "://alidns.com":
+    "doh.pub":
   nameserver:
-    - system
-    - 223.6.6.6
+    - https://://alidns.com/dns-query
+    - https://doh.pub
 proxy-providers:
   Subscribe:
     type: http
