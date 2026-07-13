@@ -2,15 +2,11 @@ mode: rule
 log-level: warning
 ipv6: false
 dns:
-  enable: true              # 必须改为 true，否则配置不生效
+  enable: true
   ipv6: false
   enhanced-mode: fake-ip
-  nameserver-policy:
-    "://alidns.com":
-    "doh.pub":
   nameserver:
-    - https://://alidns.com/dns-query
-    - https://doh.pub
+    - https://dns.alidns.com/dns-query
 proxy-providers:
   Subscribe:
     type: http
@@ -720,3 +716,5 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+hosts:
+  dns.alidns.com: 223.6.6.6
