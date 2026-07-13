@@ -79,6 +79,8 @@ proxy-groups:
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    proxies:
+      - leaf
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -666,10 +668,10 @@ rules:
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,cncidr,DIRECT,no-resolve
-  - GEOIP,private,DIRECT,no-resolve
-  - GEOIP,LAN,DIRECT,no-resolve
-  - GEOIP,CN,DIRECT,no-resolve
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - GEOIP,private,DIRECT
+  - GEOIP,LAN,DIRECT
   - MATCH,Final
 rule-providers:
   private:
