@@ -669,9 +669,7 @@ rules:
   - GEOSITE,cn,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - GEOIP,CN,DIRECT
-  - GEOIP,private,DIRECT
-  - GEOIP,LAN,DIRECT
+  - RULE-SET,privatecidr,DIRECT
   - MATCH,Final
 rule-providers:
   private:
@@ -708,7 +706,14 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     interval: 86400
-
+    
+  privatecidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+    
   lancidr:
     type: http
     behavior: ipcidr
