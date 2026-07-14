@@ -668,6 +668,7 @@ rules:
   - GEOSITE,cn,DIRECT
   - RULE-SET,private,DIRECT
   - GEOIP,CN,DIRECT
+  - GEOIP,LAN,DIRECT
   - RULE-SET,privatecidr,DIRECT
   - MATCH,Final
 rule-providers:
