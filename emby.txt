@@ -1,6 +1,6 @@
-payload:
-  - matrix.313445.xyz
-  - airplane.nubebelle.com
-  - vshw7r9mxa.shdnow.com
-  - emby-pro.hohai.eu.org
-  - emby-tw.hohai.eu.org
+matrix.313445.xyz
+airplane.nubebelle.com
+vshw7r9mxa.shdnow.com
+emby-pro.hohai.eu.org
+emby-tw.hohai.eu.org
+zhuixin.8622368.xyz
