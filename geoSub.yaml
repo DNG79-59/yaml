@@ -674,6 +674,7 @@ rules:
 rule-providers:
   private:
     type: http
+    format: yaml
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/private.yaml
@@ -681,6 +682,7 @@ rule-providers:
 
   telegramcidr:
     type: http
+    format: yaml
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
     path: ./ruleset/telegramcidr.yaml
@@ -688,6 +690,7 @@ rule-providers:
 
   privatecidr:
     type: http
+    format: yaml
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
     path: ./ruleset/private.yaml
@@ -707,7 +710,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
   Tempemby:
     behavior: domain
-    format: yaml
+    format: text
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
