@@ -5,9 +5,6 @@ dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
-  nameserver:
-    - system
-    - https://dns.alidns.com/dns-query
 proxy-providers:
   Subscribe:
     type: http
