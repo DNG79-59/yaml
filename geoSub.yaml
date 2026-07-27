@@ -643,11 +643,12 @@ proxy-groups:
     timeout: 5
     tolerance: 500
 rules:
-  - GEOSITE,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
   - RULE-SET,Tempemby,embyTemp
   - RULE-SET,69emby,69emby
+  - GEOSITE,category-ads-all,REJECT
+  - DOMAIN-SUFFIX,opencode.ai,AI
   - GEOSITE,category-ai-!cn,AI
   - GEOSITE,Telegram,Telegram
   - GEOSITE,YouTube,YouTube
