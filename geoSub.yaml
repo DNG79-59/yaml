@@ -201,6 +201,51 @@ proxy-groups:
       - AllServer
       - 自动选择
       - DIRECT
+  - name: Linkedin
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Facebook
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Instagram
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
   - name: Microsoft
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
@@ -654,6 +699,9 @@ rules:
   - GEOSITE,YouTube,YouTube
   - GEOSITE,Google,Google
   - GEOSITE,TikTok,TikTok
+  - GEOSITE,Linkedin,Linkedin
+  - GEOSITE,Facebook,Facebook
+  - GEOSITE,Instagram,Instagram
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,apple,Apple
   - GEOSITE,GitHub,Proxy
