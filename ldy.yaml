@@ -1,0 +1,1697 @@
+#!MANAGED-CONFIG http://47.242.55.240/link/9Wx2AkoTezzEylMK?clash=2
+
+#---------------------------------------------------#
+## 上次更新于：2026-08-06 01:39:55
+#---------------------------------------------------#
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: rule
+log-level: silent
+external-controller: '127.0.0.1:9090'
+secret: ''
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  prefer-h3: false
+  use-hosts: true
+  use-system-hosts: true
+  default-nameserver:
+    - system
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
+  nameserver:
+    - system
+  proxy-server-nameserver:
+    - 'https://www.allidns.com/dq7k9z2x8m'
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - '*.arpa'
+    - 'time.*.com'
+    - 'ntp.*.com'
+    - +.market.xiaomi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.work.weixin.qq.com
+    - '*.msftncsi.com'
+    - www.msftconnecttest.com
+    - +.bilibili.com
+    - +.bilivideo.com
+    - +.hdslb.com
+proxies:
+  - name: '🇸🇬 AA1新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23724
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: vip.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA3新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23716
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA4新加坡IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23706
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: search.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 AA5美国1 IPLC VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23717
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: space.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 AA5美国2 IPLC  VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23728
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: activity.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 AA5美国3 IPLC VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23705
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: t.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 AA5美国4 IPLC  VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23722
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: passport.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 AA5美国5 IPLC  VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23723
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: account.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 AA5美国6 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23735
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: bangumi.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇯🇵 AA6日本1 IPLC VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23733
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: pay.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇯🇵 AA6日本2 IPLC VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23721
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: big.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇮🇩 AA8印尼 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23744
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: secure.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇹🇼 AA8台湾1 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23748
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: biliapi.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: "🇹🇼 AA8台湾2 支持NF VIP2 网址:nnbin.com\t"
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23715
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: s4.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23745
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: s.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: 'AA8墨西哥 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23772
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: blackboard.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23746
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: upload.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23742
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: comment.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23773
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: upos-sz-mirror.bilivideo.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇫🇷 AA8法国 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23737
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: i1.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23738
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: static.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇹🇭 AA8泰国2 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23741
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: player.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇦🇺 AA8澳大利亚 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23736
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: manga.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23743
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: interface.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: 'AA8西班牙 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23740
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: analytics.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23739
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: data.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23775
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: upos-sz-mirrorcos.bilivideo.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23762
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: audio.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23703
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.bilibili.tv
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23731
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: link.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23732
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: api.bilibili.tv
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23730
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: member.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23713
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: h.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23714
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: vc.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA新加坡3 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23729
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: i2.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA新加坡4 IPLC  支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23704
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: s2.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA新加坡5 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23734
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: s3.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 AA新加坡6 IPLC  支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23700
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: static.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇬🇧 AA英国1 IEPL VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23718
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: cm.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇬🇧 AA英国3 IEPL VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23720
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: message.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇰🇷 AA韩国1 IPLC  VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23726
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: s1.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港1 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23712
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: live.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港2 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23725
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: api.live.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港3 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23711
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: api.vc.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港5 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23710
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: mall.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港6 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23709
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: m.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港7 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23708
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: api.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港8 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23707
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: app.bilibili.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 AA香港9 IPLC 支持NF VIP2 网址:nnbin.com'
+    type: anytls
+    server: b.iqiymysql.com
+    port: 23701
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: i0.hdslb.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡1 VIP1 网址:bdoos.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26019
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡2 VIP1 网址:bdoos.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26020
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡3 VIP1 网址:bdoos.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26021
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 A美国1 VIP1 网址:bdoos.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26022
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 A美国2 VIP1 网址:bdoos.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26023
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 A美国3 VIP1 网址:bdoos.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26024
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡4 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26002
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡5 vip1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26003
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡6 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26004
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇸🇬 A新加坡7 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26005
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 A香港4 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26006
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 A香港5 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26007
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 A香港6 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26008
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇭🇰 A香港8 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26016
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 c美国1 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26009
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 C美国2 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26010
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 c美国3 VIP1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26011
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇺🇲 c美国4 vip1 网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26012
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇯🇵 日本1 VIP1网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26013
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇯🇵 日本2 VIP1网址:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26014
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇰🇷 韩国1 VIP1 网站:nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26015
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+  - name: '🇰🇷 韩国2 VIP1 网址nnbin.com'
+    type: anytls
+    server: ew.ali66mysql.com
+    port: 26017
+    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+    sni: www.apple.com
+    skip-cert-verify: true
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies:
+      - 自动选择
+      - 故障转移
+      - '🇸🇬 AA1新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA3新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA4新加坡IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国1 IPLC VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国2 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国3 IPLC VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国4 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国5 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国6 网址:nnbin.com'
+      - '🇯🇵 AA6日本1 IPLC VIP2 网址:nnbin.com'
+      - '🇯🇵 AA6日本2 IPLC VIP2 网址:nnbin.com'
+      - '🇮🇩 AA8印尼 VIP2 网址:nnbin.com'
+      - '🇹🇼 AA8台湾1 VIP2 网址:nnbin.com'
+      - "🇹🇼 AA8台湾2 支持NF VIP2 网址:nnbin.com\t"
+      - '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
+      - 'AA8墨西哥 VIP2 网址:nnbin.com'
+      - '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
+      - "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+      - '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
+      - '🇫🇷 AA8法国 网址:nnbin.com'
+      - '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
+      - '🇹🇭 AA8泰国2 VIP2 网址:nnbin.com'
+      - '🇦🇺 AA8澳大利亚 网址:nnbin.com'
+      - '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
+      - 'AA8西班牙 VIP2 网址:nnbin.com'
+      - '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
+      - '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
+      - "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+      - '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
+      - '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
+      - '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
+      - '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡3 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡4 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡5 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡6 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇬🇧 AA英国1 IEPL VIP2 网址:nnbin.com'
+      - '🇬🇧 AA英国3 IEPL VIP2 网址:nnbin.com'
+      - '🇰🇷 AA韩国1 IPLC  VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港1 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港2 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港3 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港5 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港6 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港7 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港8 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港9 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 A新加坡1 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡2 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡3 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国1 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国2 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国3 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡4 VIP1 网址:nnbin.com'
+      - '🇸🇬 A新加坡5 vip1 网址:nnbin.com'
+      - '🇸🇬 A新加坡6 VIP1 网址:nnbin.com'
+      - '🇸🇬 A新加坡7 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港4 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港5 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港6 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港8 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国1 VIP1 网址:nnbin.com'
+      - '🇺🇲 C美国2 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国3 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国4 vip1 网址:nnbin.com'
+      - '🇯🇵 日本1 VIP1网址:nnbin.com'
+      - '🇯🇵 日本2 VIP1网址:nnbin.com'
+      - '🇰🇷 韩国1 VIP1 网站:nnbin.com'
+      - '🇰🇷 韩国2 VIP1 网址nnbin.com'
+  - name: 自动选择
+    type: url-test
+    proxies:
+      - '🇸🇬 AA1新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA3新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA4新加坡IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国1 IPLC VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国2 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国3 IPLC VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国4 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国5 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国6 网址:nnbin.com'
+      - '🇯🇵 AA6日本1 IPLC VIP2 网址:nnbin.com'
+      - '🇯🇵 AA6日本2 IPLC VIP2 网址:nnbin.com'
+      - '🇮🇩 AA8印尼 VIP2 网址:nnbin.com'
+      - '🇹🇼 AA8台湾1 VIP2 网址:nnbin.com'
+      - "🇹🇼 AA8台湾2 支持NF VIP2 网址:nnbin.com\t"
+      - '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
+      - 'AA8墨西哥 VIP2 网址:nnbin.com'
+      - '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
+      - "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+      - '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
+      - '🇫🇷 AA8法国 网址:nnbin.com'
+      - '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
+      - '🇹🇭 AA8泰国2 VIP2 网址:nnbin.com'
+      - '🇦🇺 AA8澳大利亚 网址:nnbin.com'
+      - '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
+      - 'AA8西班牙 VIP2 网址:nnbin.com'
+      - '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
+      - '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
+      - "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+      - '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
+      - '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
+      - '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
+      - '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡3 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡4 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡5 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡6 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇬🇧 AA英国1 IEPL VIP2 网址:nnbin.com'
+      - '🇬🇧 AA英国3 IEPL VIP2 网址:nnbin.com'
+      - '🇰🇷 AA韩国1 IPLC  VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港1 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港2 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港3 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港5 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港6 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港7 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港8 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港9 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 A新加坡1 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡2 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡3 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国1 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国2 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国3 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡4 VIP1 网址:nnbin.com'
+      - '🇸🇬 A新加坡5 vip1 网址:nnbin.com'
+      - '🇸🇬 A新加坡6 VIP1 网址:nnbin.com'
+      - '🇸🇬 A新加坡7 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港4 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港5 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港6 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港8 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国1 VIP1 网址:nnbin.com'
+      - '🇺🇲 C美国2 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国3 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国4 vip1 网址:nnbin.com'
+      - '🇯🇵 日本1 VIP1网址:nnbin.com'
+      - '🇯🇵 日本2 VIP1网址:nnbin.com'
+      - '🇰🇷 韩国1 VIP1 网站:nnbin.com'
+      - '🇰🇷 韩国2 VIP1 网址nnbin.com'
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 86400
+    tolerance: 300
+    lazy: true
+  - name: 故障转移
+    type: fallback
+    proxies:
+      - '🇸🇬 AA1新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA3新加坡 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA4新加坡IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国1 IPLC VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国2 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国3 IPLC VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国4 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国5 IPLC  VIP2 网址:nnbin.com'
+      - '🇺🇲 AA5美国6 网址:nnbin.com'
+      - '🇯🇵 AA6日本1 IPLC VIP2 网址:nnbin.com'
+      - '🇯🇵 AA6日本2 IPLC VIP2 网址:nnbin.com'
+      - '🇮🇩 AA8印尼 VIP2 网址:nnbin.com'
+      - '🇹🇼 AA8台湾1 VIP2 网址:nnbin.com'
+      - "🇹🇼 AA8台湾2 支持NF VIP2 网址:nnbin.com\t"
+      - '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
+      - 'AA8墨西哥 VIP2 网址:nnbin.com'
+      - '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
+      - "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+      - '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
+      - '🇫🇷 AA8法国 网址:nnbin.com'
+      - '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
+      - '🇹🇭 AA8泰国2 VIP2 网址:nnbin.com'
+      - '🇦🇺 AA8澳大利亚 网址:nnbin.com'
+      - '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
+      - 'AA8西班牙 VIP2 网址:nnbin.com'
+      - '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
+      - '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
+      - "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+      - '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
+      - '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
+      - '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
+      - '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡3 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡4 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡5 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 AA新加坡6 IPLC  支持NF VIP2 网址:nnbin.com'
+      - '🇬🇧 AA英国1 IEPL VIP2 网址:nnbin.com'
+      - '🇬🇧 AA英国3 IEPL VIP2 网址:nnbin.com'
+      - '🇰🇷 AA韩国1 IPLC  VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港1 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港2 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港3 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港5 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港6 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港7 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港8 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇭🇰 AA香港9 IPLC 支持NF VIP2 网址:nnbin.com'
+      - '🇸🇬 A新加坡1 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡2 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡3 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国1 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国2 VIP1 网址:bdoos.com'
+      - '🇺🇲 A美国3 VIP1 网址:bdoos.com'
+      - '🇸🇬 A新加坡4 VIP1 网址:nnbin.com'
+      - '🇸🇬 A新加坡5 vip1 网址:nnbin.com'
+      - '🇸🇬 A新加坡6 VIP1 网址:nnbin.com'
+      - '🇸🇬 A新加坡7 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港4 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港5 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港6 VIP1 网址:nnbin.com'
+      - '🇭🇰 A香港8 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国1 VIP1 网址:nnbin.com'
+      - '🇺🇲 C美国2 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国3 VIP1 网址:nnbin.com'
+      - '🇺🇲 c美国4 vip1 网址:nnbin.com'
+      - '🇯🇵 日本1 VIP1网址:nnbin.com'
+      - '🇯🇵 日本2 VIP1网址:nnbin.com'
+      - '🇰🇷 韩国1 VIP1 网站:nnbin.com'
+      - '🇰🇷 韩国2 VIP1 网址nnbin.com'
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 7200
+    lazy: true
+
+
+rules:
+- DOMAIN,itunes.apple.com,DIRECT
+- DOMAIN,beta.itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN,e.crashlytics.com,REJECT
+- DOMAIN-KEYWORD,bilibili,DIRECT
+- DOMAIN-SUFFIX,acgvideo.com,DIRECT
+- DOMAIN-SUFFIX,hdslb.com,DIRECT
+- DOMAIN-KEYWORD,qiyi,DIRECT
+- DOMAIN-SUFFIX,qy.net,DIRECT
+- DOMAIN-SUFFIX,api.mob.app.letv.com,DIRECT
+- DOMAIN-SUFFIX,music.126.net,DIRECT
+- DOMAIN-SUFFIX,music.163.com,DIRECT
+- DOMAIN-SUFFIX,vv.video.qq.com,DIRECT
+- DOMAIN,gs.apple.com,DIRECT
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilivideo.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rr.tv,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,ip138.com,DIRECT
+
+
+- DOMAIN-SUFFIX,edgedatg.com,Proxy
+- DOMAIN-SUFFIX,go.com,Proxy
+- DOMAIN,linear-abematv.akamaized.net,Proxy
+- DOMAIN-SUFFIX,abema.io,Proxy
+- DOMAIN-SUFFIX,abema.tv,Proxy
+- DOMAIN-SUFFIX,akamaized.net,Proxy
+- DOMAIN-SUFFIX,ameba.jp,Proxy
+- DOMAIN-SUFFIX,hayabusa.io,Proxy
+- DOMAIN-SUFFIX,amazonaws.com,Proxy
+- DOMAIN-SUFFIX,bahamut.com.tw,Proxy
+- DOMAIN-SUFFIX,gamer.com.tw,Proxy
+- DOMAIN-SUFFIX,hinet.net,Proxy
+- DOMAIN-KEYWORD,bbcfmt,Proxy
+- DOMAIN-KEYWORD,co.uk,Proxy
+- DOMAIN-KEYWORD,uk-live,Proxy
+- DOMAIN-SUFFIX,bbc.co,Proxy
+- DOMAIN-SUFFIX,bbc.co.uk,Proxy
+- DOMAIN-SUFFIX,bbc.com,Proxy
+- DOMAIN-SUFFIX,bbci.co,Proxy
+- DOMAIN-SUFFIX,bbci.co.uk,Proxy
+- DOMAIN-SUFFIX,chocotv.com.tw,Proxy
+- DOMAIN-KEYWORD,epicgames,Proxy
+- DOMAIN-SUFFIX,helpshift.com,Proxy
+- DOMAIN-KEYWORD,foxplus,Proxy
+- DOMAIN-SUFFIX,config.fox.com,Proxy
+- DOMAIN-SUFFIX,emome.net,Proxy
+- DOMAIN-SUFFIX,fox.com,Proxy
+- DOMAIN-SUFFIX,foxdcg.com,Proxy
+- DOMAIN-SUFFIX,foxnow.com,Proxy
+- DOMAIN-SUFFIX,foxplus.com,Proxy
+- DOMAIN-SUFFIX,foxplay.com,Proxy
+- DOMAIN-SUFFIX,ipinfo.io,Proxy
+- DOMAIN-SUFFIX,mstage.io,Proxy
+- DOMAIN-SUFFIX,now.com,Proxy
+- DOMAIN-SUFFIX,theplatform.com,Proxy
+- DOMAIN-SUFFIX,hbo.com,Proxy
+- DOMAIN-SUFFIX,hbogo.com,Proxy
+- DOMAIN-SUFFIX,hbogoasia.hk,Proxy
+- DOMAIN-SUFFIX,happyon.jp,Proxy
+- DOMAIN-SUFFIX,hulu.com,Proxy
+- DOMAIN-SUFFIX,huluim.com,Proxy
+- DOMAIN-SUFFIX,imkan.tv,Proxy
+- DOMAIN-SUFFIX,joox.com,Proxy
+- DOMAIN-SUFFIX,netflix.com,Proxy
+- DOMAIN-SUFFIX,netflix.net,Proxy
+- DOMAIN-SUFFIX,nflxext.com,Proxy
+- DOMAIN-SUFFIX,nflximg.com,Proxy
+- DOMAIN-SUFFIX,nflximg.net,Proxy
+- DOMAIN-SUFFIX,nflxso.net,Proxy
+- DOMAIN-SUFFIX,nflxvideo.net,Proxy
+- DOMAIN-KEYWORD,spotify,Proxy
+- DOMAIN-SUFFIX,scdn.co,Proxy
+- DOMAIN-SUFFIX,spoti.fi,Proxy
+- DOMAIN-SUFFIX,viu.tv,Proxy
+- DOMAIN-KEYWORD,youtube,Proxy
+- DOMAIN-SUFFIX,googlevideo.com,Proxy
+- DOMAIN-SUFFIX,gvt2.com,Proxy
+- DOMAIN-SUFFIX,youtu.be,Proxy
+- DOMAIN-KEYWORD,nowtv100,Proxy
+- DOMAIN-KEYWORD,rthklive,Proxy
+- DOMAIN-SUFFIX,mytvsuper.com,Proxy
+- DOMAIN-SUFFIX,tvb.com,Proxy
+- DOMAIN-KEYWORD,amazon,Proxy
+- DOMAIN-KEYWORD,google,Proxy
+- DOMAIN-KEYWORD,gmail,Proxy
+- DOMAIN-KEYWORD,youtube,Proxy
+- DOMAIN-KEYWORD,facebook,Proxy
+- DOMAIN-KEYWORD,openai,Proxy
+- DOMAIN-KEYWORD,chatgpt,Proxy
+- DOMAIN-KEYWORD,pixiv,Proxy
+- DOMAIN-SUFFIX,rarbg.to,Proxy
+- DOMAIN-KEYWORD,pinterest,Proxy
+- DOMAIN-KEYWORD,behance,Proxy
+- DOMAIN-SUFFIX,fb.me,Proxy
+- DOMAIN-SUFFIX,fbcdn.net,Proxy
+- DOMAIN-KEYWORD,twitter,Proxy
+- DOMAIN-KEYWORD,instagram,Proxy
+- DOMAIN-KEYWORD,dropbox,Proxy
+- DOMAIN-SUFFIX,twimg.com,Proxy
+- DOMAIN-KEYWORD,blogspot,Proxy
+- DOMAIN-SUFFIX,youtu.be,Proxy
+- DOMAIN-KEYWORD,whatsapp,Proxy
+- DOMAIN-SUFFIX,steamcommunity.com,Proxy
+- DOMAIN-SUFFIX,googleapis.cn,Proxy
+- DOMAIN-SUFFIX,googleapis.com,Proxy
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Proxy
+- DOMAIN-SUFFIX,microsoftonline.com,Proxy
+- DOMAIN-SUFFIX,t.co,Proxy
+- DOMAIN-SUFFIX,x.com,Proxy
+- DOMAIN-SUFFIX,www.x.com,Proxy
+- DOMAIN-SUFFIX,www.v2ex.com,Proxy
+- DOMAIN-SUFFIX,v2ex.com,Proxy
+- DOMAIN-SUFFIX,9to5mac.com,Proxy
+- DOMAIN-SUFFIX,abpchina.org,Proxy
+- DOMAIN-SUFFIX,adblockplus.org,Proxy
+- DOMAIN-SUFFIX,adobe.com,Proxy
+- DOMAIN-SUFFIX,alfredapp.com,Proxy
+- DOMAIN-SUFFIX,amplitude.com,Proxy
+- DOMAIN-SUFFIX,ampproject.org,Proxy
+- DOMAIN-SUFFIX,android.com,Proxy
+- DOMAIN-SUFFIX,angularjs.org,Proxy
+- DOMAIN-SUFFIX,aolcdn.com,Proxy
+- DOMAIN-SUFFIX,apkpure.com,Proxy
+- DOMAIN-SUFFIX,appledaily.com,Proxy
+- DOMAIN-SUFFIX,appshopper.com,Proxy
+- DOMAIN-SUFFIX,appspot.com,Proxy
+- DOMAIN-SUFFIX,arcgis.com,Proxy
+- DOMAIN-SUFFIX,archive.org,Proxy
+- DOMAIN-SUFFIX,armorgames.com,Proxy
+- DOMAIN-SUFFIX,aspnetcdn.com,Proxy
+- DOMAIN-SUFFIX,att.com,Proxy
+- DOMAIN-SUFFIX,awsstatic.com,Proxy
+- DOMAIN-SUFFIX,azureedge.net,Proxy
+- DOMAIN-SUFFIX,azurewebsites.net,Proxy
+- DOMAIN-SUFFIX,bing.com,Proxy
+- DOMAIN-SUFFIX,bintray.com,Proxy
+- DOMAIN-SUFFIX,bit.com,Proxy
+- DOMAIN-SUFFIX,bit.ly,Proxy
+- DOMAIN-SUFFIX,bitbucket.org,Proxy
+- DOMAIN-SUFFIX,bjango.com,Proxy
+- DOMAIN-SUFFIX,bkrtx.com,Proxy
+- DOMAIN-SUFFIX,blog.com,Proxy
+- DOMAIN-SUFFIX,blogcdn.com,Proxy
+- DOMAIN-SUFFIX,blogger.com,Proxy
+- DOMAIN-SUFFIX,blogsmithmedia.com,Proxy
+- DOMAIN-SUFFIX,blogspot.com,Proxy
+- DOMAIN-SUFFIX,blogspot.hk,Proxy
+- DOMAIN-SUFFIX,bloomberg.com,Proxy
+- DOMAIN-SUFFIX,box.com,Proxy
+- DOMAIN-SUFFIX,box.net,Proxy
+- DOMAIN-SUFFIX,cachefly.net,Proxy
+- DOMAIN-SUFFIX,chromium.org,Proxy
+- DOMAIN-SUFFIX,cl.ly,Proxy
+- DOMAIN-SUFFIX,cloudflare.com,Proxy
+- DOMAIN-SUFFIX,cloudfront.net,Proxy
+- DOMAIN-SUFFIX,cloudmagic.com,Proxy
+- DOMAIN-SUFFIX,cmail19.com,Proxy
+- DOMAIN-SUFFIX,cnet.com,Proxy
+- DOMAIN-SUFFIX,cocoapods.org,Proxy
+- DOMAIN-SUFFIX,comodoca.com,Proxy
+- DOMAIN-SUFFIX,content.office.net,Proxy
+- DOMAIN-SUFFIX,crashlytics.com,Proxy
+- DOMAIN-SUFFIX,culturedcode.com,Proxy
+- DOMAIN-SUFFIX,d.pr,Proxy
+- DOMAIN-SUFFIX,danilo.to,Proxy
+- DOMAIN-SUFFIX,dayone.me,Proxy
+- DOMAIN-SUFFIX,db.tt,Proxy
+- DOMAIN-SUFFIX,deskconnect.com,Proxy
+- DOMAIN-SUFFIX,digicert.com,Proxy
+- DOMAIN-SUFFIX,disq.us,Proxy
+- DOMAIN-SUFFIX,disqus.com,Proxy
+- DOMAIN-SUFFIX,disquscdn.com,Proxy
+- DOMAIN-SUFFIX,dlercloud.com,Proxy
+- DOMAIN-SUFFIX,dnsimple.com,Proxy
+- DOMAIN-SUFFIX,docker.com,Proxy
+- DOMAIN-SUFFIX,dribbble.com,Proxy
+- DOMAIN-SUFFIX,droplr.com,Proxy
+- DOMAIN-SUFFIX,duckduckgo.com,Proxy
+- DOMAIN-SUFFIX,dueapp.com,Proxy
+- DOMAIN-SUFFIX,dytt8.net,Proxy
+- DOMAIN-SUFFIX,edgecastcdn.net,Proxy
+- DOMAIN-SUFFIX,edgekey.net,Proxy
+- DOMAIN-SUFFIX,edgesuite.net,Proxy
+- DOMAIN-SUFFIX,engadget.com,Proxy
+- DOMAIN-SUFFIX,entrust.net,Proxy
+- DOMAIN-SUFFIX,eurekavpt.com,Proxy
+- DOMAIN-SUFFIX,evernote.com,Proxy
+- DOMAIN-SUFFIX,fabric.io,Proxy
+- DOMAIN-SUFFIX,fast.com,Proxy
+- DOMAIN-SUFFIX,fastly.net,Proxy
+- DOMAIN-SUFFIX,fc2.com,Proxy
+- DOMAIN-SUFFIX,feedburner.com,Proxy
+- DOMAIN-SUFFIX,feedly.com,Proxy
+- DOMAIN-SUFFIX,feedsportal.com,Proxy
+- DOMAIN-SUFFIX,fiftythree.com,Proxy
+- DOMAIN-SUFFIX,firebaseio.com,Proxy
+- DOMAIN-SUFFIX,flexibits.com,Proxy
+- DOMAIN-SUFFIX,flickr.com,Proxy
+- DOMAIN-SUFFIX,flipboard.com,Proxy
+- DOMAIN-SUFFIX,g.co,Proxy
+- DOMAIN-SUFFIX,gabia.net,Proxy
+- DOMAIN-SUFFIX,geni.us,Proxy
+- DOMAIN-SUFFIX,gfx.ms,Proxy
+- DOMAIN-SUFFIX,ggpht.com,Proxy
+- DOMAIN-SUFFIX,ghostnoteapp.com,Proxy
+- DOMAIN-SUFFIX,git.io,Proxy
+- DOMAIN-KEYWORD,github,Proxy
+- DOMAIN-SUFFIX,globalsign.com,Proxy
+- DOMAIN-SUFFIX,gmodules.com,Proxy
+- DOMAIN-SUFFIX,godaddy.com,Proxy
+- DOMAIN-SUFFIX,golang.org,Proxy
+- DOMAIN-SUFFIX,gongm.in,Proxy
+- DOMAIN-SUFFIX,goo.gl,Proxy
+- DOMAIN-SUFFIX,goodreaders.com,Proxy
+- DOMAIN-SUFFIX,goodreads.com,Proxy
+- DOMAIN-SUFFIX,gravatar.com,Proxy
+- DOMAIN-SUFFIX,gstatic.com,Proxy
+- DOMAIN-SUFFIX,gvt0.com,Proxy
+- DOMAIN-SUFFIX,hockeyapp.net,Proxy
+- DOMAIN-SUFFIX,hotmail.com,Proxy
+- DOMAIN-SUFFIX,icons8.com,Proxy
+- DOMAIN-SUFFIX,ift.tt,Proxy
+- DOMAIN-SUFFIX,ifttt.com,Proxy
+- DOMAIN-SUFFIX,iherb.com,Proxy
+- DOMAIN-SUFFIX,imageshack.us,Proxy
+- DOMAIN-SUFFIX,img.ly,Proxy
+- DOMAIN-SUFFIX,imgur.com,Proxy
+- DOMAIN-SUFFIX,imore.com,Proxy
+- DOMAIN-SUFFIX,instapaper.com,Proxy
+- DOMAIN-SUFFIX,ipn.li,Proxy
+- DOMAIN-SUFFIX,is.gd,Proxy
+- DOMAIN-SUFFIX,issuu.com,Proxy
+- DOMAIN-SUFFIX,itgonglun.com,Proxy
+- DOMAIN-SUFFIX,itun.es,Proxy
+- DOMAIN-SUFFIX,ixquick.com,Proxy
+- DOMAIN-SUFFIX,j.mp,Proxy
+- DOMAIN-SUFFIX,js.revsci.net,Proxy
+- DOMAIN-SUFFIX,jshint.com,Proxy
+- DOMAIN-SUFFIX,jtvnw.net,Proxy
+- DOMAIN-SUFFIX,justgetflux.com,Proxy
+- DOMAIN-SUFFIX,kat.cr,Proxy
+- DOMAIN-SUFFIX,klip.me,Proxy
+- DOMAIN-SUFFIX,libsyn.com,Proxy
+- DOMAIN-SUFFIX,licdn.com,Proxy
+- DOMAIN-SUFFIX,linkedin.com,Proxy
+- DOMAIN-SUFFIX,www.linkedin.com,Proxy
+- DOMAIN-SUFFIX,linode.com,Proxy
+- DOMAIN-SUFFIX,lithium.com,Proxy
+- DOMAIN-SUFFIX,littlehj.com,Proxy
+- DOMAIN-SUFFIX,live.com,Proxy
+- DOMAIN-SUFFIX,live.net,Proxy
+- DOMAIN-SUFFIX,livefilestore.com,Proxy
+- DOMAIN-SUFFIX,llnwd.net,Proxy
+- DOMAIN-SUFFIX,macid.co,Proxy
+- DOMAIN-SUFFIX,macromedia.com,Proxy
+- DOMAIN-SUFFIX,macrumors.com,Proxy
+- DOMAIN-SUFFIX,mashable.com,Proxy
+- DOMAIN-SUFFIX,mathjax.org,Proxy
+- DOMAIN-SUFFIX,medium.com,Proxy
+- DOMAIN-SUFFIX,mega.co.nz,Proxy
+- DOMAIN-SUFFIX,mega.nz,Proxy
+- DOMAIN-SUFFIX,megaupload.com,Proxy
+- DOMAIN-SUFFIX,microsofttranslator.com,Proxy
+- DOMAIN-SUFFIX,mindnode.com,Proxy
+- DOMAIN-SUFFIX,mobile01.com,Proxy
+- DOMAIN-SUFFIX,modmyi.com,Proxy
+- DOMAIN-SUFFIX,msedge.net,Proxy
+- DOMAIN-SUFFIX,myfontastic.com,Proxy
+- DOMAIN-SUFFIX,name.com,Proxy
+- DOMAIN-SUFFIX,nextmedia.com,Proxy
+- DOMAIN-SUFFIX,nsstatic.net,Proxy
+- DOMAIN-SUFFIX,nssurge.com,Proxy
+- DOMAIN-SUFFIX,nyt.com,Proxy
+- DOMAIN-SUFFIX,nytimes.com,Proxy
+- DOMAIN-SUFFIX,office365.com,Proxy
+- DOMAIN-SUFFIX,omnigroup.com,Proxy
+- DOMAIN-SUFFIX,onedrive.com,Proxy
+- DOMAIN-SUFFIX,onenote.com,Proxy
+- DOMAIN-SUFFIX,ooyala.com,Proxy
+- DOMAIN-SUFFIX,openvpn.net,Proxy
+- DOMAIN-SUFFIX,openwrt.org,Proxy
+- DOMAIN-SUFFIX,orkut.com,Proxy
+- DOMAIN-SUFFIX,osxdaily.com,Proxy
+- DOMAIN-SUFFIX,outlook.com,Proxy
+- DOMAIN-SUFFIX,ow.ly,Proxy
+- DOMAIN-SUFFIX,paddleapi.com,Proxy
+- DOMAIN-SUFFIX,parallels.com,Proxy
+- DOMAIN-SUFFIX,parse.com,Proxy
+- DOMAIN-SUFFIX,pdfexpert.com,Proxy
+- DOMAIN-SUFFIX,periscope.tv,Proxy
+- DOMAIN-SUFFIX,pinboard.in,Proxy
+- DOMAIN-SUFFIX,pinterest.com,Proxy
+- DOMAIN-SUFFIX,pinimg.com,Proxy
+- DOMAIN-SUFFIX,www.pinterest.com,Proxy
+- DOMAIN-SUFFIX,s.pinimg.com,Proxy
+- DOMAIN-SUFFIX,i.pinimg.com,Proxy
+- DOMAIN-SUFFIX,pixelmator.com,Proxy
+- DOMAIN-SUFFIX,pixiv.net,Proxy
+- DOMAIN-SUFFIX,pximg.net,Proxy
+- DOMAIN-SUFFIX,playpcesor.com,Proxy
+- DOMAIN-SUFFIX,playstation.com,Proxy
+- DOMAIN-SUFFIX,playstation.com.hk,Proxy
+- DOMAIN-SUFFIX,playstation.net,Proxy
+- DOMAIN-SUFFIX,playstationnetwork.com,Proxy
+- DOMAIN-SUFFIX,pushwoosh.com,Proxy
+- DOMAIN-SUFFIX,rime.im,Proxy
+- DOMAIN-SUFFIX,servebom.com,Proxy
+- DOMAIN-SUFFIX,sfx.ms,Proxy
+- DOMAIN-SUFFIX,shadowsocks.org,Proxy
+- DOMAIN-SUFFIX,sharethis.com,Proxy
+- DOMAIN-SUFFIX,shazam.com,Proxy
+- DOMAIN-SUFFIX,skype.com,Proxy
+- DOMAIN-SUFFIX,smartdnsProxy.com,Proxy
+- DOMAIN-SUFFIX,smartmailcloud.com,Proxy
+- DOMAIN-SUFFIX,sndcdn.com,Proxy
+- DOMAIN-SUFFIX,sony.com,Proxy
+- DOMAIN-SUFFIX,soundcloud.com,Proxy
+- DOMAIN-SUFFIX,sourceforge.net,Proxy
+- DOMAIN-SUFFIX,spotify.com,Proxy
+- DOMAIN-SUFFIX,squarespace.com,Proxy
+- DOMAIN-SUFFIX,sstatic.net,Proxy
+- DOMAIN-SUFFIX,st.luluku.pw,Proxy
+- DOMAIN-SUFFIX,stackoverflow.com,Proxy
+- DOMAIN-SUFFIX,startpage.com,Proxy
+- DOMAIN-SUFFIX,staticflickr.com,Proxy
+- DOMAIN-SUFFIX,symauth.com,Proxy
+- DOMAIN-SUFFIX,symcb.com,Proxy
+- DOMAIN-SUFFIX,symcd.com,Proxy
+- DOMAIN-SUFFIX,tapbots.com,Proxy
+- DOMAIN-SUFFIX,tapbots.net,Proxy
+- DOMAIN-SUFFIX,tdesktop.com,Proxy
+- DOMAIN-SUFFIX,techcrunch.com,Proxy
+- DOMAIN-SUFFIX,techsmith.com,Proxy
+- DOMAIN-SUFFIX,thepiratebay.org,Proxy
+- DOMAIN-SUFFIX,theverge.com,Proxy
+- DOMAIN-SUFFIX,time.com,Proxy
+- DOMAIN-SUFFIX,timeinc.net,Proxy
+- DOMAIN-SUFFIX,tiny.cc,Proxy
+- DOMAIN-SUFFIX,tinypic.com,Proxy
+- DOMAIN-SUFFIX,tmblr.co,Proxy
+- DOMAIN-SUFFIX,todoist.com,Proxy
+- DOMAIN-SUFFIX,trello.com,Proxy
+- DOMAIN-SUFFIX,trustasiassl.com,Proxy
+- DOMAIN-SUFFIX,tumblr.co,Proxy
+- DOMAIN-SUFFIX,tumblr.com,Proxy
+- DOMAIN-SUFFIX,tweetdeck.com,Proxy
+- DOMAIN-SUFFIX,tweetmarker.net,Proxy
+- DOMAIN-SUFFIX,twitch.tv,Proxy
+- DOMAIN-SUFFIX,txmblr.com,Proxy
+- DOMAIN-SUFFIX,typekit.net,Proxy
+- DOMAIN-SUFFIX,ubertags.com,Proxy
+- DOMAIN-SUFFIX,ublock.org,Proxy
+- DOMAIN-SUFFIX,ubnt.com,Proxy
+- DOMAIN-SUFFIX,ulyssesapp.com,Proxy
+- DOMAIN-SUFFIX,urchin.com,Proxy
+- DOMAIN-SUFFIX,usertrust.com,Proxy
+- DOMAIN-SUFFIX,v.gd,Proxy
+- DOMAIN-SUFFIX,vimeo.com,Proxy
+- DOMAIN-SUFFIX,vimeocdn.com,Proxy
+- DOMAIN-SUFFIX,vine.co,Proxy
+- DOMAIN-SUFFIX,vivaldi.com,Proxy
+- DOMAIN-SUFFIX,vox-cdn.com,Proxy
+- DOMAIN-SUFFIX,vsco.co,Proxy
+- DOMAIN-SUFFIX,vultr.com,Proxy
+- DOMAIN-SUFFIX,w.org,Proxy
+- DOMAIN-SUFFIX,w3schools.com,Proxy
+- DOMAIN-SUFFIX,webtype.com,Proxy
+- DOMAIN-SUFFIX,wikiwand.com,Proxy
+- DOMAIN-SUFFIX,wikileaks.org,Proxy
+- DOMAIN-SUFFIX,wikimedia.org,Proxy
+- DOMAIN-SUFFIX,wikipedia.com,Proxy
+- DOMAIN-SUFFIX,wikipedia.org,Proxy
+- DOMAIN-SUFFIX,windows.com,Proxy
+- DOMAIN-SUFFIX,windows.net,Proxy
+- DOMAIN-SUFFIX,wire.com,Proxy
+- DOMAIN-SUFFIX,wordpress.com,Proxy
+- DOMAIN-SUFFIX,workflowy.com,Proxy
+- DOMAIN-SUFFIX,wp.com,Proxy
+- DOMAIN-SUFFIX,wsj.com,Proxy
+- DOMAIN-SUFFIX,wsj.net,Proxy
+- DOMAIN-SUFFIX,xda-developers.com,Proxy
+- DOMAIN-SUFFIX,xeeno.com,Proxy
+- DOMAIN-SUFFIX,xiti.com,Proxy
+- DOMAIN-SUFFIX,yahoo.com,Proxy
+- DOMAIN-SUFFIX,yimg.com,Proxy
+- DOMAIN-SUFFIX,ying.com,Proxy
+- DOMAIN-SUFFIX,yoyo.org,Proxy
+- DOMAIN-SUFFIX,ytimg.com,Proxy
+- DOMAIN-SUFFIX,chatgpt.com,Proxy
+- DOMAIN-SUFFIX,openai.com,Proxy
+- DOMAIN-SUFFIX,auth.openai.com,Proxy
+- DOMAIN-SUFFIX,auth0.openai.com,Proxy
+- DOMAIN-SUFFIX,ab.chatgpt.com,Proxy
+- DOMAIN-SUFFIX,telegra.ph,Proxy
+- DOMAIN-SUFFIX,telegram.org,Proxy
+- IP-CIDR,91.108.56.0/22,Proxy
+- IP-CIDR,91.108.4.0/22,Proxy
+- IP-CIDR,91.108.8.0/22,Proxy
+- IP-CIDR,109.239.140.0/24,Proxy
+- IP-CIDR,149.154.160.0/20,Proxy
+- IP-CIDR,149.154.164.0/22,Proxy
+
+- DOMAIN,steamcdn-a.akamaihd.net,DIRECT
+- DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
+- DOMAIN-SUFFIX,steamserver.net,DIRECT
+- IP-CIDR,45.121.184.0/24,DIRECT
+- IP-CIDR,103.10.124.0/23,DIRECT
+- IP-CIDR,103.28.54.0/24,DIRECT
+- IP-CIDR,146.66.152.0/24,DIRECT
+- IP-CIDR,146.66.155.0/24,DIRECT
+- IP-CIDR,153.254.86.0/24,DIRECT
+- IP-CIDR,155.133.224.0/22,DIRECT
+- IP-CIDR,155.133.230.0/24,DIRECT
+- IP-CIDR,155.133.232.0/23,DIRECT
+- IP-CIDR,155.133.234.0/24,DIRECT
+- IP-CIDR,155.133.236.0/22,DIRECT
+- IP-CIDR,155.133.240.0/23,DIRECT
+- IP-CIDR,155.133.244.0/23,DIRECT
+- IP-CIDR,155.133.246.0/24,DIRECT
+- IP-CIDR,155.133.248.0/21,DIRECT
+- IP-CIDR,162.254.192.0/21,DIRECT
+- IP-CIDR,185.25.182.0/23,DIRECT
+- IP-CIDR,190.217.32.0/22,DIRECT
+- IP-CIDR,192.69.96.0/22,DIRECT
+- IP-CIDR,205.196.6.0/24,DIRECT
+- IP-CIDR,208.64.200.0/22,DIRECT
+- IP-CIDR,208.78.164.0/22,DIRECT
+- IP-CIDR,205.185.194.0/24,DIRECT
+- IP-CIDR,101.224.0.0/13,DIRECT
+- IP-CIDR,119.176.0.0/12,DIRECT
+- IP-CIDR,106.11.0.0/16,DIRECT
+
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+
+
+
+
+- DOMAIN-SUFFIX,cn,DIRECT
+- GEOSITE,CN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Proxy

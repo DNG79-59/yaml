@@ -20,13 +20,6 @@ proxy-providers:
     path: ./proxy_providers/69Emby.yaml
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
-  tempEmby:
-    type: http
-    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/tempEmby
-    interval: 7200
-    path: ./proxy_providers/TempEmby.yaml
-    benchmark-url: https://emby3.69yun69.com
-    benchmark-timeout: 5
   leaf3:
     type: http
     url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/leaf*3
@@ -656,17 +649,6 @@ proxy-groups:
     use:
       - 69Emby
     filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
-  - name: embyTemp
-    type: load-balance
-    include-all: true
-    filter: (?i)tempEmby
-    # url: https://matrix.313445.xyz
-    # interval: 300
-    # lazy: true
-    hidden: false
-    # tolerance: 100
-    use:
-      - tempEmby
   - name: PROXY
     proxies:
       - 自动选择
@@ -690,9 +672,8 @@ proxy-groups:
 rules:
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
-  - RULE-SET,Tempemby,embyTemp
   - RULE-SET,69emby,69emby
-  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-ads,REJECT
   - DOMAIN-SUFFIX,opencode.ai,AI
   - GEOSITE,category-ai-!cn,AI
   - GEOSITE,Telegram,Telegram

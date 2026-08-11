@@ -1,0 +1,734 @@
+mode: rule
+log-level: warning
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+proxies:
+  - {"name":"69yun | 香港 2× IPLC 01","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41447,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 香港 2× IPLC 02","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41453,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 香港 2× IPLC 03","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41463,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 香港 2× IPLC 04","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41593,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 香港 2× IPLC 05","type":"ss","server":"bgp-1313122-228.834928.xyz","port":35361,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 香港 2× IPLC 06","type":"ss","server":"bgp-1313122-228.834928.xyz","port":35315,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 台湾 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":37386,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 台湾 2× IPLC 02","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41293,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 台湾 2× Fam 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":30302,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 香港 2× Fam 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20511,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 新加坡 2× IPLC 01","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41483,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 新加坡 2× IPLC 02","type":"ss","server":"bgp-1313122-228.834928.xyz","port":21381,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 日本 2× IPLC 01","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41193,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 日本 2× IPLC 02","type":"ss","server":"bgp-1313122-228.834928.xyz","port":55327,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 美国 2× IPLC 01","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":41473,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"69yun | 美国 2× IPLC 02","type":"ss","server":"bgp-1313122-228.834928.xyz","port":53362,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 美国 2× IPLC 03","type":"ss","server":"bgp-1313122-228.834928.xyz","port":53762,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 美国 2× IPLC 04","type":"ss","server":"bgp-1313122-228.834928.xyz","port":53365,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 美国 2× IPLC 05","type":"ss","server":"bgp-1313122-228.834928.xyz","port":58363,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 德国 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":21311,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 法国 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":55371,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 澳大利亚 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":24329,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 英国 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":41391,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 加拿大 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":41393,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 荷兰 2× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":52355,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 香港 01","type":"ss","server":"hk-nat-toys-ddns.337979.xyz","port":20513,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 印度 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":14323,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 埃及 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":31755,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 越南 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":24355,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 马来 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":33308,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 柬埔寨 5× Fam 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20192,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 土耳其 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20363,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 尼日利亚 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20172,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 巴基斯坦 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":31055,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 波兰 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20263,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 泰国 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":43233,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 澳门 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":31352,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 俄罗斯 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20382,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 菲律宾 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":20056,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 阿根廷 5× IPLC 01","type":"ss","server":"bgp-1313122-228.834928.xyz","port":21192,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"69yun | 印度 5× 01","type":"ss","server":"152.67.1.223","port":44363,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
+  - {"name":"hs-ts | 香港 01","server":"b.3.g.l.p.b.o.d.1.hk01-ae5.entry.v51124-6.qpon","port":19276,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 01","server":"b.k.q.i.o.j.p.d.1.jp01-ae5.entry.v51124-6.qpon","port":477,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 02","server":"b.i.2.v.x.v.p.d.1.jp02-ae5.entry.v51124-6.qpon","port":487,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 03","server":"y.k.g.v.x.b.p.d.1.jp03-ae5.entry.v51124-6.qpon","port":492,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 04","server":"5.i.2.6.s.b.o.d.1.jp04-ae5.entry.v51124-6.qpon","port":497,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 05","server":"5.3.2.6.x.v.p.d.1.jp07-ae5.entry.v51124-6.qpon","port":14009,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 06","server":"5.k.2.l.s.e.p.d.1.jp08-ae5.entry.v51124-6.qpon","port":12547,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 07","server":"b.k.2.l.o.b.r.d.1.jp09-ae5.entry.v51124-6.qpon","port":11162,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 08","server":"y.3.g.v.x.b.p.d.1.jp10-ae5.entry.v51124-6.qpon","port":16528,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 IEPL 09","server":"b.3.q.6.p.b.r.d.1.jp11-ae5.entry.v51124-6.qpon","port":17745,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 IEPL 01","server":"y.3.g.v.s.j.o.d.1.hk02-ae5.entry.v51124-6.qpon","port":14564,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 IEPL 02","server":"y.i.2.6.s.b.p.d.1.hk03-ae5.entry.v51124-6.qpon","port":764,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 IEPL 03","server":"b.i.q.6.p.j.r.d.1.hk04-ae5.entry.v51124-6.qpon","port":808,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 IEPL 04","server":"y.3.2.6.p.e.o.d.1.hk05-ae5.entry.v51124-6.qpon","port":1816,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 IEPL 05","server":"y.i.2.l.p.b.o.d.1.hk09-vm5.entry.v51124-6.qpon","port":15269,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"hs-ts | 香港 IEPL 06","server":"y.i.q.l.p.v.r.d.1.hk10-vm5.entry.v51124-6.qpon","port":13487,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"speedtest-bgp-01-10.entry-0.chinasnow.net"}},"udp":true}
+  - {"name":"hs-ts | 香港 IEPL 07","server":"5.3.2.6.x.b.o.d.1.hk11-vm5.entry.v51124-6.qpon","port":579,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/tutorial/iphone13.m3u8","headers":{"Host":"speedtest-bgp-01-11.entry-0.chinasnow.net"}},"udp":true}
+  - {"name":"hs-ts | 日本 0.01× 01","server":"y32ioeo.g06.jp05-vm5.entry.rtysjur.quest","port":64659,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"hs-ts | 日本 0.01× 02","server":"bigvoeo.g06.jp06-vm5.entry.rtysjur.quest","port":667,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"hs-ts | 香港 0.8× 01","server":"5.k.g.v.p.e.p.d.1.hk06-ae5.entry.v51124-6.qpon","port":1417,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 0.8× 02","server":"b.k.g.v.x.v.r.d.1.hk07-ae5.entry.v51124-6.qpon","port":1424,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 0.8× 03","server":"b.k.g.l.o.b.o.d.1.hk08-ae5.entry.v51124-6.qpon","port":18647,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 新加坡 2× IEPL 01","server":"5.3.2.6.x.b.r.d.1.sg01-ae5.entry.v51124-6.qpon","port":20004,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 新加坡 2× IEPL 02","server":"5.i.2.i.x.b.r.d.1.sg02-ae5.entry.v51124-6.qpon","port":20079,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 新加坡 2× IEPL 03","server":"b.i.2.l.o.v.r.d.1.sg03-ae5.entry.v51124-6.qpon","port":20084,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 台湾 2× IEPL 01","server":"5.k.2.v.o.b.o.d.1.tw01-ae5.entry.v51124-6.qpon","port":20009,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 美国 1.5× IEPL 01","server":"b.3.q.6.p.j.r.d.1.us01-ae5.entry.v51124-6.qpon","port":20014,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 美国 1.5× IEPL 02","server":"b.i.2.i.p.b.o.d.1.us02-ae5.entry.v51124-6.qpon","port":20019,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 英国 01","server":"5.3.2.l.s.e.o.d.1.gb01-ae5.entry.v51124-6.qpon","port":20024,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 阿根廷 01","server":"y.k.g.6.x.j.o.d.1.ar01-ae5.entry.v51124-6.qpon","port":20029,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 俄罗斯 01","server":"5.k.2.6.s.b.r.d.1.ru01-ae5.entry.v51124-6.qpon","port":20034,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 土耳其 01","server":"5.3.g.l.p.b.o.d.1.tr01-ae5.entry.v51124-6.qpon","port":20039,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 韩国 01","server":"y.k.2.l.o.v.o.d.1.kr01-ae5.entry.v51124-6.qpon","port":20044,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 印度 01","server":"5.k.2.v.p.b.p.d.1.in01-ae5.entry.v51124-6.qpon","port":20049,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 德国 01","server":"5.k.q.6.x.j.r.d.1.de01-ae5.entry.v51124-6.qpon","port":20054,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 加拿大 01","server":"y.i.2.i.p.j.r.d.1.ca01-ae5.entry.v51124-6.qpon","port":20059,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 澳大利亚 01","server":"y.3.q.v.o.b.r.d.1.au01-ae5.entry.v51124-6.qpon","port":20064,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 法国 01","server":"y.k.2.6.s.e.p.d.1.fr01-ae5.entry.v51124-6.qpon","port":20069,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 乌克兰 01","server":"5.k.g.6.o.e.o.d.1.ua01-ae5.entry.v51124-6.qpon","port":20074,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 日本 01","server":"y3glpvr-g06.jp01-nn-vm0.entry.fr0528.art","port":21586,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":true,"skip-cert-verify":false,"udp":true,"network":"tcp","servername":"y3glpvr-g06.jp01-nn-vm0.entry.fr0528.art"}
+  - {"name":"hs-ts | 日本 02","server":"big6pbp-g06.jp02-e3-vm0.entry.fr0528.art","port":11778,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"hs-ts | 日本 03","server":"5i26pjr-g06.jp03-j7-vm0.entry.fr0528.art","port":21586,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":true,"skip-cert-verify":false,"udp":true,"network":"tcp","servername":"5i26pjr-g06.jp03-j7-vm0.entry.fr0528.art"}
+  - {"name":"hs-ts | 日本 04","server":"53g6xer-g06.jp04-1d-vm0.entry.fr0528.art","port":449,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"hs-ts | 日本 05","server":"yiqioep-g06.jp05-h6-vm0.entry.fr0528.art","port":46487,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"hs-ts | 日本 06","server":"b326xbo-g06.jp06-jz-vm0.entry.fr0528.art","port":28788,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":true,"skip-cert-verify":false,"udp":true,"network":"tcp","servername":"b326xbo-g06.jp06-jz-vm0.entry.fr0528.art"}
+  - {"name":"hs-ts | 日本 07","server":"y3qiojo-g06.jp07-sh-vm0.entry.fr0528.art","port":28788,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"name":"69emby19","type":"ss","server":"hk-nat-toys-ddns.337979.xyz","port":20513,"cipher":"aes-256-gcm","password":"imIp8qCShhZqnZvG","udp":true,"tfo":true,"fast-open":true}
+  - {"type":"vless","name":"69emby20","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
+  - {"type":"hysteria2","name":"69emby21","server":"192.129.211.150","port":45636,"password":"f9cea999","sni":"www.bing.com","skip-cert-verify":true,"tfo":true,"udp":true,"fast-open":true}
+  - {"name":"69emby22","type":"vmess","server":"leaf.dngh.dpdns.org","port":8080,"cipher":"auto","uuid":"1673661d-9643-492b-a4f4-8adb319b429e","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/sudhgs","headers":{"Host":"leaf.dngh.dpdns.org"}},"client-fingerprint":""}
+  - {"type":"vless","name":"v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
+  - {"name":"cdn+8080","type":"vmess","server":"leaf.dngh.dpdns.org","port":8080,"cipher":"auto","uuid":"1673661d-9643-492b-a4f4-8adb319b429e","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/sudhgs","headers":{"Host":"leaf.dngh.dpdns.org"}},"client-fingerprint":""}
+  - {"type":"hysteria2","name":"Leaf79203","server":"192.129.211.150","port":45636,"password":"f9cea999","sni":"www.bing.com","skip-cert-verify":true,"tfo":true,"udp":true,"fast-open":true}
+
+proxy-groups:
+  - name: Final
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    proxies:
+      - Proxy
+      - DIRECT
+  - name: Proxy
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    proxies:
+      - 自动选择
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 带宽优先
+      - DIRECT
+  - name: leaf
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf-LoadBalance
+      - leaf-FallBack
+      - leaf-Auto
+      - 'v+r'
+      - 'cdn+8080'
+      - 'Leaf79203'
+  - name: 自动选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    type: url-test
+    timeout: 3
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    proxies:
+      - leaf
+  - name: AI
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+    proxies:
+      - AllServer
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - 自动选择
+  - name: YouTube
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    proxies:
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: TikTok
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Spotify
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    proxies:
+      - Singapore
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: Telegram
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+    proxies:
+      - Singapore
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: X
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
+    proxies:
+      - Japan
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+    proxies:
+      - America
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: Linkedin
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Facebook
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Instagram
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Microsoft
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Games
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: Whatsapp
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+      - DIRECT
+  - name: HongKong
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    proxies:
+      - HK-Auto
+      - HK-FallBack
+      - HK-LoadBalance
+    filter: ^(?!.*emby).*(?i)港|HK|hk|Hong Kong|HongKong|hongkong
+  - name: TaiWan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    proxies:
+      - TW-Auto
+      - TW-FallBack
+      - TW-LoadBalance
+    filter: ^(?!.*emby).*(?i)台|新北|彰化|TW|Taiwan
+  - name: Japan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    proxies:
+      - JP-Auto
+      - JP-FallBack
+      - JP-LoadBalance
+    filter: ^(?!.*emby).*(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+  - name: Korea
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    proxies:
+      - KR-Auto
+      - KR-FallBack
+      - KR-LoadBalance
+    filter: ^(?!.*emby).*(?i)KR|Korea|KOR|首尔|韩|韓
+
+  - name: Singapore
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    proxies:
+      - SG-Auto
+      - SG-FallBack
+      - SG-LoadBalance
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|SG|Singapore
+
+  - name: America
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    proxies:
+      - US-Auto
+      - US-FallBack
+      - US-LoadBalance
+    filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+
+  - name: UnitedKingdom
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png
+    proxies:
+      - UK-Auto
+      - UK-FallBack
+      - UK-LoadBalance
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+
+  - name: AllServer
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    include-all: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+  - name: GLOBAL
+    type: select
+    proxies:
+      - Proxy
+      - leaf
+  - name: HK-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: TW-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: JP-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: KR-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: SG-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: US-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: UK-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - leaf
+  - name: HK-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+  - name: TW-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+  - name: JP-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+  - name: KR-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+  - name: SG-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+  - name: US-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+  - name: UK-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+
+  - name: HK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
+    strategy: consistent-hashing
+    interval: 300
+
+  - name: TW-LoadBalance
+    type: load-balance
+    hidden: true
+    
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    strategy: consistent-hashing
+    interval: 300
+
+  - name: JP-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    strategy: consistent-hashing
+    interval: 300
+
+  - name: KR-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
+    strategy: consistent-hashing
+    interval: 300
+
+  - name: SG-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
+    strategy: consistent-hashing
+    interval: 300
+
+  - name: US-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    strategy: consistent-hashing
+    interval: 300
+
+  - name: UK-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
+    strategy: consistent-hashing
+    interval: 300
+
+  # leaf3 配套测速/负载均衡子组
+  - name: leaf-Auto
+    type: url-test
+    hidden: true
+    filter: ^(?!.*emby).*$
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - 'v+r'
+      - 'cdn+8080'
+      - 'Leaf79203'
+  - name: leaf-FallBack
+    type: fallback
+    hidden: true
+    filter: ^(?!.*emby).*$
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - 'v+r'
+      - 'cdn+8080'
+      - 'Leaf79203'
+  - name: leaf-LoadBalance
+    type: load-balance
+    hidden: true
+    filter: ^(?!.*emby).*$
+    strategy: consistent-hashing
+    interval: 300
+    proxies:
+      - 'v+r'
+      - 'cdn+8080'
+      - 'Leaf79203'
+
+  - name: PROXY
+    proxies:
+      - 自动选择
+      - leaf
+      - TaiWan
+      - HongKong
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+    type: fallback
+    hidden: true
+  - name: 带宽优先
+    type: url-test
+    include-all: true
+    url: https://speed.cloudflare.com/__down?bytes=5000000
+    interval: 600
+    timeout: 5
+    tolerance: 500
+rules:
+  - RULE-SET,个人代理,Proxy
+  - RULE-SET,个人直连,DIRECT
+  - GEOSITE,category-ads,REJECT
+  - DOMAIN-SUFFIX,opencode.ai,AI
+  - GEOSITE,category-ai-!cn,AI
+  - GEOSITE,Telegram,Telegram
+  - GEOSITE,YouTube,YouTube
+  - GEOSITE,Google,Google
+  - GEOSITE,TikTok,TikTok
+  - GEOSITE,Linkedin,Linkedin
+  - GEOSITE,Facebook,Facebook
+  - GEOSITE,Instagram,Instagram
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,Apple
+  - GEOSITE,GitHub,Proxy
+  - GEOSITE,Microsoft,Microsoft
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,Steam,DIRECT
+  - GEOSITE,Twitter,X
+  - GEOSITE,Whatsapp,Whatsapp
+  - RULE-SET,telegramcidr,Telegram,no-resolve
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,cn,DIRECT
+  - RULE-SET,private,DIRECT
+  - GEOIP,CN,DIRECT
+  - GEOIP,LAN,DIRECT
+  - RULE-SET,privatecidr,DIRECT
+  - MATCH,Final
+rule-providers:
+  private:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  privatecidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  个人直连:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
+  个人代理:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
+  Tempemby:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+  69emby:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+hosts:
+  dns.alidns.com: 223.6.6.6
