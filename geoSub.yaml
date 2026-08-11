@@ -628,18 +628,7 @@ proxy-groups:
     use:
       - Subscribe
       - 69Emby
-  - name: 69emby3-Auto
-    type: url-test
-    include-all: true
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
-    url: https://emby3.69yun69.com
-    interval: 300
-    hidden: false
-    tolerance: 100
-    timeout: 2
-    use:
-      - Subscribe
-      - 69emby
+
   - name: 69emby-LoadBalance
     type: load-balance
     strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
