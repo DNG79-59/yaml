@@ -659,9 +659,9 @@ proxy-groups:
     timeout: 5
     tolerance: 500
 rules:
-  - RULE-SET,个人代理,Proxy
-  - RULE-SET,个人直连,DIRECT
-  - RULE-SET,69emby,69emby
+  - RULE-SET,个人代理,Proxy,no-resolve
+  - RULE-SET,个人直连,DIRECT,no-resolve
+  - RULE-SET,69emby,69emby,no-resolve
   - GEOSITE,category-ads,REJECT
   - DOMAIN-SUFFIX,opencode.ai,AI
   - GEOSITE,category-ai-!cn,AI
@@ -683,10 +683,8 @@ rules:
   - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
-  - RULE-SET,private,DIRECT
-  - GEOIP,CN,DIRECT
-  - GEOIP,LAN,DIRECT
-  - RULE-SET,privatecidr,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
   - MATCH,Final
 rule-providers:
   private:
