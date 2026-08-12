@@ -15,11 +15,11 @@ proxy-providers:
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
-  69Emby:
+  emby:
     type: http
     url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/69yunemby
     interval: 7200
-    path: ./proxy_providers/69Emby.yaml
+    path: ./proxy_providers/emby.yaml
     benchmark-url: https://emby1.69yun69.com
     benchmark-timeout: 1
   leaf3:
@@ -288,18 +288,18 @@ proxy-groups:
       - AllServer
       - 自动选择
       - DIRECT
-  - name: 69emby
+  - name: emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
-      - 69emby-LoadBalance   # 新增的负载均衡
+      - emby-LoadBalance   # 新增的负载均衡
       - leaf
-      - 69emby-Auto
+      - emby-Auto
       - 自动选择
       - DIRECT
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本)).*$
+    filter: ^(?=.*emby)(?!.*(5×|美国|日本)).*$
     use:
-      - 69Emby
+      - emby
       - Subscribe
   - name: HongKong
     type: select
@@ -612,10 +612,10 @@ proxy-groups:
     interval: 300
     use:
       - leaf3
-  - name: 69emby-Auto
+  - name: emby-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
+    filter: ^(?=.*emby)(?!.*(5×|美国|日本|Fam)).*$
     url: https://emby1.69yun69.com
     interval: 300
     hidden: false
@@ -625,17 +625,17 @@ proxy-groups:
       - DIRECT
     use:
       - Subscribe
-      - 69Emby
+      - emby
 
-  - name: 69emby-LoadBalance
+  - name: emby-LoadBalance
     type: load-balance
     strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
     url: https://emby1.69yun69.com
     interval: 300
     hidden: true
     use:
-      - 69Emby
-    filter: ^(?=.*69emby)(?!.*(5×|美国|日本|Fam)).*$
+      - emby
+    filter: ^(?=.*emby)(?!.*(5×|美国|日本|Fam)).*$
   - name: PROXY
     proxies:
       - 自动选择
@@ -652,7 +652,8 @@ proxy-groups:
 rules:
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
-  - RULE-SET,69emby,69emby,no-resolve
+  - RULE-SET,Tempemby,emby,no-resolve
+  - RULE-SET,emby,emby,no-resolve
   - GEOSITE,category-ads,REJECT
   - DOMAIN-SUFFIX,opencode.ai,AI
   - GEOSITE,category-ai-!cn,AI
@@ -720,7 +721,7 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
-  69emby:
+  emby:
     behavior: domain
     format: text
     interval: 86400
