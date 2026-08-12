@@ -5,6 +5,8 @@ dns:
   enable: true
   ipv6: false
   enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  cache-algorithm: arc
 proxy-providers:
   Subscribe:
     type: http
@@ -32,8 +34,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - Proxy
       - DIRECT
+      - Proxy
   - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -48,7 +50,6 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 带宽优先
       - DIRECT
   - name: leaf
     type: select
@@ -182,6 +183,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
+      - AllServer
       - America
       - Proxy
       - leaf
@@ -191,7 +193,6 @@ proxy-groups:
       - Korea
       - Singapore
       - UnitedKingdom
-      - AllServer
       - 自动选择
       - DIRECT
   - name: Linkedin
@@ -300,8 +301,6 @@ proxy-groups:
     use:
       - 69Emby
       - Subscribe
-
-
   - name: HongKong
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -589,7 +588,6 @@ proxy-groups:
     interval: 300
     use:
       - Subscribe
-  # leaf3 配套测速/负载均衡子组
   - name: leaf-Auto
     type: url-test
     hidden: true
@@ -651,13 +649,6 @@ proxy-groups:
       - UnitedKingdom
     type: fallback
     hidden: true
-  - name: 带宽优先
-    type: url-test
-    include-all: true
-    url: https://speed.cloudflare.com/__down?bytes=5000000
-    interval: 600
-    timeout: 5
-    tolerance: 500
 rules:
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
