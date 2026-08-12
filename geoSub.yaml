@@ -15,7 +15,7 @@ proxy-providers:
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
-  emby:
+  Emby-providers:
     type: http
     url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/69yunemby
     interval: 7200
@@ -299,7 +299,7 @@ proxy-groups:
       - DIRECT
     filter: ^(?=.*emby)(?!.*(5×|美国|日本)).*$
     use:
-      - emby
+      - Emby-providers
       - Subscribe
   - name: HongKong
     type: select
@@ -588,6 +588,7 @@ proxy-groups:
     interval: 300
     use:
       - Subscribe
+
   - name: leaf-Auto
     type: url-test
     hidden: true
@@ -612,6 +613,7 @@ proxy-groups:
     interval: 300
     use:
       - leaf3
+
   - name: emby-Auto
     type: url-test
     include-all: true
@@ -624,9 +626,7 @@ proxy-groups:
     proxies:
       - DIRECT
     use:
-      - Subscribe
-      - emby
-
+      - Emby-providers
   - name: emby-LoadBalance
     type: load-balance
     strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
@@ -634,8 +634,9 @@ proxy-groups:
     interval: 300
     hidden: true
     use:
-      - emby
+      - Emby-providers
     filter: ^(?=.*emby)(?!.*(5×|美国|日本|Fam)).*$
+    
   - name: PROXY
     proxies:
       - 自动选择
@@ -652,7 +653,6 @@ proxy-groups:
 rules:
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
-  - RULE-SET,Tempemby,emby,no-resolve
   - RULE-SET,emby,emby,no-resolve
   - GEOSITE,category-ads,REJECT
   - DOMAIN-SUFFIX,opencode.ai,AI
@@ -715,17 +715,11 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
-  Tempemby:
-    behavior: domain
-    format: text
-    interval: 86400
-    type: http
-    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
   emby:
     behavior: domain
     format: text
     interval: 86400
     type: http
-    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/69emby.txt
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
 hosts:
   dns.alidns.com: 223.6.6.6
