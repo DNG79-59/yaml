@@ -1,3 +1,4 @@
 +.pages.dev
 +.yfamilys.com
 +.substack.com
++.shdnow.com
