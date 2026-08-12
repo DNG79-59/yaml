@@ -15,13 +15,6 @@ proxy-providers:
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
-  Emby-providers:
-    type: http
-    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/69yunemby
-    interval: 7200
-    path: ./proxy_providers/emby.yaml
-    benchmark-url: https://emby1.69yun69.com
-    benchmark-timeout: 1
   leaf3:
     type: http
     url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/leaf*3
@@ -297,10 +290,8 @@ proxy-groups:
       - emby-Auto
       - 自动选择
       - DIRECT
-    filter: ^(?=.*emby)(?!.*(5×|美国|日本)).*$
-    use:
-      - Emby-providers
-      - Subscribe
+    include-all: true
+    filter: ^(?!.*(5×|美国|日本)).*$
   - name: HongKong
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -600,7 +591,6 @@ proxy-groups:
   - name: leaf-FallBack
     type: fallback
     hidden: true
-    filter: ^(?!.*emby).*$
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
     use:
@@ -608,7 +598,6 @@ proxy-groups:
   - name: leaf-LoadBalance
     type: load-balance
     hidden: true
-    filter: ^(?!.*emby).*$
     strategy: consistent-hashing
     interval: 300
     use:
@@ -617,7 +606,7 @@ proxy-groups:
   - name: emby-Auto
     type: url-test
     include-all: true
-    filter: ^(?=.*emby)(?!.*(5×|美国|日本|Fam)).*$
+    filter: ^(?!.*(5×|美国|日本)).*$
     url: https://emby1.69yun69.com
     interval: 300
     hidden: false
@@ -625,17 +614,16 @@ proxy-groups:
     timeout: 2
     proxies:
       - DIRECT
-    use:
-      - Emby-providers
   - name: emby-LoadBalance
     type: load-balance
+    include-all: true
     strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
     url: https://emby1.69yun69.com
     interval: 300
     hidden: true
     use:
       - Emby-providers
-    filter: ^(?=.*emby)(?!.*(5×|美国|日本|Fam)).*$
+    filter: ^(?!.*(5×|美国|日本)).*$
     
   - name: PROXY
     proxies:
