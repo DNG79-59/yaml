@@ -3,3 +3,4 @@
 +.substack.com
 +.shdnow.com
 +.cloudflare.com
++.linux.do
