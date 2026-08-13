@@ -659,6 +659,7 @@ rules:
   - GEOSITE,category-games@cn,DIRECT
   - GEOSITE,Steam,DIRECT
   - GEOSITE,Twitter,X
+  - DOMAIN-SUFFIX,api.giphy.com,Whatsapp
   - GEOSITE,Whatsapp,Whatsapp
   - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,geolocation-!cn,Proxy
