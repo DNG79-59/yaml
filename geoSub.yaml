@@ -657,7 +657,8 @@ rules:
   - GEOSITE,GitHub,Proxy
   - GEOSITE,Microsoft,Microsoft
   - GEOSITE,category-games@cn,DIRECT
-  - GEOSITE,Steam,DIRECT
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
+  - GEOSITE,Steam@cn,DIRECT
   - GEOSITE,Twitter,X
   - DOMAIN-SUFFIX,api.giphy.com,Whatsapp
   - GEOSITE,Whatsapp,Whatsapp
