@@ -1,0 +1,118 @@
+proxies:
+- name: ✈️ 机场B | 台湾 01
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场B | 新加坡 01
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场A | 日本 02
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场A | 日本 01
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场A | 美国 01
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场A | 香港 02
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场A | 香港 01
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场A | 香港 03
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场B | 香港 03
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场B | 香港 02
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: ✈️ 机场B | 香港 01
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: '[机场C] 香港 02'
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
+- name: '[机场C] 香港 01'
+  type: trojan
+  server: 127.0.0.1
+  port: 10443
+  password: testpass123
+  tls: true
+  servername: 127.0.0.1
+  skip-cert-verify: true
+  network: tcp
