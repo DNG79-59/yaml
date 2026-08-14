@@ -1,0 +1,76 @@
+proxies:
+- name: hs-ts | 乌克兰 01
+  type: ss
+  server: 36.141.40.13
+  port: 20074
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 印度 01
+  type: ss
+  server: 36.141.40.13
+  port: 20049
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 台湾 2× IEPL 01
+  type: ss
+  server: 36.141.40.13
+  port: 20009
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 新加坡 2× IEPL 02
+  type: ss
+  server: 36.141.40.13
+  port: 20079
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 日本 IEPL 09
+  type: ss
+  server: 36.141.40.13
+  port: 17745
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 日本 IEPL 03
+  type: ss
+  server: 36.141.40.13
+  port: 492
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 日本 IEPL 08
+  type: ss
+  server: 36.141.40.13
+  port: 16528
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 英国 01
+  type: ss
+  server: 36.141.40.13
+  port: 20024
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 香港 IEPL 01
+  type: ss
+  server: 36.141.40.13
+  port: 14564
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 香港 IEPL 07
+  type: vmess
+  server: 36.141.40.13
+  port: 579
+  uuid: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+  alterId: 1
+  cipher: auto
+  tls: false
+  servername: 36.141.40.13
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /tutorial/iphone13.m3u8
+    headers:
+      Host: speedtest-bgp-01-11.entry-0.chinasnow.net
+- name: hs-ts | 香港 01
+  type: ss
+  server: 36.141.40.13
+  port: 19276
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
