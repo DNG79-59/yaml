@@ -5,18 +5,298 @@ proxies:
   port: 20074
   cipher: aes-256-gcm
   password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: 69yun | 俄罗斯 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 20382
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 俄罗斯 01
+  type: ss
+  server: 36.141.40.13
+  port: 20034
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 俄罗斯 01
+  type: anytls
+  server: 54.169.74.28
+  port: 23703
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.bilibili.tv
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 加拿大 2× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 41393
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 加拿大 01
+  type: ss
+  server: 36.141.40.13
+  port: 20059
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 加拿大 01
+  type: anytls
+  server: 54.151.144.19
+  port: 23731
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: link.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 印度 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 14323
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 印度 01
+  type: ss
+  server: 36.141.40.13
+  port: 20049
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 印度 01
+  type: anytls
+  server: 52.221.220.63
+  port: 23730
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: member.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 印尼 01
+  type: anytls
+  server: 52.221.220.63
+  port: 23744
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: secure.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 台湾 2× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 37386
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 台湾 2× IPLC 02
+  type: vless
+  server: 13.229.199.94
+  port: 41293
+  uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
+  flow: ''
+  tls: true
+  reality: false
+  servername: bgpvless-2342ss.834928.xyz
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  network: tcp
+- name: 69yun | 台湾 2× Fam 01
+  type: ss
+  server: 47.128.146.174
+  port: 30302
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
 - name: hs-ts | 台湾 2× IEPL 01
   type: ss
   server: 36.141.40.13
   port: 20009
   cipher: aes-256-gcm
   password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 台湾 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23748
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: biliapi.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 台湾 02
+  type: anytls
+  server: 3.0.59.153
+  port: 23715
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: s4.hdslb.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 土耳其 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 20363
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 土耳其 01
+  type: ss
+  server: 36.141.40.13
+  port: 20039
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 土耳其 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23745
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: s.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 埃及 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 31755
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: ldy | 墨西哥 01
+  type: anytls
+  server: 54.169.74.28
+  port: 23772
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: blackboard.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 尼日利亚 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 20172
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 巴基斯坦 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 31055
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: ldy | 巴西 01
+  type: anytls
+  server: 54.169.74.28
+  port: 23746
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: upload.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 德国 2× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 21311
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 德国 01
+  type: ss
+  server: 36.141.40.13
+  port: 20054
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 德国 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23742
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: comment.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 意大利 01
+  type: anytls
+  server: 54.169.74.28
+  port: 23773
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: upos-sz-mirror.bilivideo.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 新加坡 2× IPLC 02
+  type: ss
+  server: 47.128.146.174
+  port: 21381
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
 - name: hs-ts | 新加坡 2× IEPL 01
   type: ss
   server: 36.141.40.13
   port: 20004
   cipher: aes-256-gcm
   password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 新加坡 2× IEPL 02
+  type: ss
+  server: 36.141.40.13
+  port: 20079
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 新加坡 2× IEPL 03
+  type: ss
+  server: 36.141.40.13
+  port: 20084
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 新加坡 IPLC 07
+  type: anytls
+  server: 3.0.59.153
+  port: 23704
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: s2.hdslb.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 新加坡 IPLC 08
+  type: anytls
+  server: 54.169.74.28
+  port: 23734
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: s3.hdslb.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 新加坡 IPLC 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23724
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: vip.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 日本 2× IPLC 02
+  type: ss
+  server: 47.128.146.174
+  port: 55327
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
 - name: hs-ts | 日本 IEPL 05
   type: ss
   server: 36.141.40.13
@@ -35,16 +315,346 @@ proxies:
   port: 11162
   cipher: aes-256-gcm
   password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 日本 01
+  type: anytls
+  server: 47.129.41.81
+  port: 26013
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.apple.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 日本 IPLC 02
+  type: anytls
+  server: 3.0.59.153
+  port: 23721
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: big.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 日本 02
+  type: anytls
+  server: 52.77.254.80
+  port: 26014
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.apple.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 法国 2× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 55371
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 法国 01
+  type: ss
+  server: 36.141.40.13
+  port: 20069
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 法国 01
+  type: anytls
+  server: 54.169.74.28
+  port: 23737
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: i1.hdslb.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 泰国 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 43233
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: ldy | 泰国 02
+  type: anytls
+  server: 52.221.220.63
+  port: 23741
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: player.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 泰国 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23738
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: static.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: hs-ts | 澳大利亚 01
+  type: ss
+  server: 36.141.40.13
+  port: 20064
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 澳大利亚 01
+  type: anytls
+  server: 54.151.144.19
+  port: 23736
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: manga.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 澳门 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 31352
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 美国 2× IPLC 02
+  type: ss
+  server: 47.128.146.174
+  port: 53362
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 美国 2× IPLC 04
+  type: ss
+  server: 47.128.146.174
+  port: 53365
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 美国 2× IPLC 03
+  type: ss
+  server: 47.128.146.174
+  port: 53762
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 美国 1.5× IEPL 02
+  type: ss
+  server: 36.141.40.13
+  port: 20019
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 美国 1.5× IEPL 01
+  type: ss
+  server: 36.141.40.13
+  port: 20014
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 美国 IPLC 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23717
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: space.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 美国 05
+  type: anytls
+  server: 47.129.41.81
+  port: 26009
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.apple.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 美国 01
+  type: anytls
+  server: 52.221.220.63
+  port: 23735
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: bangumi.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 英国 2× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 41391
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: hs-ts | 英国 01
+  type: ss
+  server: 36.141.40.13
+  port: 20024
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 英国 IEPL 01
+  type: anytls
+  server: 3.0.59.153
+  port: 23718
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: cm.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 英国 IEPL 02
+  type: anytls
+  server: 18.140.69.101
+  port: 23720
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: message.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 荷兰 2× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 52355
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 菲律宾 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 20056
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: ldy | 菲律宾 01
+  type: anytls
+  server: 54.169.74.28
+  port: 23743
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: interface.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 西班牙 01
+  type: anytls
+  server: 52.221.220.63
+  port: 23740
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: analytics.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 越南 5× IPLC 01
+  type: ss
+  server: 47.128.146.174
+  port: 24355
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: ldy | 越南 01
+  type: anytls
+  server: 54.151.144.19
+  port: 23739
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: data.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: hs-ts | 阿根廷 01
+  type: ss
+  server: 36.141.40.13
+  port: 20029
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 韩国 01
+  type: ss
+  server: 36.141.40.13
+  port: 20044
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: ldy | 韩国 01
+  type: anytls
+  server: 52.77.254.80
+  port: 26015
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.apple.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 韩国 IPLC 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23726
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: s1.hdslb.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 韩国 02
+  type: anytls
+  server: 47.129.41.81
+  port: 26017
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.apple.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 香港 2× Fam 01
+  type: ss
+  server: 47.128.146.174
+  port: 20511
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+- name: 69yun | 香港 2× IPLC 01
+  type: vless
+  server: 13.229.199.94
+  port: 41447
+  uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
+  flow: ''
+  tls: true
+  reality: false
+  servername: bgpvless-2342ss.834928.xyz
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  network: tcp
+- name: 69yun | 香港 2× IPLC 05
+  type: ss
+  server: 47.128.146.174
+  port: 35361
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
 - name: hs-ts | 香港 IEPL 03
   type: ss
   server: 36.141.40.13
   port: 808
   cipher: aes-256-gcm
   password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
-- name: hs-ts | 香港 IEPL 07
+- name: hs-ts | 香港 IEPL 04
+  type: ss
+  server: 36.141.40.13
+  port: 1816
+  cipher: aes-256-gcm
+  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+- name: hs-ts | 香港 IEPL 06
   type: vmess
   server: 36.141.40.13
-  port: 579
+  port: 13487
   uuid: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
   alterId: 1
   cipher: auto
@@ -53,12 +663,45 @@ proxies:
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /tutorial/iphone13.m3u8
+    path: /
     headers:
-      Host: speedtest-bgp-01-11.entry-0.chinasnow.net
-- name: hs-ts | 香港 01
+      Host: speedtest-bgp-01-10.entry-0.chinasnow.net
+- name: ldy | 香港 03
+  type: anytls
+  server: 47.129.41.81
+  port: 26008
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: www.apple.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 香港 IPLC 06
+  type: anytls
+  server: 54.151.144.19
+  port: 23708
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: api.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: ldy | 香港 IPLC 01
+  type: anytls
+  server: 18.140.69.101
+  port: 23712
+  password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
+  sni: live.bilibili.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+- name: 69yun | 马来 5× IPLC 01
   type: ss
-  server: 36.141.40.13
-  port: 19276
+  server: 47.128.146.174
+  port: 33308
   cipher: aes-256-gcm
-  password: 69c35e5b-ef57-3aca-b797-b207f8ea4fbd
+  password: ZXY6maaJ86Fxsy0n
