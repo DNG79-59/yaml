@@ -1,33 +1,35 @@
-测试时间: 2026-08-14 14:55:29
-总节点: 87, 可用: 80, 过滤后保留: 11
+测试时间: 2026-08-14 15:20:22
+总节点: 158, 可用: 148, 过滤后保留: 10
 
 === 保留节点 ===
-hs-ts | 乌克兰 01 [乌克兰/hs-ts] 带宽=1.05MB/s
-hs-ts | 印度 01 [印度/hs-ts] 带宽=1.18MB/s
-hs-ts | 台湾 2× IEPL 01 [台湾/hs-ts] 带宽=1.64MB/s
-hs-ts | 新加坡 2× IEPL 02 [新加坡/hs-ts] 带宽=1.29MB/s
-hs-ts | 日本 IEPL 09 [日本/hs-ts] 带宽=4.67MB/s
-hs-ts | 日本 IEPL 03 [日本/hs-ts] 带宽=2.53MB/s
-hs-ts | 日本 IEPL 08 [日本/hs-ts] 带宽=2.00MB/s
-hs-ts | 英国 01 [英国/hs-ts] 带宽=1.21MB/s
-hs-ts | 香港 IEPL 01 [香港/hs-ts] 带宽=4.14MB/s
-hs-ts | 香港 IEPL 07 [香港/hs-ts] 带宽=2.94MB/s
-hs-ts | 香港 01 [香港/hs-ts] 带宽=1.94MB/s
+hs-ts | 俄罗斯 01 [俄罗斯/hs-ts] 带宽=1.84MB/s
+hs-ts | 新加坡 2× IEPL 02 [新加坡/hs-ts] 带宽=1.22MB/s
+hs-ts | 日本 IEPL 01 [日本/hs-ts] 带宽=6.07MB/s
+hs-ts | 日本 IEPL 06 [日本/hs-ts] 带宽=5.88MB/s
+hs-ts | 日本 IEPL 05 [日本/hs-ts] 带宽=3.81MB/s
+hs-ts | 法国 01 [法国/hs-ts] 带宽=1.14MB/s
+hs-ts | 美国 1.5× IEPL 01 [美国/hs-ts] 带宽=1.30MB/s
+hs-ts | 香港 01 [香港/hs-ts] 带宽=7.08MB/s
+hs-ts | 香港 IEPL 01 [香港/hs-ts] 带宽=6.87MB/s
+hs-ts | 香港 IEPL 02 [香港/hs-ts] 带宽=6.57MB/s
 
 === 丢弃节点 ===
-hs-ts | 香港 IEPL 05 [香港/hs-ts] 带宽=1.77MB/s
-hs-ts | 香港 0.8× 01 [香港/hs-ts] 带宽=1.33MB/s
-hs-ts | 香港 IEPL 04 [香港/hs-ts] 带宽=1.30MB/s
-hs-ts | 香港 0.8× 02 [香港/hs-ts] 带宽=1.18MB/s
-hs-ts | 香港 IEPL 03 [香港/hs-ts] 带宽=1.14MB/s
-hs-ts | 日本 IEPL 01 [日本/hs-ts] 带宽=1.72MB/s
-hs-ts | 日本 IEPL 04 [日本/hs-ts] 带宽=1.25MB/s
-hs-ts | 日本 IEPL 02 [日本/hs-ts] 带宽=1.23MB/s
-hs-ts | 日本 06 [日本/hs-ts] 带宽=1.18MB/s
+hs-ts | 香港 0.8× 02 [香港/hs-ts] 带宽=3.12MB/s
+hs-ts | 香港 IEPL 07 [香港/hs-ts] 带宽=2.69MB/s
+hs-ts | 香港 IEPL 03 [香港/hs-ts] 带宽=2.62MB/s
+hs-ts | 香港 0.8× 03 [香港/hs-ts] 带宽=2.17MB/s
+hs-ts | 香港 IEPL 04 [香港/hs-ts] 带宽=2.17MB/s
+hs-ts | 香港 IEPL 05 [香港/hs-ts] 带宽=1.51MB/s
+hs-ts | 香港 0.8× 01 [香港/hs-ts] 带宽=1.08MB/s
+hs-ts | 日本 IEPL 03 [日本/hs-ts] 带宽=1.78MB/s
+hs-ts | 日本 IEPL 07 [日本/hs-ts] 带宽=1.76MB/s
 69yun | 美国 2× IPLC 05 [美国/69yun] 不可用
 69yun | 澳大利亚 2× IPLC 01 [澳大利亚/69yun] 不可用
 69yun | 香港 01 [香港/69yun] 不可用
-69yun | 柬埔寨 5× Fam 01 [未知/69yun] 不可用
+69yun | 柬埔寨 5× Fam 01 [柬埔寨/69yun] 不可用
 69yun | 波兰 5× IPLC 01 [波兰/69yun] 不可用
 69yun | 阿根廷 5× IPLC 01 [阿根廷/69yun] 不可用
 69yun | 印度 5× 01 [印度/69yun] 不可用
+hs-ts | 香港 IEPL 06 [香港/hs-ts] 不可用
+ldy | 阿根廷 01 [阿根廷/ldy] 不可用
+ldy | 加拿大 02 [加拿大/ldy] 不可用
