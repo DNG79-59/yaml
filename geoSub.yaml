@@ -657,7 +657,7 @@ rules:
   - GEOSITE,GitHub,Proxy
   - GEOSITE,Microsoft,Microsoft
   - GEOSITE,category-games@cn,DIRECT
-  - GEOSITE,Steam@cn,DIRECT
+  - RULE-SET,Steam@cn,DIRECT,no-resolve
   - GEOSITE,Twitter,X
   - DOMAIN-SUFFIX,api.giphy.com,Whatsapp
   - GEOSITE,Whatsapp,Whatsapp
@@ -710,6 +710,13 @@ rule-providers:
     interval: 86400
     type: http
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
+  Steam@cn:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
 hosts:
   dns.alidns.com: 223.6.6.6
 geodata-mode: true
