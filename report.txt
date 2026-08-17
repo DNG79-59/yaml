@@ -1,0 +1,164 @@
+测试时间: 2026-08-14 15:57:18
+总节点: 158, 可用: 141, 过滤后保留: 85
+
+=== 保留节点 ===
+hs-ts | 乌克兰 01 [乌克兰/hs-ts] 带宽=1.37MB/s
+69yun | 俄罗斯 5× IPLC 01 [俄罗斯/69yun] 带宽=0.00MB/s
+hs-ts | 俄罗斯 01 [俄罗斯/hs-ts] 带宽=0.76MB/s
+ldy | 俄罗斯 01 [俄罗斯/ldy] 带宽=0.07MB/s
+69yun | 加拿大 2× IPLC 01 [加拿大/69yun] 带宽=0.00MB/s
+hs-ts | 加拿大 01 [加拿大/hs-ts] 带宽=0.12MB/s
+ldy | 加拿大 01 [加拿大/ldy] 带宽=0.00MB/s
+69yun | 印度 5× IPLC 01 [印度/69yun] 带宽=0.02MB/s
+hs-ts | 印度 01 [印度/hs-ts] 带宽=0.53MB/s
+ldy | 印度 01 [印度/ldy] 带宽=0.10MB/s
+ldy | 印尼 01 [印度尼西亚/ldy] 带宽=0.01MB/s
+69yun | 台湾 2× IPLC 01 [台湾/69yun] 带宽=0.05MB/s
+69yun | 台湾 2× IPLC 02 [台湾/69yun] 带宽=0.02MB/s
+69yun | 台湾 2× Fam 01 [台湾/69yun] 带宽=0.02MB/s
+hs-ts | 台湾 2× IEPL 01 [台湾/hs-ts] 带宽=4.23MB/s
+ldy | 台湾 01 [台湾/ldy] 带宽=0.16MB/s
+ldy | 台湾 02 [台湾/ldy] 带宽=0.09MB/s
+69yun | 土耳其 5× IPLC 01 [土耳其/69yun] 带宽=0.01MB/s
+hs-ts | 土耳其 01 [土耳其/hs-ts] 带宽=0.01MB/s
+ldy | 土耳其 01 [土耳其/ldy] 带宽=0.05MB/s
+69yun | 埃及 5× IPLC 01 [埃及/69yun] 带宽=0.02MB/s
+ldy | 墨西哥 01 [墨西哥/ldy] 带宽=0.01MB/s
+69yun | 尼日利亚 5× IPLC 01 [尼日利亚/69yun] 带宽=0.01MB/s
+69yun | 巴基斯坦 5× IPLC 01 [巴基斯坦/69yun] 带宽=0.00MB/s
+ldy | 巴西 01 [巴西/ldy] 带宽=0.01MB/s
+69yun | 德国 2× IPLC 01 [德国/69yun] 带宽=0.02MB/s
+hs-ts | 德国 01 [德国/hs-ts] 带宽=0.06MB/s
+ldy | 德国 01 [德国/ldy] 带宽=0.12MB/s
+ldy | 意大利 01 [意大利/ldy] 带宽=0.02MB/s
+69yun | 新加坡 2× IPLC 02 [新加坡/69yun] 带宽=0.02MB/s
+hs-ts | 新加坡 2× IEPL 01 [新加坡/hs-ts] 带宽=0.82MB/s
+hs-ts | 新加坡 2× IEPL 02 [新加坡/hs-ts] 带宽=0.01MB/s
+hs-ts | 新加坡 2× IEPL 03 [新加坡/hs-ts] 带宽=0.00MB/s
+ldy | 新加坡 IPLC 07 [新加坡/ldy] 带宽=0.72MB/s
+ldy | 新加坡 IPLC 08 [新加坡/ldy] 带宽=0.70MB/s
+ldy | 新加坡 IPLC 01 [新加坡/ldy] 带宽=0.67MB/s
+69yun | 日本 2× IPLC 02 [日本/69yun] 带宽=0.01MB/s
+hs-ts | 日本 IEPL 05 [日本/hs-ts] 带宽=6.17MB/s
+hs-ts | 日本 IEPL 01 [日本/hs-ts] 带宽=4.41MB/s
+hs-ts | 日本 IEPL 07 [日本/hs-ts] 带宽=2.41MB/s
+ldy | 日本 01 [日本/ldy] 带宽=0.33MB/s
+ldy | 日本 IPLC 02 [日本/ldy] 带宽=0.33MB/s
+ldy | 日本 02 [日本/ldy] 带宽=0.21MB/s
+69yun | 法国 2× IPLC 01 [法国/69yun] 带宽=0.03MB/s
+hs-ts | 法国 01 [法国/hs-ts] 带宽=0.04MB/s
+ldy | 法国 01 [法国/ldy] 带宽=0.08MB/s
+69yun | 泰国 5× IPLC 01 [泰国/69yun] 带宽=0.01MB/s
+ldy | 泰国 02 [泰国/ldy] 带宽=0.02MB/s
+ldy | 泰国 01 [泰国/ldy] 带宽=0.01MB/s
+hs-ts | 澳大利亚 01 [澳大利亚/hs-ts] 带宽=0.02MB/s
+ldy | 澳大利亚 01 [澳大利亚/ldy] 带宽=0.06MB/s
+69yun | 澳门 5× IPLC 01 [澳门/69yun] 带宽=0.01MB/s
+69yun | 美国 2× IPLC 02 [美国/69yun] 带宽=0.02MB/s
+69yun | 美国 2× IPLC 04 [美国/69yun] 带宽=0.01MB/s
+69yun | 美国 2× IPLC 03 [美国/69yun] 带宽=0.00MB/s
+hs-ts | 美国 1.5× IEPL 02 [美国/hs-ts] 带宽=0.13MB/s
+hs-ts | 美国 1.5× IEPL 01 [美国/hs-ts] 带宽=0.01MB/s
+ldy | 美国 IPLC 01 [美国/ldy] 带宽=0.74MB/s
+ldy | 美国 05 [美国/ldy] 带宽=0.54MB/s
+ldy | 美国 01 [美国/ldy] 带宽=0.48MB/s
+69yun | 英国 2× IPLC 01 [英国/69yun] 带宽=0.01MB/s
+hs-ts | 英国 01 [英国/hs-ts] 带宽=0.15MB/s
+ldy | 英国 IEPL 01 [英国/ldy] 带宽=0.15MB/s
+ldy | 英国 IEPL 02 [英国/ldy] 带宽=0.15MB/s
+69yun | 荷兰 2× IPLC 01 [荷兰/69yun] 带宽=0.01MB/s
+69yun | 菲律宾 5× IPLC 01 [菲律宾/69yun] 带宽=0.01MB/s
+ldy | 菲律宾 01 [菲律宾/ldy] 带宽=0.58MB/s
+ldy | 西班牙 01 [西班牙/ldy] 带宽=0.04MB/s
+69yun | 越南 5× IPLC 01 [越南/69yun] 带宽=0.00MB/s
+ldy | 越南 01 [越南/ldy] 带宽=0.05MB/s
+hs-ts | 阿根廷 01 [阿根廷/hs-ts] 带宽=0.16MB/s
+hs-ts | 韩国 01 [韩国/hs-ts] 带宽=0.98MB/s
+ldy | 韩国 01 [韩国/ldy] 带宽=0.50MB/s
+ldy | 韩国 IPLC 01 [韩国/ldy] 带宽=0.33MB/s
+ldy | 韩国 02 [韩国/ldy] 带宽=0.01MB/s
+69yun | 香港 2× Fam 01 [香港/69yun] 带宽=0.03MB/s
+69yun | 香港 2× IPLC 01 [香港/69yun] 带宽=0.02MB/s
+69yun | 香港 2× IPLC 05 [香港/69yun] 带宽=0.02MB/s
+hs-ts | 香港 IEPL 03 [香港/hs-ts] 带宽=5.77MB/s
+hs-ts | 香港 IEPL 04 [香港/hs-ts] 带宽=3.55MB/s
+hs-ts | 香港 IEPL 06 [香港/hs-ts] 带宽=3.32MB/s
+ldy | 香港 03 [香港/ldy] 带宽=0.73MB/s
+ldy | 香港 IPLC 06 [香港/ldy] 带宽=0.68MB/s
+ldy | 香港 IPLC 01 [香港/ldy] 带宽=0.65MB/s
+69yun | 马来 5× IPLC 01 [马来西亚/69yun] 带宽=0.01MB/s
+
+=== 丢弃节点 ===
+69yun | 香港 2× IPLC 04 [香港/69yun] 带宽=0.02MB/s
+hs-ts | 香港 IEPL 07 [香港/hs-ts] 带宽=3.16MB/s
+hs-ts | 香港 IEPL 02 [香港/hs-ts] 带宽=3.13MB/s
+hs-ts | 香港 0.8× 03 [香港/hs-ts] 带宽=2.40MB/s
+hs-ts | 香港 01 [香港/hs-ts] 带宽=1.57MB/s
+hs-ts | 香港 0.8× 02 [香港/hs-ts] 带宽=1.08MB/s
+hs-ts | 香港 IEPL 01 [香港/hs-ts] 带宽=1.06MB/s
+hs-ts | 香港 0.8× 01 [香港/hs-ts] 带宽=0.96MB/s
+hs-ts | 香港 IEPL 05 [香港/hs-ts] 带宽=0.95MB/s
+hs-ts | 日本 IEPL 03 [日本/hs-ts] 带宽=2.18MB/s
+hs-ts | 日本 01 [日本/hs-ts] 带宽=1.08MB/s
+hs-ts | 日本 06 [日本/hs-ts] 带宽=0.97MB/s
+hs-ts | 日本 IEPL 06 [日本/hs-ts] 带宽=0.95MB/s
+hs-ts | 日本 IEPL 08 [日本/hs-ts] 带宽=0.21MB/s
+hs-ts | 日本 IEPL 04 [日本/hs-ts] 带宽=0.21MB/s
+hs-ts | 日本 IEPL 09 [日本/hs-ts] 带宽=0.20MB/s
+hs-ts | 日本 03 [日本/hs-ts] 带宽=0.18MB/s
+hs-ts | 日本 IEPL 02 [日本/hs-ts] 带宽=0.15MB/s
+hs-ts | 日本 07 [日本/hs-ts] 带宽=0.07MB/s
+hs-ts | 日本 02 [日本/hs-ts] 带宽=0.03MB/s
+hs-ts | 日本 0.01× 01 [日本/hs-ts] 带宽=0.01MB/s
+hs-ts | 日本 05 [日本/hs-ts] 带宽=0.01MB/s
+hs-ts | 日本 0.01× 02 [日本/hs-ts] 带宽=0.01MB/s
+ldy | 新加坡 07 [新加坡/ldy] 带宽=0.66MB/s
+ldy | 新加坡 IPLC 06 [新加坡/ldy] 带宽=0.66MB/s
+ldy | 新加坡 05 [新加坡/ldy] 带宽=0.58MB/s
+ldy | 新加坡 IPLC 02 [新加坡/ldy] 带宽=0.46MB/s
+ldy | 新加坡 06 [新加坡/ldy] 带宽=0.45MB/s
+ldy | 新加坡 IPLC 04 [新加坡/ldy] 带宽=0.37MB/s
+ldy | 新加坡 02 [新加坡/ldy] 带宽=0.36MB/s
+ldy | 新加坡 IPLC 09 [新加坡/ldy] 带宽=0.33MB/s
+ldy | 新加坡 03 [新加坡/ldy] 带宽=0.31MB/s
+ldy | 新加坡 01 [新加坡/ldy] 带宽=0.31MB/s
+ldy | 新加坡 IPLC 05 [新加坡/ldy] 带宽=0.27MB/s
+ldy | 新加坡 04 [新加坡/ldy] 带宽=0.19MB/s
+ldy | 新加坡 IPLC 03 [新加坡/ldy] 带宽=0.02MB/s
+ldy | 美国 06 [美国/ldy] 带宽=0.38MB/s
+ldy | 美国 03 [美国/ldy] 带宽=0.37MB/s
+ldy | 美国 08 [美国/ldy] 带宽=0.36MB/s
+ldy | 美国 04 [美国/ldy] 带宽=0.36MB/s
+ldy | 美国 IPLC 05 [美国/ldy] 带宽=0.35MB/s
+ldy | 美国 IPLC 02 [美国/ldy] 带宽=0.35MB/s
+ldy | 美国 07 [美国/ldy] 带宽=0.30MB/s
+ldy | 美国 IPLC 03 [美国/ldy] 带宽=0.02MB/s
+ldy | 美国 IPLC 04 [美国/ldy] 带宽=0.01MB/s
+ldy | 美国 02 [美国/ldy] 带宽=0.01MB/s
+ldy | 日本 IPLC 01 [日本/ldy] 带宽=0.14MB/s
+ldy | 香港 IPLC 07 [香港/ldy] 带宽=0.61MB/s
+ldy | 香港 02 [香港/ldy] 带宽=0.56MB/s
+ldy | 香港 IPLC 05 [香港/ldy] 带宽=0.54MB/s
+ldy | 香港 IPLC 08 [香港/ldy] 带宽=0.44MB/s
+ldy | 香港 IPLC 04 [香港/ldy] 带宽=0.24MB/s
+ldy | 香港 04 [香港/ldy] 带宽=0.17MB/s
+ldy | 香港 01 [香港/ldy] 带宽=0.12MB/s
+ldy | 香港 IPLC 03 [香港/ldy] 带宽=0.10MB/s
+ldy | 香港 IPLC 02 [香港/ldy] 带宽=0.09MB/s
+69yun | 香港 2× IPLC 02 [香港/69yun] 不可用
+69yun | 香港 2× IPLC 03 [香港/69yun] 不可用
+69yun | 香港 2× IPLC 06 [香港/69yun] 不可用
+69yun | 新加坡 2× IPLC 01 [新加坡/69yun] 不可用
+69yun | 日本 2× IPLC 01 [日本/69yun] 不可用
+69yun | 美国 2× IPLC 01 [美国/69yun] 不可用
+69yun | 美国 2× IPLC 05 [美国/69yun] 不可用
+69yun | 澳大利亚 2× IPLC 01 [澳大利亚/69yun] 不可用
+69yun | 香港 01 [香港/69yun] 不可用
+69yun | 柬埔寨 5× Fam 01 [柬埔寨/69yun] 不可用
+69yun | 波兰 5× IPLC 01 [波兰/69yun] 不可用
+69yun | 阿根廷 5× IPLC 01 [阿根廷/69yun] 不可用
+69yun | 印度 5× 01 [印度/69yun] 不可用
+hs-ts | 日本 04 [日本/hs-ts] 不可用
+ldy | 阿根廷 01 [阿根廷/ldy] 不可用
+ldy | 马来 01 [马来西亚/ldy] 不可用
+ldy | 加拿大 02 [加拿大/ldy] 不可用
