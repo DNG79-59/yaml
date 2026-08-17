@@ -1,4 +1,5 @@
 steamcdn-a.akamaihd.net
++.api.steampowered.com
 +.cm.steampowered.com
 +.steamserver.net
 +.api.wizconnected.cn
