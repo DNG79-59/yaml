@@ -10,14 +10,14 @@ dns:
 proxy-providers:
   Subscribe:
     type: http
-    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
+    url: https://leaf-3001.dngh.space/2cXaAxRGfddmGz2yx1wA/download/collection/TOTAL
     interval: 7200
     path: ./proxy_providers/Subscribe.yaml
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
   leaf3:
     type: http
-    url: https://leaf-3001.dngh.dpdns.org/2cXaAxRGfddmGz2yx1wA/download/collection/leaf*3
+    url: https://leaf-3001.dngh.space/2cXaAxRGfddmGz2yx1wA/download/collection/leaf*3
     interval: 7200
     path: ./proxy_providers/leaf3.yaml
     benchmark-url: http://cp.cloudflare.com
@@ -712,3 +712,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
 hosts:
   dns.alidns.com: 223.6.6.6
+geodata-mode: true
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
