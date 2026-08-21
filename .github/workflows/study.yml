@@ -1,0 +1,30 @@
+name: 自动搓配置
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+# 👇 就是这一行，授权写入权限
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+      
+      - name: 在这里无脑生成我的文件
+        run: |
+          echo "# 这是我自动生成的" > geoSub-study.yaml
+          echo "rules:" >> geoSub-study.yaml
+          echo "  - 占位符1" >> geoSub.yaml
+          echo "  - 占位符2" >> geoSub.yaml
+          cp geoSub-study.yaml geoSub-v1.yaml
+          cp geoSub-study.yaml geoSub-v2.yaml
+
+      - name: 自动提交回去
+        uses: stefanzweifel/git-auto-commit-action@v5.1.0
+        with:
+          commit_message: "机器自动搓的，别找我"
