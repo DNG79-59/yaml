@@ -665,11 +665,11 @@ rules:
   - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
-  - GEOIP,HK,Proxy,no-resolve
-  - GEOIP,TW,Proxy,no-resolve
-  - GEOIP,JP,Proxy,no-resolve
-  - GEOIP,SG,Proxy,no-resolve
-  - GEOIP,US,Proxy,no-resolve
+  - GEOIP,HK,HongKong,no-resolve
+  - GEOIP,TW,TaiWan,no-resolve
+  - GEOIP,JP,Japan,no-resolve
+  - GEOIP,SG,Singapore,no-resolve
+  - GEOIP,US,America,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
   - MATCH,Final
