@@ -639,6 +639,7 @@ proxy-groups:
     type: fallback
     hidden: true
 rules:
+  - GEOSITE,category-ads,REJECT
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,emby,emby,no-resolve
@@ -664,6 +665,11 @@ rules:
   - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
+  - GEOIP,HK,Proxy,no-resolve
+  - GEOIP,TW,Proxy,no-resolve
+  - GEOIP,JP,Proxy,no-resolve
+  - GEOIP,SG,Proxy,no-resolve
+  - GEOIP,US,Proxy,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
   - MATCH,Final
