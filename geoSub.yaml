@@ -1,3 +1,7 @@
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+
 mode: rule
 log-level: warning
 ipv6: false
@@ -639,6 +643,7 @@ proxy-groups:
     type: fallback
     hidden: true
 rules:
+  - SCRIPT,quic,REJECT
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,emby,emby,no-resolve
