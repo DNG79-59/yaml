@@ -1,0 +1,30 @@
+name: 自动搓配置
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 在这里无脑生成我的文件
+        run: |
+          # 这一行是创建你的 geoSub.yaml，你先随便写点内容进去
+          echo "# 这是我自动生成的" > geoSub.yaml
+          echo "rules:" >> geoSub.yaml
+          echo "  - 占位符1" >> geoSub.yaml
+          echo "  - 占位符2" >> geoSub.yaml
+          
+          # 复制一份变成v1
+          cp geoSub.yaml geoSub-v1.yaml
+          # 复制一份变成v2
+          cp geoSub.yaml geoSub-v2.yaml
+
+      - name: 自动提交回去
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "机器自动搓的，别找我"
