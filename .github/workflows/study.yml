@@ -36,6 +36,9 @@ jobs:
           # 写入head.yaml全部内容
           cat head.yaml > SubMin.yaml
 
+          # 插入一个空换行
+          echo "" >> SubMin.yaml
+
           # proxies‑by‑one.yaml 跳过第一行追加
           cat proxies-by-one.yaml >> SubMin.yaml
 
@@ -44,6 +47,9 @@ jobs:
 
           # proxy-groups.yaml 放入 SubMin.yaml
           cat proxy-groups.yaml >> SubMin.yaml
+
+          # all-rules.yaml 放入 SubMin.yaml
+          cat all-rules.yaml >> SubMin.yaml
 
       - name: 自动提交回去
         uses: stefanzweifel/git-auto-commit-action@v5.1.0
