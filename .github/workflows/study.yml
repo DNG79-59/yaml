@@ -37,7 +37,7 @@ jobs:
           cat head.yaml > SubMin.yaml
 
           # proxies‑by‑one.yaml 跳过第一行追加
-          tail -n +2 proxies-by-one.yaml >> SubMin.yaml
+          cat proxies-by-one.yaml >> SubMin.yaml
 
           # proxies‑by‑two.yaml 跳过第一行追加
           tail -n +2 proxies-by-two.yaml >> SubMin.yaml
