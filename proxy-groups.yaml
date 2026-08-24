@@ -24,19 +24,15 @@ proxy-groups:
       - leaf-LoadBalance
       - leaf-Auto
     filter: ^(?!.*emby).*$
-    use:
-      - leaf3
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     timeout: 3
-    use:
-      - Subscribe
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
       - leaf
+    include-all: true
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -216,9 +212,6 @@ proxy-groups:
       - HK-FallBack
       - HK-LoadBalance
     filter: ^(?!.*emby).*(?i)港|HK|hk|Hong Kong|HongKong|hongkong
-    use:
-      - Subscribe
-
   - name: Singapore
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -227,8 +220,6 @@ proxy-groups:
       - SG-FallBack
       - SG-LoadBalance
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|SG|Singapore
-    use:
-      - Subscribe
   - name: America
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -237,8 +228,6 @@ proxy-groups:
       - US-FallBack
       - US-LoadBalance
     filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
-    use:
-      - Subscribe
 
   - name: AllServer
     type: select
@@ -258,8 +247,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
     proxies:
       - leaf
   - name: SG-Auto
@@ -269,8 +256,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
     proxies:
       - leaf
   - name: US-Auto
@@ -280,8 +265,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
     proxies:
       - leaf
 
@@ -292,8 +275,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
   - name: SG-FallBack
     type: fallback
     hidden: true
@@ -301,8 +282,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
   - name: US-FallBack
     type: fallback
     hidden: true
@@ -310,8 +289,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
@@ -319,8 +296,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     strategy: consistent-hashing
     interval: 300
-    use:
-      - Subscribe
   - name: SG-LoadBalance
     type: load-balance
     hidden: true
@@ -328,8 +303,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     strategy: consistent-hashing
     interval: 300
-    use:
-      - Subscribe
   - name: US-LoadBalance
     type: load-balance
     hidden: true
@@ -337,30 +310,22 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     strategy: consistent-hashing
     interval: 300
-    use:
-      - Subscribe
   - name: leaf-Auto
     type: url-test
     hidden: true
     filter: ^(?!.*emby).*$
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
-    use:
-      - leaf3
   - name: leaf-FallBack
     type: fallback
     hidden: true
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
-    use:
-      - leaf3
   - name: leaf-LoadBalance
     type: load-balance
     hidden: true
     strategy: consistent-hashing
     interval: 300
-    use:
-      - leaf3
   - name: emby-Auto
     type: url-test
     include-all: true
@@ -370,8 +335,6 @@ proxy-groups:
     hidden: false
     tolerance: 100
     timeout: 2
-    proxies:
-      - DIRECT
   - name: emby-LoadBalance
     type: load-balance
     include-all: true
@@ -379,8 +342,6 @@ proxy-groups:
     url: https://emby1.69yun69.com
     interval: 300
     hidden: true
-    use:
-      - Emby-providers
     filter: ^(?!.*(5×|美国|日本)).*$
   - name: PROXY
     proxies:
