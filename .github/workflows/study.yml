@@ -1,4 +1,4 @@
-name: 自动搓配置
+name: Build SubMin.yaml
 
 on:
   push:
@@ -14,17 +14,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
-      
-      - name: 在这里无脑生成我的文件
+
+      - name: 下载远程订阅到 proxies-by-one.yaml
         run: |
-          echo "# 这是我自动生成的" > geoSub-study.yaml
-          echo "rules:" >> geoSub-study.yaml
-          echo "  - 占位符1" >> geoSub-study.yaml
-          echo "  - 占位符2" >> geoSub-study.yaml
-          cp geoSub-study.yaml geoSub-v1.yaml
-          cp geoSub-study.yaml geoSub-v2.yaml
+          # 读取providers-by-one.yaml中的url，去除换行空格
+          URL=$(cat providers-by-one.yaml | tr -d '\r\n ')
+          echo "Fetch url: $URL"
+          # curl下载，输出到 proxies-by-one.yaml
+          curl -sL --connect-timeout 15 "$URL" -o proxies-by-one.yaml
+
+      - name: 下载远程订阅到 proxies-by-two.yaml（如果你也需要，同理）
+        run: |
+          URL2=$(cat providers-by-two.yaml | tr -d '\r\n ')
+          echo "Fetch url2: $URL2"
+          curl -sL --connect-timeout 15 "$URL2" -o proxies-by-two.yaml
+      
+      - name: 合并生成 SubMin.yaml
+        run: |
+          # 获取配置
+
+          # 写入head.yaml全部内容
+          cat head.yaml > SubMin.yaml
+
+          # proxies‑by‑one.yaml 跳过第一行追加
+          tail -n +2 proxies-by-one.yaml >> SubMin.yaml
+
+          # proxies‑by‑two.yaml 跳过第一行追加
+          tail -n +2 proxies-by-two.yaml >> SubMin.yaml
+
+          # proxy-groups.yaml 放入 SubMin.yaml
+          cat proxy-groups.yaml >> SubMin.yaml
 
       - name: 自动提交回去
         uses: stefanzweifel/git-auto-commit-action@v5.1.0
         with:
           commit_message: "机器自动搓的，别找我"
+

@@ -1,0 +1,9 @@
+mode: rule
+log-level: warning
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  cache-algorithm: arc

@@ -1,0 +1,84 @@
+rules:
+  - RULE-SET,个人代理,Proxy,no-resolve
+  - RULE-SET,个人直连,DIRECT,no-resolve
+  - RULE-SET,emby,emby,no-resolve
+  - GEOSITE,category-ads,REJECT
+  - DOMAIN-SUFFIX,opencode.ai,AI
+  - GEOSITE,category-ai-!cn,AI
+  - GEOSITE,Telegram,Telegram
+  - GEOSITE,YouTube,YouTube
+  - GEOSITE,Google,Google
+  - GEOSITE,TikTok,TikTok
+  - GEOSITE,Linkedin,Linkedin
+  - GEOSITE,Facebook,Facebook
+  - GEOSITE,Instagram,Instagram
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,Apple
+  - GEOSITE,GitHub,Proxy
+  - GEOSITE,Microsoft,Microsoft
+  - GEOSITE,category-games@cn,DIRECT
+  - RULE-SET,Steam@cn,DIRECT,no-resolve
+  - GEOSITE,Twitter,X
+  - DOMAIN-SUFFIX,api.giphy.com,Whatsapp
+  - GEOSITE,Whatsapp,Whatsapp
+  - RULE-SET,telegramcidr,Telegram,no-resolve
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,cn,DIRECT
+  - GEOIP,HK,HongKong,no-resolve
+  - GEOIP,TW,TaiWan,no-resolve
+  - GEOIP,JP,Japan,no-resolve
+  - GEOIP,SG,Singapore,no-resolve
+  - GEOIP,US,America,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - MATCH,Final
+rule-providers:
+  private:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  privatecidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  个人直连:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
+  个人代理:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
+  emby:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
+  Steam@cn:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
