@@ -43,45 +43,45 @@ proxies:
   - {"name":"hs-ts | 美国 1.5× IEPL 01","server":"36.141.40.13","port":20014,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 美国 1.5× IEPL 02","server":"36.141.40.13","port":20019,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"ldy | 新加坡 IPLC 01","type":"anytls","server":"54.169.167.171","port":23724,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"vip.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 02","type":"anytls","server":"13.229.114.180","port":23716,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 03","type":"anytls","server":"54.169.167.171","port":23706,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"search.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 02","type":"anytls","server":"54.169.167.171","port":23716,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 03","type":"anytls","server":"13.215.254.51","port":23706,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"search.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 新加坡 IPLC 04","type":"anytls","server":"13.215.254.51","port":23713,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"h.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 05","type":"anytls","server":"13.215.254.51","port":23714,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"vc.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 06","type":"anytls","server":"13.229.114.180","port":23729,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"i2.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 07","type":"anytls","server":"54.169.167.171","port":23704,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"s2.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 08","type":"anytls","server":"13.229.114.180","port":23734,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"s3.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 IPLC 09","type":"anytls","server":"52.76.46.99","port":23700,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"static.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 IPLC 01","type":"anytls","server":"52.76.46.99","port":23717,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"space.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 IPLC 02","type":"anytls","server":"52.76.46.99","port":23728,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"activity.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 IPLC 03","type":"anytls","server":"47.128.239.86","port":23705,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"t.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 05","type":"anytls","server":"54.169.167.171","port":23714,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"vc.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 06","type":"anytls","server":"54.169.167.171","port":23729,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"i2.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 07","type":"anytls","server":"13.215.254.51","port":23704,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"s2.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 08","type":"anytls","server":"13.215.254.51","port":23734,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"s3.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 IPLC 09","type":"anytls","server":"47.128.239.86","port":23700,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"static.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 IPLC 01","type":"anytls","server":"13.229.114.180","port":23717,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"space.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 IPLC 02","type":"anytls","server":"13.229.114.180","port":23728,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"activity.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 IPLC 03","type":"anytls","server":"54.169.167.171","port":23705,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"t.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 美国 IPLC 04","type":"anytls","server":"13.229.114.180","port":23722,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"passport.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 IPLC 05","type":"anytls","server":"54.169.167.171","port":23723,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"account.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 IPLC 05","type":"anytls","server":"47.128.239.86","port":23723,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"account.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 美国 01","type":"anytls","server":"13.215.254.51","port":23735,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"bangumi.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 02","type":"anytls","server":"13.215.248.138","port":26022,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 02","type":"anytls","server":"13.250.96.79","port":26022,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 美国 03","type":"anytls","server":"13.215.248.138","port":26023,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 04","type":"anytls","server":"13.215.248.138","port":26024,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 04","type":"anytls","server":"13.250.96.79","port":26024,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 美国 05","type":"anytls","server":"13.215.248.138","port":26009,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 美国 06","type":"anytls","server":"13.250.96.79","port":26010,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 美国 06","type":"anytls","server":"13.215.248.138","port":26010,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 美国 07","type":"anytls","server":"13.250.96.79","port":26011,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 美国 08","type":"anytls","server":"13.250.96.79","port":26012,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 香港 IPLC 01","type":"anytls","server":"52.76.46.99","port":23712,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"live.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 IPLC 02","type":"anytls","server":"52.76.46.99","port":23725,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"api.live.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 IPLC 03","type":"anytls","server":"54.169.167.171","port":23711,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"api.vc.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 IPLC 04","type":"anytls","server":"52.76.46.99","port":23710,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"mall.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 IPLC 02","type":"anytls","server":"13.215.254.51","port":23725,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"api.live.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 IPLC 03","type":"anytls","server":"52.76.46.99","port":23711,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"api.vc.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 IPLC 04","type":"anytls","server":"47.128.239.86","port":23710,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"mall.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 香港 IPLC 05","type":"anytls","server":"13.229.114.180","port":23709,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"m.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 IPLC 06","type":"anytls","server":"13.229.114.180","port":23708,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"api.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 IPLC 07","type":"anytls","server":"54.169.167.171","port":23707,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"app.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 IPLC 08","type":"anytls","server":"52.76.46.99","port":23701,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"i0.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 01","type":"anytls","server":"13.250.96.79","port":26019,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 IPLC 06","type":"anytls","server":"13.215.254.51","port":23708,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"api.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 IPLC 07","type":"anytls","server":"13.229.114.180","port":23707,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"app.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 IPLC 08","type":"anytls","server":"13.215.254.51","port":23701,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"i0.hdslb.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 01","type":"anytls","server":"13.215.248.138","port":26019,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 新加坡 02","type":"anytls","server":"13.215.248.138","port":26020,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 新加坡 03","type":"anytls","server":"13.250.96.79","port":26021,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 新加坡 04","type":"anytls","server":"13.215.248.138","port":26002,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 05","type":"anytls","server":"13.250.96.79","port":26003,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 新加坡 06","type":"anytls","server":"13.250.96.79","port":26004,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 05","type":"anytls","server":"13.215.248.138","port":26003,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 新加坡 06","type":"anytls","server":"13.215.248.138","port":26004,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 新加坡 07","type":"anytls","server":"13.250.96.79","port":26005,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 香港 01","type":"anytls","server":"13.215.248.138","port":26006,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 02","type":"anytls","server":"13.250.96.79","port":26007,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ldy | 香港 03","type":"anytls","server":"13.250.96.79","port":26008,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 02","type":"anytls","server":"13.215.248.138","port":26007,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ldy | 香港 03","type":"anytls","server":"13.215.248.138","port":26008,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 香港 04","type":"anytls","server":"13.215.248.138","port":26016,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"type":"vless","name":"qwpaw | 新加坡","server":"bestcf.top","port":443,"uuid":"1b6e8823-6c9b-4582-8b3d-6ee5ca6d8113","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"network":"ws","ws-opts":{"headers":{"Host":"qwenpaw-8080.dngh.space"},"path":"/70daf11d0d071d4171be1164d6c565fc"},"servername":"qwenpaw-8080.dngh.space"}
 proxy-groups:
@@ -110,19 +110,15 @@ proxy-groups:
       - leaf-LoadBalance
       - leaf-Auto
     filter: ^(?!.*emby).*$
-    use:
-      - leaf3
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     timeout: 3
-    use:
-      - Subscribe
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
       - leaf
+    include-all: true
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -302,9 +298,6 @@ proxy-groups:
       - HK-FallBack
       - HK-LoadBalance
     filter: ^(?!.*emby).*(?i)港|HK|hk|Hong Kong|HongKong|hongkong
-    use:
-      - Subscribe
-
   - name: Singapore
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -313,8 +306,6 @@ proxy-groups:
       - SG-FallBack
       - SG-LoadBalance
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|SG|Singapore
-    use:
-      - Subscribe
   - name: America
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -323,8 +314,6 @@ proxy-groups:
       - US-FallBack
       - US-LoadBalance
     filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
-    use:
-      - Subscribe
 
   - name: AllServer
     type: select
@@ -344,8 +333,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
     proxies:
       - leaf
   - name: SG-Auto
@@ -355,8 +342,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
     proxies:
       - leaf
   - name: US-Auto
@@ -366,8 +351,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
     proxies:
       - leaf
 
@@ -378,8 +361,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
   - name: SG-FallBack
     type: fallback
     hidden: true
@@ -387,8 +368,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
   - name: US-FallBack
     type: fallback
     hidden: true
@@ -396,8 +375,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    use:
-      - Subscribe
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
@@ -405,8 +382,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     strategy: consistent-hashing
     interval: 300
-    use:
-      - Subscribe
   - name: SG-LoadBalance
     type: load-balance
     hidden: true
@@ -414,8 +389,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     strategy: consistent-hashing
     interval: 300
-    use:
-      - Subscribe
   - name: US-LoadBalance
     type: load-balance
     hidden: true
@@ -423,30 +396,22 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     strategy: consistent-hashing
     interval: 300
-    use:
-      - Subscribe
   - name: leaf-Auto
     type: url-test
     hidden: true
     filter: ^(?!.*emby).*$
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
-    use:
-      - leaf3
   - name: leaf-FallBack
     type: fallback
     hidden: true
     interval: 300
     url: 'http://www.gstatic.com/generate_204'
-    use:
-      - leaf3
   - name: leaf-LoadBalance
     type: load-balance
     hidden: true
     strategy: consistent-hashing
     interval: 300
-    use:
-      - leaf3
   - name: emby-Auto
     type: url-test
     include-all: true
@@ -456,8 +421,6 @@ proxy-groups:
     hidden: false
     tolerance: 100
     timeout: 2
-    proxies:
-      - DIRECT
   - name: emby-LoadBalance
     type: load-balance
     include-all: true
@@ -465,8 +428,6 @@ proxy-groups:
     url: https://emby1.69yun69.com
     interval: 300
     hidden: true
-    use:
-      - Emby-providers
     filter: ^(?!.*(5×|美国|日本)).*$
   - name: PROXY
     proxies:
@@ -476,8 +437,7 @@ proxy-groups:
       - Singapore
       - America
     type: fallback
-    hidden: true
-rules:
+    hidden: truerules:
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,emby,emby,no-resolve
