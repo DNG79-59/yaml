@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+# 👇 就是这一行，授权写入权限
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,15 +17,11 @@ jobs:
       
       - name: 在这里无脑生成我的文件
         run: |
-          # 这一行是创建你的 geoSub.yaml，你先随便写点内容进去
           echo "# 这是我自动生成的" > geoSub.yaml
           echo "rules:" >> geoSub.yaml
           echo "  - 占位符1" >> geoSub.yaml
           echo "  - 占位符2" >> geoSub.yaml
-          
-          # 复制一份变成v1
           cp geoSub.yaml geoSub-v1.yaml
-          # 复制一份变成v2
           cp geoSub.yaml geoSub-v2.yaml
 
       - name: 自动提交回去
