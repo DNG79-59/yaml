@@ -103,9 +103,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
+      - leaf
       - HongKong
       - Proxy
-      - leaf
       - TaiWan
       - Japan
       - Korea
