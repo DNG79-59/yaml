@@ -53,7 +53,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 复制下面指令一键运行即可
 
 请将其中的 2cXaAxRGfddmGz2yx1wA 字段改为其它复杂字符串；
-本示例中演示的定时任务环境变量为 SUB_STORE_CRON, 此时使用的是系统的 crond; 如果有问题, 可以使用 SUB_STORE_BACKEND_CRON, 此时将使用 Node 版 node-cron
+本示例中演示的定时任务环境变量为 SUB_STORE_CRON, 此时使用的是系统的 crond; 如果有问题, 可以使用 SUB_STORE_BACKEND_CRON, 此时将使用 Node 版 node-cron  
 推送服务: https://api.day.app/XXXXXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive&icon=https%3A%2F%2Fraw.githubusercontent.com%2F58xinian%2Ficon%2Fmaster%2FSub-Store1.png
 
 支持 Bark/PushPlus 等服务. 形如: https://api.day.app/XXXXXXXXX/[推送标题]/[推送内容]?group=SubStore&autoCopy=1&isArchive=1&sound=shake&level=timeSensitive 或 http://www.pushplus.plus/send?token=XXXXXXXXX&title=[推送标题]&content=[推送内容]&channel=wechat 的 URL, [推送标题] 和 [推送内容] 会被自动替换.
@@ -75,7 +75,8 @@ http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
 Tips:可以通过 docker help 查看docker的各项指令
 ```
 docker stats 
-```  指令查看当前运行中的docker状态
+```  
+指令查看当前运行中的docker状态
 
 有人提出不使用反向代理的方式，直接使用IP+端口直接访问，开发者让我补充一点：处于安全性考虑，建议还是使用反向代理以及配置较为复杂的API（也就是上面2cXaAxRGfddmGz2yx1wA这一串换成别的复杂字符）
 (将其中的x.x.x.x换成你的VPS IP）如果想使用域名并使用ssl，请接着往下看。
@@ -86,9 +87,9 @@ docker stats
 
 不要直接暴露容器的端口到宿主机,而是设置反向代理。比如可以使用 Nginx 作为反代,并配置域名访问容器内服务。
 如果就是想直接通过 IP+端口访问,可以在 docker run 时使用 -p 参数,比如 -p 3001:3001 来将容器端口映射到宿主机端口。但是直接暴露端口有安全风险,还是建议使用反向代理的方式。这时候运行指令如下：
-
+```bash
 docker run -it -d --restart=always -e "SUB_STORE_CRON=0 0 * * *" -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA -p 3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
-Copy
+```
 如果设置了端口映射但是无法访问,可以检查下面的常见情况:
 • 使用 docker ps 查看容器是否正确启动并监听了端口。
 
@@ -102,23 +103,21 @@ Copy
 
 域名设置：
 在cloudflare的域名DNS记录里面添加一个A记录
-substore.domain.com
+`substore.domain.com`
 
 实际A记录的名字随意，只要你能区分就行
-
-如下图例：
-
-CC 2023-12-13 at 09.21.18@2x
 
 备注：后面的代理黄云勾不勾随意，如果你用其它第三方ssl证书可以不勾，如果用CF的证书就勾上。
 
 nginx部署过程
 安装nginx
+```bash
 sudo apt install nginx -y
-Copy
+```
 编辑nginx配置
+```bash
 sudo vim /etc/nginx/sites-enabled/sub-store.conf
-Copy
+```
 根据自己的前面域名设置将以下内容改好后复制进去并保存
 ```
 server {
@@ -135,9 +134,10 @@ server {
   }
 }
 ```  
-编写完毕保存后输入：nginx -t 查看配置是否正确，如果正确输入：nginx -s reload重载配置，如果出现错误输入：nginx -s stop 停止nginx运行， 并根据提示信息进行排查。
+编写完毕保存后输入：`nginx -t` 查看配置是否正确，如果正确输入：`nginx -s reload`重载配置，如果出现错误输入：`nginx -s stop` 停止nginx运行， 并根据提示信息进行排查。
 
-使用CloudFlare的15年ssl证书步骤
+### 使用CloudFlare的15年ssl证书步骤
+
 将域名托管到cloudflare后，将旁边那朵云点上变为黄色
 在左侧的SSL/TLS栏目下概述中，将加密模式改为完全（严格）
 CC2023-12-13at15.37.35@2x
@@ -149,14 +149,20 @@ CC2023-12-13at15.40.57@2x
 
 打开ssh软件，并且链接上VPS后
 创建文件夹 cert
+```bash
 mkdir cert
 cd cert
+```
 创建公钥文件
+```bash
 vim ssl.pem
+```
 将上面的cloudflare证书公钥内容粘贴进去并保存
 CC2023-12-13at15.45.31@2x
 创建私钥文件
+```bash
 vim ssl.key
+```
 将上面的cloudflare证书私钥内容粘贴进去并保存
 CC2023-12-13at15.44.15@2x
 至此整个Docker版的sub-store服务搭建完成。
@@ -172,14 +178,14 @@ https://substore.yourdomain.com?api=https://substore.yourdomain.com/2cXaAxRGfddm
 如果想两个域名都用上
 docker 那部分启动改为
 
+```bash
 docker run -it -d --restart=always -p 127.0.0.1:3001:3001 -v /root/sub-store-data:/opt/app/data --name sub-store xream/sub-store
-Copy
+```
 nginx部分则参照之前的方法即可。
 
 适配 yandf 用户的完整操作流程（非 root 目录）
 步骤 1：创建并配置 yandf 专属数据目录
-bash
-运行
+```bash
 # 1. 确认 yandf 用户存在（不存在则先创建：sudo useradd -m yandf）
 id yandf
 
@@ -191,9 +197,10 @@ sudo chown -R yandf:yandf /data/sub-store
 
 # 4. 设置权限（yandf 可读写，其他用户只读，兼顾安全）
 sudo chmod -R 755 /data/sub-store
+```
+
 步骤 2：最终启动命令（基于 yandf 用户）
-bash
-运行
+```bash
 docker run -it -d --restart=always \
   -e "SUB_STORE_CRON=0 0 * * *" \
   -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA \
@@ -204,23 +211,29 @@ docker run -it -d --restart=always \
   # 指定容器内以 yandf 的 UID/GID 运行（避免 root 权限）
   --user $(id -u yandf):$(id -g yandf) \
   xream/sub-store
+```
 步骤 3：验证配置有效性（yandf 用户操作）
-bash
-运行
+```bash
 # 切换到 yandf 用户（若当前是 root）
 su - yandf
+```
 
 # 写入测试文件（无需 sudo，因目录归属 yandf）
+```bash
 echo "yandf test data" > /data/sub-store/test.txt
+```
 
 # 查看容器内是否能读取到（需 root 权限执行 docker 命令，或给 yandf 配置 docker 权限）
+```bash
 sudo docker exec sub-store cat /opt/app/data/test.txt
-若想让 yandf 用户无需 sudo 执行 docker 命令，执行：sudo usermod -aG docker yandf，然后重新登录 yandf 用户。
+```
+若想让 yandf 用户无需 sudo 执行 docker 命令，执行：`sudo usermod -aG docker yandf`，然后重新登录 yandf 用户。
 
 
 部署完docker上的sub后，下载nat123，完成端口映射。
 如完整的substore地址：http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
 将ip部分改为端口映射后给出的地址如http://25101a8b.nat123.top:40200?api=http://25101a8b.nat123.top:40200/2cXaAxRGfddmGz2yx1wA
 
-
+```bash
 docker run -d --restart=always -p 3001:3001 -v sub-store-data:/opt/app/data -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA --name sub-store xream/sub-store
+```
