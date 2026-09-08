@@ -221,3 +221,6 @@ sudo docker exec sub-store cat /opt/app/data/test.txt
 部署完docker上的sub后，下载nat123，完成端口映射。
 如完整的substore地址：http://127.0.0.1:3001?api=http://127.0.0.1:3001/2cXaAxRGfddmGz2yx1wA
 将ip部分改为端口映射后给出的地址如http://25101a8b.nat123.top:40200?api=http://25101a8b.nat123.top:40200/2cXaAxRGfddmGz2yx1wA
+
+
+docker run -d --restart=always -p 3001:3001 -v sub-store-data:/opt/app/data -e SUB_STORE_FRONTEND_BACKEND_PATH=/2cXaAxRGfddmGz2yx1wA --name sub-store xream/sub-store

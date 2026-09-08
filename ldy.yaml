@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG http://47.242.55.240/link/9Wx2AkoTezzEylMK?clash=2
 
 #---------------------------------------------------#
-## 上次更新于：2026-08-06 01:39:55
+## 上次更新于：2026-09-08 03:47:09
 #---------------------------------------------------#
 
 port: 7890
@@ -82,7 +82,7 @@ proxies:
       - http/1.1
   - name: '🇺🇲 AA5美国1 IPLC VIP2 网址:nnbin.com'
     type: anytls
-    server: b.iqiymysql.com
+    server: c.iqiymysql.com
     port: 23717
     password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
     sni: space.bilibili.com
@@ -248,7 +248,7 @@ proxies:
     alpn:
       - h2
       - http/1.1
-  - name: "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+  - name: '🇩🇪 AA8德国 VIP2 网址:nnbin.com'
     type: anytls
     server: b.iqiymysql.com
     port: 23742
@@ -356,19 +356,7 @@ proxies:
     alpn:
       - h2
       - http/1.1
-  - name: '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
-    type: anytls
-    server: b.iqiymysql.com
-    port: 23775
-    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
-    sni: upos-sz-mirrorcos.bilivideo.com
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-  - name: "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+  - name: '🇲🇾 AA8马来西亚2 VIP2 网址:bdoos.com'
     type: anytls
     server: b.iqiymysql.com
     port: 23762
@@ -398,18 +386,6 @@ proxies:
     port: 23731
     password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
     sni: link.bilibili.com
-    skip-cert-verify: true
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-  - name: '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
-    type: anytls
-    server: b.iqiymysql.com
-    port: 23732
-    password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
-    sni: api.bilibili.tv
     skip-cert-verify: true
     client-fingerprint: chrome
     udp: true
@@ -919,7 +895,7 @@ proxy-groups:
       - '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
       - 'AA8墨西哥 VIP2 网址:nnbin.com'
       - '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
-      - "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+      - '🇩🇪 AA8德国 VIP2 网址:nnbin.com'
       - '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
       - '🇫🇷 AA8法国 网址:nnbin.com'
       - '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
@@ -928,11 +904,9 @@ proxy-groups:
       - '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
       - 'AA8西班牙 VIP2 网址:nnbin.com'
       - '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
-      - '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
-      - "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+      - '🇲🇾 AA8马来西亚2 VIP2 网址:bdoos.com'
       - '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
       - '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
-      - '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
       - '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
       - '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
       - '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
@@ -993,7 +967,7 @@ proxy-groups:
       - '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
       - 'AA8墨西哥 VIP2 网址:nnbin.com'
       - '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
-      - "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+      - '🇩🇪 AA8德国 VIP2 网址:nnbin.com'
       - '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
       - '🇫🇷 AA8法国 网址:nnbin.com'
       - '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
@@ -1002,11 +976,9 @@ proxy-groups:
       - '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
       - 'AA8西班牙 VIP2 网址:nnbin.com'
       - '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
-      - '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
-      - "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+      - '🇲🇾 AA8马来西亚2 VIP2 网址:bdoos.com'
       - '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
       - '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
-      - '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
       - '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
       - '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
       - '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
@@ -1071,7 +1043,7 @@ proxy-groups:
       - '🇹🇷 AA8土耳其1 VIP2 网址:ccbbss.com'
       - 'AA8墨西哥 VIP2 网址:nnbin.com'
       - '🇧🇷 AA8巴西 VIP2 网址:nnbin.com'
-      - "🇩🇪 AA8德国 VIP2 网址:nnbin.com\t"
+      - '🇩🇪 AA8德国 VIP2 网址:nnbin.com'
       - '🇮🇹 AA8意大利 支持NF VIP2 网址:nnbin.com'
       - '🇫🇷 AA8法国 网址:nnbin.com'
       - '🇹🇭 AA8泰国 VIP2 网址:nnbin.com'
@@ -1080,11 +1052,9 @@ proxy-groups:
       - '🇵🇭 AA8菲律宾 VIP2 网址:nnbin.com'
       - 'AA8西班牙 VIP2 网址:nnbin.com'
       - '🇻🇳 AA8越南 VIP2 网址:nnbin.com'
-      - '🇦🇷 AA8阿根廷 支持NF VIP2 网址:nnbin.com'
-      - "🇲🇾 AA8马来西亚2 VIP2 网址:nnbin.com\t"
+      - '🇲🇾 AA8马来西亚2 VIP2 网址:bdoos.com'
       - '🇷🇺 AA俄罗斯1 VIP2 网址:nnbin.com'
       - '🇨🇦 AA加拿大1 VIP2 网址:nnbin.com'
-      - '🇨🇦 AA加拿大2 VIP2 网址:nnbin.com'
       - '🇮🇳 AA印度1 VIP2 网址:nnbin.com'
       - '🇸🇬 AA新加坡1 IPLC  支持NF VIP2 网址:nnbin.com'
       - '🇸🇬 AA新加坡2 IPLC  支持NF VIP2 网址:nnbin.com'
