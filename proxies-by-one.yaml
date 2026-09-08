@@ -1,4 +1,1 @@
-proxies:
-  - {"type":"vless","name":"leaf | US v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
-  - {"name":"leaf | US cdn","type":"vmess","server":"bestcf.top","port":8080,"cipher":"auto","uuid":"1673661d-9643-492b-a4f4-8adb319b429e","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/sudhgs","headers":{"Host":"leaf.dngh.space"}},"client-fingerprint":""}
-  - {"type":"hysteria2","name":"leaf | US hy2","server":"192.129.211.150","port":45636,"password":"f9cea999","sni":"www.bing.com","skip-cert-verify":true,"tfo":true,"udp":true,"fast-open":true}
+{"status":"failed","error":{"code":"INTERNAL_SERVER_ERROR","type":"InternalServerError","message":"Failed to download collection: leaf*3","details":"Reason: 组合订阅 leaf*3 中不含有效节点"}}
