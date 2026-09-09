@@ -1,1 +1,2 @@
-{"status":"failed","error":{"code":"INTERNAL_SERVER_ERROR","type":"InternalServerError","message":"Failed to download collection: leaf*3","details":"Reason: 组合订阅 leaf*3 中不含有效节点"}}
+proxies:
+  - {"type":"vless","name":"qwpaw | 新加坡","server":"bestcf.top","port":443,"uuid":"1b6e8823-6c9b-4582-8b3d-6ee5ca6d8113","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"network":"ws","ws-opts":{"headers":{"Host":"qwenpaw-8080.dngh.space"},"path":"/70daf11d0d071d4171be1164d6c565fc"},"servername":"qwenpaw-8080.dngh.space"}
