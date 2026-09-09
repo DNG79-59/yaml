@@ -31,8 +31,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - DIRECT
       - Proxy
+      - DIRECT
   - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -69,6 +69,7 @@ proxy-groups:
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
       - leaf
+
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -84,6 +85,56 @@ proxy-groups:
       - America
       - UnitedKingdom
       - 自动选择
+
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+    proxies:
+      - AllServer
+      - America
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - UnitedKingdom
+      - 自动选择
+      - DIRECT
+  - name: Microsoft
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Apple
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+
   - name: YouTube
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
@@ -130,6 +181,7 @@ proxy-groups:
       - AllServer
       - 自动选择
       - DIRECT
+
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
@@ -141,6 +193,21 @@ proxy-groups:
       - TaiWan
       - Japan
       - Korea
+      - America
+      - UnitedKingdom
+      - AllServer
+      - 自动选择
+  - name: Linkedin
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
       - America
       - UnitedKingdom
       - AllServer
@@ -160,14 +227,13 @@ proxy-groups:
       - UnitedKingdom
       - AllServer
       - 自动选择
-  - name: Apple
+  - name: Meta
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
     proxies:
-      - DIRECT
+      - HongKong
       - Proxy
       - leaf
-      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -175,103 +241,12 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
-  - name: Google
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-    proxies:
-      - AllServer
-      - America
-      - Proxy
-      - leaf
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - UnitedKingdom
       - 自动选择
       - DIRECT
-  - name: Linkedin
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
-    proxies:
-      - HongKong
-      - Proxy
-      - leaf
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
-      - 自动选择
-  - name: Facebook
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
-    proxies:
-      - HongKong
-      - Proxy
-      - leaf
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
-      - 自动选择
-  - name: Instagram
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png
-    proxies:
-      - HongKong
-      - Proxy
-      - leaf
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
-      - 自动选择
-  - name: Microsoft
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
-    proxies:
-      - DIRECT
-      - Proxy
-      - leaf
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
-      - 自动选择
+
   - name: Games
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-    proxies:
-      - HongKong
-      - Proxy
-      - leaf
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - AllServer
-      - 自动选择
-      - DIRECT
-  - name: Whatsapp
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
     proxies:
       - HongKong
       - Proxy
@@ -296,6 +271,7 @@ proxy-groups:
       - DIRECT
     include-all: true
     filter: ^(?!.*(5×|美国|日本)).*$
+
   - name: HongKong
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -375,11 +351,6 @@ proxy-groups:
       - Subscribe
       - leaf3
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-  - name: GLOBAL
-    type: select
-    proxies:
-      - Proxy
-      - leaf
   - name: HK-Auto
     type: url-test
     hidden: true
@@ -629,6 +600,11 @@ proxy-groups:
       - Emby-providers
     filter: ^(?!.*(5×|美国|日本)).*$
     
+  - name: GLOBAL
+    type: select
+    proxies:
+      - Proxy
+      - leaf
   - name: PROXY
     proxies:
       - 自动选择
@@ -641,33 +617,39 @@ proxy-groups:
       - America
       - UnitedKingdom
     type: fallback
-    hidden: true
 rules:
+# 个人
   - RULE-SET,个人代理,Proxy,no-resolve
   - RULE-SET,个人直连,DIRECT,no-resolve
   - RULE-SET,emby,emby,no-resolve
-  - GEOSITE,category-ads,REJECT
+# 科技技术
   - DOMAIN-SUFFIX,opencode.ai,AI
   - GEOSITE,category-ai-!cn,AI
-  - GEOSITE,Telegram,Telegram
-  - GEOSITE,YouTube,YouTube
+  - GEOSITE,GitHub,Proxy
+# 大厂
   - GEOSITE,Google,Google
-  - GEOSITE,TikTok,TikTok
-  - GEOSITE,Linkedin,Linkedin
-  - GEOSITE,Facebook,Facebook
-  - GEOSITE,Instagram,Instagram
+  - GEOSITE,Microsoft,Microsoft
   - GEOSITE,apple-cn,DIRECT
   - GEOSITE,apple,Apple
-  - GEOSITE,GitHub,Proxy
-  - GEOSITE,Microsoft,Microsoft
+# 媒体
+  - GEOSITE,YouTube,YouTube
+  - GEOSITE,TikTok,TikTok
+  - GEOSITE,Spotify,Spotify
+# 社交
+  - RULE-SET,telegramcidr,Telegram,no-resolve
+  - GEOSITE,Telegram,Telegram
+  - GEOSITE,Linkedin,Linkedin
+  - GEOSITE,Twitter,X
+  - DOMAIN-SUFFIX,api.giphy.com,Meta
+  - GEOSITE,meta,Meta
+# 粗分流
+  - GEOSITE,category-ads,REJECT
   - GEOSITE,category-games@cn,DIRECT
   - RULE-SET,Steam@cn,DIRECT,no-resolve
-  - GEOSITE,Twitter,X
-  - DOMAIN-SUFFIX,api.giphy.com,Whatsapp
-  - GEOSITE,Whatsapp,Whatsapp
-  - RULE-SET,telegramcidr,Telegram,no-resolve
+
   - GEOSITE,geolocation-!cn,Proxy
   - GEOSITE,cn,DIRECT
+
   - GEOIP,HK,HongKong,no-resolve
   - GEOIP,TW,TaiWan,no-resolve
   - GEOIP,JP,Japan,no-resolve
@@ -675,6 +657,8 @@ rules:
   - GEOIP,US,America,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
+  - RULE-SET,private,DIRECT
+  - RULE-SET,privatecidr,DIRECT
   - MATCH,Final
 rule-providers:
   private:
