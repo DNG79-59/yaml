@@ -428,8 +428,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: TW-Auto
     type: url-test
     hidden: true
@@ -439,8 +437,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: JP-Auto
     type: url-test
     hidden: true
@@ -450,8 +446,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: KR-Auto
     type: url-test
     hidden: true
@@ -461,8 +455,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: SG-Auto
     type: url-test
     hidden: true
@@ -472,8 +464,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: US-Auto
     type: url-test
     hidden: true
@@ -483,8 +473,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: UK-Auto
     type: url-test
     hidden: true
@@ -494,8 +482,6 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
-    proxies:
-      - leaf
   - name: HK-FallBack
     type: fallback
     hidden: true
@@ -505,6 +491,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: TW-FallBack
     type: fallback
     hidden: true
@@ -514,6 +502,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: JP-FallBack
     type: fallback
     hidden: true
@@ -523,6 +513,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: KR-FallBack
     type: fallback
     hidden: true
@@ -532,6 +524,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: SG-FallBack
     type: fallback
     hidden: true
@@ -541,6 +535,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: US-FallBack
     type: fallback
     hidden: true
@@ -550,6 +546,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: UK-FallBack
     type: fallback
     hidden: true
@@ -559,6 +557,8 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
+    proxies:
+      - leaf
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
