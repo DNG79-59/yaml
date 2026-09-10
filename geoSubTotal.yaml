@@ -65,7 +65,8 @@ proxy-groups:
     timeout: 3
     use:
       - Subscribe
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
@@ -74,20 +75,29 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
     type: fallback
     timeout: 3
-    use:
-      - Subscribe
     interval: 300
+    lazy: true
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
+      - Fall-Back-1
       - leaf
+  - name: Fall-Back-1
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
+    type: fallback
+    timeout: 3
+    use:
+      - Subscribe
+    interval: 600
+    lazy: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
 
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
+      - leaf
       - Manual-select
       - Proxy
-      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -412,9 +422,9 @@ proxy-groups:
   - name: HK-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -423,9 +433,9 @@ proxy-groups:
   - name: TW-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -434,9 +444,9 @@ proxy-groups:
   - name: JP-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -445,9 +455,9 @@ proxy-groups:
   - name: KR-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -456,9 +466,9 @@ proxy-groups:
   - name: SG-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -467,9 +477,9 @@ proxy-groups:
   - name: US-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -478,9 +488,9 @@ proxy-groups:
   - name: UK-Auto
     type: url-test
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
@@ -489,127 +499,127 @@ proxy-groups:
   - name: HK-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: TW-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: JP-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: KR-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: SG-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: US-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: UK-FallBack
     type: fallback
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
-    interval: 300
+    interval: 900
+    lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     use:
       - Subscribe
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)港|🇭🇰|HK|(?i)Hong
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
   - name: TW-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
   - name: JP-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
   - name: KR-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)韓|🇰🇷|韩国|KR|Korea
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
   - name: SG-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
   - name: US-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
   - name: UK-LoadBalance
     type: load-balance
     hidden: true
-    include-all: true
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     strategy: consistent-hashing
-    interval: 300
+    interval: 900
+    lazy: true
     use:
       - Subscribe
 
@@ -618,6 +628,7 @@ proxy-groups:
     hidden: true
     filter: ^(?!.*emby).*$
     interval: 300
+    lazy: true
     url: 'http://www.gstatic.com/generate_204'
     use:
       - leaf3
@@ -625,6 +636,7 @@ proxy-groups:
     type: fallback
     hidden: true
     interval: 300
+    lazy: true
     url: 'http://www.gstatic.com/generate_204'
     use:
       - leaf3
@@ -633,6 +645,7 @@ proxy-groups:
     hidden: true
     strategy: consistent-hashing
     interval: 300
+    lazy: true
     use:
       - leaf3
 
@@ -642,6 +655,7 @@ proxy-groups:
     filter: ^(?!.*(5×|美国|日本)).*$
     url: https://emby1.69yun69.com
     interval: 300
+    lazy: true
     hidden: false
     tolerance: 100
     timeout: 2
@@ -653,6 +667,7 @@ proxy-groups:
     strategy: consistent-hashing # 使用一致性哈希确保连接稳定性
     url: https://emby1.69yun69.com
     interval: 300
+    lazy: true
     hidden: true
     use:
       - Emby-providers
@@ -675,6 +690,7 @@ proxy-groups:
       - America
       - UnitedKingdom
     type: fallback
+    lazy: true
 rules:
 # 个人
   - RULE-SET,个人代理,Proxy,no-resolve
@@ -743,7 +759,7 @@ rule-providers:
     format: yaml
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
-    path: ./ruleset/private.yaml
+    path: ./ruleset/privatecidr.yaml
     interval: 86400
 
   个人直连:
