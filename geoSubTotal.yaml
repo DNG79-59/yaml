@@ -47,7 +47,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - DIRECT
   - name: leaf
     type: select
@@ -71,13 +71,12 @@ proxy-groups:
     proxies:
       - leaf
   - name: Fall-Back
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: url-test
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
+    type: fallback
     timeout: 3
     use:
       - Subscribe
     interval: 300
-    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
       - leaf
@@ -86,7 +85,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - AllServer
+      - Manual-select
       - Proxy
       - leaf
       - HongKong
@@ -103,7 +102,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
-      - AllServer
+      - Manual-select
       - America
       - Proxy
       - leaf
@@ -130,7 +129,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
   - name: Apple
@@ -147,7 +146,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
 
@@ -164,7 +163,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
   - name: TikTok
@@ -180,7 +179,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
   - name: Spotify
@@ -196,7 +195,7 @@ proxy-groups:
       - Korea
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
       - DIRECT
@@ -213,7 +212,7 @@ proxy-groups:
       - Korea
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
       - DIRECT
@@ -231,7 +230,7 @@ proxy-groups:
       - Korea
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
   - name: Linkedin
@@ -247,7 +246,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
   - name: X
@@ -263,7 +262,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
   - name: Meta
@@ -279,7 +278,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
       - DIRECT
@@ -296,7 +295,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
       - DIRECT
@@ -314,7 +313,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - AllServer
+      - Manual-select
       - Auto-select
       - Fall-Back
       - DIRECT
@@ -401,7 +400,7 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     use:
       - Subscribe
-  - name: AllServer
+  - name: Manual-select
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
     proxies:
@@ -752,24 +751,28 @@ rule-providers:
     format: text
     interval: 86400
     type: http
+    path: ./ruleset/personnelDirect.yaml
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
   个人代理:
     behavior: domain
     format: text
     interval: 86400
     type: http
+    path: ./ruleset/personnelProxy.txt
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
   emby:
     behavior: domain
     format: text
     interval: 86400
     type: http
+    path: ./ruleset/emby.txt
     url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
 
   Steam@cn:
     type: http
     behavior: classical
     format: text
+    path: ./ruleset/SteamCN.list
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
     interval: 86400
 hosts:
