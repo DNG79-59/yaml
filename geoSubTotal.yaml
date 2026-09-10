@@ -37,7 +37,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
-      - 自动选择
+      - Fall-Back
+      - Auto-select
       - leaf
       - HongKong
       - TaiWan
@@ -58,7 +59,18 @@ proxy-groups:
     filter: ^(?!.*emby).*$
     use:
       - leaf3
-  - name: 自动选择
+  - name: Auto-select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    type: url-test
+    timeout: 3
+    use:
+      - Subscribe
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    proxies:
+      - leaf
+  - name: Fall-Back
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
     timeout: 3
@@ -84,7 +96,8 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
-      - 自动选择
+      - Auto-select
+      - Fall-Back
 
   - name: Google
     type: select
@@ -100,7 +113,8 @@ proxy-groups:
       - Korea
       - Singapore
       - UnitedKingdom
-      - 自动选择
+      - Auto-select
+      - Fall-Back
       - DIRECT
   - name: Microsoft
     type: select
@@ -117,7 +131,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
@@ -133,7 +148,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
 
   - name: YouTube
     type: select
@@ -149,7 +165,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
@@ -164,7 +181,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
   - name: Spotify
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
@@ -179,7 +197,25 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
+      - DIRECT
+  - name: Media
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
+    proxies:
+      - Singapore
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - America
+      - UnitedKingdom
+      - AllServer
+      - Auto-select
+      - Fall-Back
       - DIRECT
 
   - name: Telegram
@@ -196,7 +232,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
   - name: Linkedin
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
@@ -211,7 +248,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
   - name: X
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
@@ -226,10 +264,11 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
   - name: Meta
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/WeChat.png
+    icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Meta-2.png
     proxies:
       - HongKong
       - Proxy
@@ -241,7 +280,25 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
+      - DIRECT
+  - name: Social
+    type: select
+    icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Messenger.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - AllServer
+      - Auto-select
+      - Fall-Back
       - DIRECT
 
   - name: Games
@@ -258,7 +315,8 @@ proxy-groups:
       - America
       - UnitedKingdom
       - AllServer
-      - 自动选择
+      - Auto-select
+      - Fall-Back
       - DIRECT
   - name: emby
     type: select
@@ -267,7 +325,8 @@ proxy-groups:
       - emby-LoadBalance   # 新增的负载均衡
       - leaf
       - emby-Auto
-      - 自动选择
+      - Auto-select
+      - Fall-Back
       - DIRECT
     include-all: true
     filter: ^(?!.*(5×|美国|日本)).*$
@@ -607,7 +666,7 @@ proxy-groups:
       - leaf
   - name: PROXY
     proxies:
-      - 自动选择
+      - Auto-select
       - leaf
       - TaiWan
       - HongKong
@@ -625,8 +684,8 @@ rules:
 # 科技技术
   - DOMAIN-SUFFIX,opencode.ai,AI
   - GEOSITE,category-ai-!cn,AI
-  - GEOSITE,GitHub,Proxy
 # 大厂
+  - GEOSITE,GitHub,Proxy
   - GEOSITE,Google,Google
   - GEOSITE,Microsoft,Microsoft
   - GEOSITE,apple-cn,DIRECT
@@ -635,6 +694,7 @@ rules:
   - GEOSITE,YouTube,YouTube
   - GEOSITE,TikTok,TikTok
   - GEOSITE,Spotify,Spotify
+  - GEOSITE,category-social-media-!cn,Media
 # 社交
   - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,Telegram,Telegram
@@ -642,9 +702,11 @@ rules:
   - GEOSITE,Twitter,X
   - DOMAIN-SUFFIX,api.giphy.com,Meta
   - GEOSITE,meta,Meta
+  - GEOSITE,category-communication,Social
 # 粗分流
   - GEOSITE,category-ads,REJECT
   - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,category-games,Games
   - RULE-SET,Steam@cn,DIRECT,no-resolve
 
   - GEOSITE,geolocation-!cn,Proxy
@@ -655,8 +717,8 @@ rules:
   - GEOIP,JP,Japan,no-resolve
   - GEOIP,SG,Singapore,no-resolve
   - GEOIP,US,America,no-resolve
-  - GEOIP,CN,DIRECT,no-resolve
-  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT
+  - GEOIP,LAN,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,privatecidr,DIRECT
   - MATCH,Final
