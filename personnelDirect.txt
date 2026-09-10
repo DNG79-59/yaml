@@ -17,3 +17,4 @@ updates.cdn-apple.com
 +.time.windows.com
 +.duolingo.cn
 +.taobao.com
++.dngh.space
