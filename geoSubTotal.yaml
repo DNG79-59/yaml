@@ -68,6 +68,8 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
+    tolerance: 80
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
       - leaf
@@ -84,11 +86,8 @@ proxy-groups:
   - name: Fall-Back-1
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
     type: fallback
-    timeout: 3
     use:
       - Subscribe
-    interval: 600
-    lazy: true
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
 
   - name: AI
@@ -426,6 +425,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: TW-Auto
@@ -435,6 +435,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: JP-Auto
@@ -444,6 +445,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: KR-Auto
@@ -453,6 +455,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: SG-Auto
@@ -462,6 +465,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: US-Auto
@@ -471,6 +475,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: UK-Auto
@@ -480,6 +485,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
   - name: HK-FallBack
@@ -489,6 +495,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -500,6 +507,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -511,6 +519,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -522,6 +531,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -533,6 +543,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -544,6 +555,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -555,6 +567,7 @@ proxy-groups:
     interval: 900
     lazy: true
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
     use:
       - Subscribe
     proxies:
@@ -630,6 +643,7 @@ proxy-groups:
     interval: 300
     lazy: true
     url: 'http://www.gstatic.com/generate_204'
+    expected-status: 204
     use:
       - leaf3
   - name: leaf-FallBack
@@ -638,6 +652,7 @@ proxy-groups:
     interval: 300
     lazy: true
     url: 'http://www.gstatic.com/generate_204'
+    expected-status: 204
     use:
       - leaf3
   - name: leaf-LoadBalance
@@ -670,7 +685,7 @@ proxy-groups:
     lazy: true
     hidden: true
     use:
-      - Emby-providers
+      - Subscribe
     filter: ^(?!.*(5×|美国|日本)).*$
     
   - name: GLOBAL
