@@ -16,7 +16,7 @@ proxies:
   - {"name":"69yun | 新加坡 2× IPLC 01","type":"vless","server":"47.128.230.144","port":41483,"uuid":"768ace59-f7ab-3857-8171-134f97e4ceb8","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
   - {"name":"69yun | 新加坡 2× IPLC 02","type":"ss","server":"18.183.7.33","port":21381,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
   - {"name":"69yun | 香港 01","type":"ss","server":"124.244.101.131","port":20513,"cipher":"aes-256-gcm","password":"ZXY6maaJ86Fxsy0n","udp":true}
-  - {"name":"hs-ts | 香港 01","server":"14.23.28.96","port":19276,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 01","server":"36.141.40.13","port":19276,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 香港 IEPL 01","server":"36.141.40.13","port":14564,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 香港 IEPL 02","server":"36.141.40.13","port":764,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 香港 IEPL 03","server":"36.141.40.13","port":808,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
@@ -24,9 +24,9 @@ proxies:
   - {"name":"hs-ts | 香港 IEPL 05","server":"36.141.40.13","port":15269,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
   - {"name":"hs-ts | 香港 IEPL 06","server":"36.141.40.13","port":13487,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"speedtest-bgp-01-10.entry-0.chinasnow.net"}},"udp":true}
   - {"name":"hs-ts | 香港 IEPL 07","server":"36.141.40.13","port":579,"type":"vmess","uuid":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","alterId":1,"cipher":"auto","tls":false,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/tutorial/iphone13.m3u8","headers":{"Host":"speedtest-bgp-01-11.entry-0.chinasnow.net"}},"udp":true}
-  - {"name":"hs-ts | 香港 0.8× 01","server":"14.23.28.96","port":1417,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 0.8× 01","server":"36.141.40.13","port":1417,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 香港 0.8× 02","server":"36.141.40.13","port":1424,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
-  - {"name":"hs-ts | 香港 0.8× 03","server":"14.23.28.96","port":18647,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
+  - {"name":"hs-ts | 香港 0.8× 03","server":"36.141.40.13","port":18647,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 新加坡 2× IEPL 01","server":"36.141.40.13","port":20004,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 新加坡 2× IEPL 02","server":"36.141.40.13","port":20079,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
   - {"name":"hs-ts | 新加坡 2× IEPL 03","server":"36.141.40.13","port":20084,"type":"ss","cipher":"aes-256-gcm","password":"69c35e5b-ef57-3aca-b797-b207f8ea4fbd","udp":true}
