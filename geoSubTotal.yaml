@@ -736,7 +736,7 @@ rules:
 # 粗分流
   - GEOSITE,category-ads,REJECT
   - GEOSITE,category-games@cn,DIRECT
-  - GEOSITE,category-games!cn,Games
+  - GEOSITE,category-games-!cn,Games
   - RULE-SET,Steam@cn,DIRECT,no-resolve
 
   - GEOSITE,geolocation-!cn,Proxy
