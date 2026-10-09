@@ -22,6 +22,12 @@ proxy-groups:
       - leaf | US hy2
       - leaf | US v+r
       - leaf | US cdn
+  - name: GLOBAL
+    type: select
+    hidden: true
+    proxies:
+      - Proxy
+      - DIRECT
 
 rules:
   - GEOSITE,geolocation-cn,Proxy
