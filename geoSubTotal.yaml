@@ -713,6 +713,7 @@ rules:
   - RULE-SET,emby,emby,no-resolve
 # 科技技术
   - DOMAIN-SUFFIX,opencode.ai,AI
+  - DOMAIN-SUFFIX,revenuecat.com,AI
   - GEOSITE,category-ai-!cn,AI
 # 大厂
   - GEOSITE,GitHub,Proxy
