@@ -728,6 +728,7 @@ rules:
 # 社交
   - RULE-SET,telegramcidr,Telegram,no-resolve
   - GEOSITE,Telegram,Telegram
+  - DOMAIN-SUFFIX,apollo.io,Linkedin
   - GEOSITE,Linkedin,Linkedin
   - GEOSITE,Twitter,X
   - DOMAIN-SUFFIX,api.giphy.com,Meta
