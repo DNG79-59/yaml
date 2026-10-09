@@ -30,7 +30,7 @@ proxy-groups:
       - DIRECT
 
 rules:
-  - GEOSITE,geolocation-cn,Proxy
+  - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT
   - GEOIP,LAN,DIRECT
