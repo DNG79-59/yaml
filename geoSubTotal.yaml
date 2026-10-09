@@ -27,69 +27,6 @@ proxy-providers:
     benchmark-url: http://cp.cloudflare.com
     benchmark-timeout: 2
 proxy-groups:
-  - name: Final
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-    proxies:
-      - Proxy
-      - DIRECT
-  - name: Proxy
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-    proxies:
-      - Fall-Back
-      - Auto-select
-      - leaf
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - Manual-select
-      - DIRECT
-  - name: leaf
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
-    proxies:
-      - leaf-FallBack
-      - leaf-LoadBalance
-      - leaf-Auto
-    filter: ^(?!.*emby).*$
-    use:
-      - leaf3
-  - name: Auto-select
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
-    type: url-test
-    timeout: 3
-    use:
-      - Subscribe
-    interval: 900
-    lazy: true
-    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
-    expected-status: 204
-    tolerance: 80
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-    proxies:
-      - leaf
-  - name: Fall-Back
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
-    type: fallback
-    timeout: 3
-    interval: 300
-    lazy: true
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-    proxies:
-      - Fall-Back-1
-      - leaf
-  - name: Fall-Back-1
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
-    type: fallback
-    use:
-      - Subscribe
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
-
   - name: AI
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -107,40 +44,6 @@ proxy-groups:
       - Auto-select
       - Fall-Back
 
-  - name: Google
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-    proxies:
-      - Manual-select
-      - America
-      - Proxy
-      - leaf
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - UnitedKingdom
-      - Auto-select
-      - Fall-Back
-      - DIRECT
-  - name: Microsoft
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
-    proxies:
-      - DIRECT
-      - Proxy
-      - leaf
-      - HongKong
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - Manual-select
-      - Auto-select
-      - Fall-Back
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
@@ -159,13 +62,26 @@ proxy-groups:
       - Auto-select
       - Fall-Back
 
-  - name: YouTube
+  - name: emby
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     proxies:
+      - emby-LoadBalance   # 新增的负载均衡
+      - leaf
+      - emby-Auto
+      - Auto-select
+      - Fall-Back
+      - DIRECT
+    include-all: true
+    filter: ^(?!.*(5×|美国|日本)).*$
+
+  - name: Games
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    proxies:
+      - HongKong
       - Proxy
       - leaf
-      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -175,13 +91,33 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-  - name: TikTok
+      - DIRECT
+
+  - name: Google
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
+      - Manual-select
+      - America
+      - Proxy
       - leaf
       - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - UnitedKingdom
+      - Auto-select
+      - Fall-Back
+      - DIRECT
+
+  - name: Linkedin
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
+    proxies:
+      - HongKong
       - Proxy
+      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -191,9 +127,10 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-  - name: Spotify
+
+  - name: Media
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
     proxies:
       - Singapore
       - Proxy
@@ -208,9 +145,64 @@ proxy-groups:
       - Auto-select
       - Fall-Back
       - DIRECT
-  - name: Media
+
+  - name: Meta
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
+    icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Meta-2.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - Manual-select
+      - Auto-select
+      - Fall-Back
+      - DIRECT
+
+  - name: Microsoft
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+    proxies:
+      - DIRECT
+      - Proxy
+      - leaf
+      - HongKong
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - Manual-select
+      - Auto-select
+      - Fall-Back
+
+  - name: Social
+    type: select
+    icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Messenger.png
+    proxies:
+      - HongKong
+      - Proxy
+      - leaf
+      - TaiWan
+      - Japan
+      - Korea
+      - Singapore
+      - America
+      - UnitedKingdom
+      - Manual-select
+      - Auto-select
+      - Fall-Back
+      - DIRECT
+
+  - name: Spotify
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     proxies:
       - Singapore
       - Proxy
@@ -242,13 +234,14 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-  - name: Linkedin
+
+  - name: TikTok
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
+      - leaf
       - HongKong
       - Proxy
-      - leaf
       - TaiWan
       - Japan
       - Korea
@@ -258,6 +251,7 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
+
   - name: X
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
@@ -274,13 +268,14 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-  - name: Meta
+
+  - name: YouTube
     type: select
-    icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Meta-2.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
-      - HongKong
       - Proxy
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -290,32 +285,22 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
-  - name: Social
+
+  - name: Final
     type: select
-    icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Messenger.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
-      - HongKong
       - Proxy
-      - leaf
-      - TaiWan
-      - Japan
-      - Korea
-      - Singapore
-      - America
-      - UnitedKingdom
-      - Manual-select
-      - Auto-select
-      - Fall-Back
       - DIRECT
 
-  - name: Games
+  - name: Proxy
     type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
-      - HongKong
-      - Proxy
+      - Fall-Back
+      - Auto-select
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -323,21 +308,61 @@ proxy-groups:
       - America
       - UnitedKingdom
       - Manual-select
-      - Auto-select
-      - Fall-Back
       - DIRECT
-  - name: emby
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+
+  - name: Fall-Back
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
+    type: fallback
+    timeout: 3
+    interval: 300
+    lazy: true
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
-      - emby-LoadBalance   # 新增的负载均衡
+      - Fall-Back-1
       - leaf
-      - emby-Auto
-      - Auto-select
-      - Fall-Back
-      - DIRECT
-    include-all: true
-    filter: ^(?!.*(5×|美国|日本)).*$
+  - name: Fall-Back-1
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
+    type: fallback
+    use:
+      - Subscribe
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+
+  - name: Auto-select
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    type: url-test
+    timeout: 3
+    use:
+      - Subscribe
+    interval: 900
+    lazy: true
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    expected-status: 204
+    tolerance: 80
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+    proxies:
+      - leaf
+
+  - name: Manual-select
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf
+    use:
+      - Subscribe
+      - leaf3
+    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+
+
+  - name: leaf
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    proxies:
+      - leaf-FallBack
+      - leaf-LoadBalance
+      - leaf-Auto
+    filter: ^(?!.*emby).*$
+    use:
+      - leaf3
 
   - name: HongKong
     type: select
@@ -409,15 +434,6 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)英|🇬🇧|英国|UK|United Kingdom
     use:
       - Subscribe
-  - name: Manual-select
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
-    proxies:
-      - leaf
-    use:
-      - Subscribe
-      - leaf3
-    filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
   - name: HK-Auto
     type: url-test
     hidden: true
@@ -671,7 +687,7 @@ proxy-groups:
     url: https://emby1.69yun69.com
     interval: 300
     lazy: true
-    hidden: false
+    hidden: true
     tolerance: 100
     timeout: 2
     proxies:
@@ -687,9 +703,10 @@ proxy-groups:
     use:
       - Subscribe
     filter: ^(?!.*(5×|美国|日本)).*$
-    
+
   - name: GLOBAL
     type: select
+    hidden: true
     proxies:
       - Proxy
       - leaf
@@ -705,6 +722,7 @@ proxy-groups:
       - America
       - UnitedKingdom
     type: fallback
+    hidden: true
     lazy: true
 rules:
 # 个人
