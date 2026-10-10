@@ -1,0 +1,60 @@
+mode: rule
+log-level: warning
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  cache-algorithm: arc
+proxies:
+  - {"type":"vless","name":"leaf | US v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
+  - {"name":"leaf | US cdn","type":"vmess","server":"bestcf.top","port":8080,"cipher":"auto","uuid":"1673661d-9643-492b-a4f4-8adb319b429e","alterId":0,"tls":false,"network":"ws","ws-opts":{"path":"/sudhgs","headers":{"Host":"leaf.dngh.space"}},"client-fingerprint":""}
+  - {"type":"hysteria2","name":"leaf | US hy2","server":"192.129.211.150","port":45636,"ports":"20000-50000","hop-interval":30,"password":"f9cea999","sni":"www.apple.com","skip-cert-verify":true,"alpn":["h3"]}
+  - {"name":"ldy | 美国 IPLC 01","type":"anytls","server":"137.175.71.22","port":23717,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"space.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ky69yun | 美国 2× IPLC 02","type":"vless","server":"35.78.91.128","port":41473,"uuid":"1f4d44f1-feb6-32ff-bc1e-880cfb05baaf","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"ky69yun | 美国 2× IPLC 03","type":"ss","server":"54.169.112.175","port":54463,"cipher":"aes-256-gcm","password":"RbYU0EvHCTph0Y41","udp":true}
+
+  - name: "leaf | US hy2 IPLC"
+    type: hysteria2
+    server: 192.129.211.150
+    port: 45636
+    password: f9cea999
+    sni: www.bing.com
+    skip-cert-verify: true
+    up: "50 Mbps"
+    down: "200 Mbps"
+    fast-open: true
+    dialer-proxy: "US-IPLC"
+      
+proxy-groups:
+  - name: US-IPLC
+    type: fallback
+    url: 'http://www.gstatic.com/generate_204'
+    proxies:
+      - "ldy | 美国 IPLC 01"
+      - "ky69yun | 美国 2× IPLC 02"
+      - "ky69yun | 美国 2× IPLC 03"
+
+  - name: Proxy
+    type: fallback
+    url: 'http://www.gstatic.com/generate_204'
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    proxies:
+      - leaf | US hy2 IPLC
+      - leaf | US hy2
+      - leaf | US v+r
+      - leaf | US cdn
+  - name: GLOBAL
+    type: select
+    hidden: true
+    proxies:
+      - Proxy
+      - DIRECT
+
+rules:
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOIP,!cn,Proxy,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - MATCH,DIRECT
