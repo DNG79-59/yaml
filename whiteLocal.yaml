@@ -53,8 +53,8 @@ proxy-groups:
       - DIRECT
 
 rules:
-  - GEOSITE,geolocation-!cn,Proxy
-  - GEOIP,!cn,Proxy,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOIP,!cn,Proxy,no-resolve
   - MATCH,DIRECT
