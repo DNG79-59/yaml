@@ -1,0 +1,28 @@
+name: Validate and Build (雏形，不自动覆盖)
+
+on:
+  # 雏形阶段：PR 和手动触发只做校验，不自动提交，避免误覆盖
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: 安装依赖
+        run: pip install pyyaml
+
+      - name: 校验 config/*.yaml 语法
+        run: python tools/validate.py SubMin.yaml || true
+        # 雏形先 || true 只打印，确认无误后再去掉，改为硬拦截
+
+      - name: 试合并生成 SubMin.new.yaml
+        run: python tools/merge.py
+
+      - name: 校验合并产物
+        run: python tools/validate.py SubMin.new.yaml

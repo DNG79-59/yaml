@@ -1,8 +1,9 @@
 name: Build SubMin.yaml
 
 on:
-  push:
-    branches: [ "main" ]
+  # 已停用自动触发，仅保留手动点火，避免重构期间误覆盖 SubMin.yaml
+  # push:
+  #   branches: [ "main" ]
   workflow_dispatch:
 
 # 👇 就是这一行，授权写入权限

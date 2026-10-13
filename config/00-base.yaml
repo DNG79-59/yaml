@@ -1,0 +1,5 @@
+# 基础配置，不含 dns/proxies/groups/rules
+# 对应旧 head.yaml 的 mode/log/ipv6 部分
+mode: rule
+log-level: warning
+ipv6: false

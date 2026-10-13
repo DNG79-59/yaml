@@ -1,0 +1,18 @@
+# DNS 配置单独存放
+# 来源：localMin.yaml:4-25（比旧 head.yaml:4-9 更完整，含 nameserver/fake-ip-filter）
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  cache-algorithm: arc
+  listen: 0.0.0.0:53
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - 'geosite:private'
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - 223.5.5.5
+    - 119.29.29.29

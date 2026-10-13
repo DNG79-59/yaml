@@ -1,0 +1,36 @@
+# 规则单独存放，只含 rules:
+# 来源：all-rules.yaml:1-34
+rules:
+  - RULE-SET,个人代理,Proxy,no-resolve
+  - RULE-SET,个人直连,DIRECT,no-resolve
+  - RULE-SET,emby,emby,no-resolve
+  - GEOSITE,category-ads,REJECT
+  - DOMAIN-SUFFIX,opencode.ai,AI
+  - GEOSITE,category-ai-!cn,AI
+  - GEOSITE,Telegram,Telegram
+  - GEOSITE,YouTube,YouTube
+  - GEOSITE,Google,Google
+  - GEOSITE,TikTok,TikTok
+  - GEOSITE,Linkedin,Linkedin
+  - GEOSITE,Facebook,Facebook
+  - GEOSITE,Instagram,Instagram
+  - GEOSITE,apple-cn,DIRECT
+  - GEOSITE,apple,Apple
+  - GEOSITE,GitHub,Proxy
+  - GEOSITE,Microsoft,Microsoft
+  - GEOSITE,category-games@cn,DIRECT
+  - RULE-SET,Steam@cn,DIRECT,no-resolve
+  - GEOSITE,Twitter,X
+  - DOMAIN-SUFFIX,api.giphy.com,Whatsapp
+  - GEOSITE,Whatsapp,Whatsapp
+  - RULE-SET,telegramcidr,Telegram,no-resolve
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,cn,DIRECT
+  - GEOIP,HK,HongKong,no-resolve
+  - GEOIP,TW,TaiWan,no-resolve
+  - GEOIP,JP,Japan,no-resolve
+  - GEOIP,SG,Singapore,no-resolve
+  - GEOIP,US,America,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - MATCH,Final

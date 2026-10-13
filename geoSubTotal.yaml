@@ -737,7 +737,7 @@ rules:
   - GEOSITE,GitHub,Proxy
   - GEOSITE,Google,Google
   - GEOSITE,Microsoft,Microsoft
-  - GEOSITE,apple-cn,DIRECT
+  - RULE-SET,apple-cn,DIRECT
   - GEOSITE,apple,Apple
 # 媒体
   - GEOSITE,YouTube,YouTube
@@ -825,6 +825,14 @@ rule-providers:
     format: text
     path: ./ruleset/SteamCN.list
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
+
+  apple-cn:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/apple-cn.yaml
+    url: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/apple@cn.yaml
     interval: 86400
 hosts:
   dns.alidns.com: 223.6.6.6

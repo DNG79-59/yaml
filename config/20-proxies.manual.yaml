@@ -1,0 +1,12 @@
+# 手工节点单独存放（不从订阅下载的节点放这里）
+# 格式：标准 Clash proxies 列表
+# 示例：
+# proxies:
+#   - name: "ldy | 美国 IPLC 01"
+#     type: anytls
+#     server: 137.175.71.22
+#     port: 23717
+#     password: "xxx"
+#     sni: space.bilibili.com
+#     skip-cert-verify: true
+proxies: []

@@ -1,0 +1,319 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7893
+allow-lan: true
+bind-address: "*"
+mode: rule
+external-controller: 0.0.0.0:9090
+hosts:
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  default-nameserver:
+  - 114.114.114.114
+  - 8.8.8.8
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - 114.114.114.114
+  ipv6: false
+  fake-ip-filter:
+  - "+.*"
+proxies:
+- name: US-SG-PROXY
+  type: trojan
+  server: 8.219.156.26
+  port: 8443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: US-HK-PROXY
+  type: trojan
+  server: 8.218.223.233
+  port: 8443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: US-W-AZURE
+  type: trojan
+  server: 13.91.22.173
+  port: 443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: US-W-AZURE-KCPTUN
+  type: trojan
+  server: 127.0.0.1
+  port: 6443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: US-E-AZURE
+  type: trojan
+  server: 40.114.46.134
+  port: 443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: US-E-AZURE-KCPTUN
+  type: trojan
+  server: 127.0.0.1
+  port: 8443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: HK-ALIYUN
+  type: trojan
+  server: 8.218.223.233
+  port: 443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: SG-ALIYUN
+  type: trojan
+  server: 8.219.156.26
+  port: 443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+- name: JP-TENCENT
+  type: trojan
+  server: 43.130.251.81
+  port: 443
+  password: DTtFqdKAh6tXGiFh
+  udp: false
+  sni: huoshi.cloud
+  skip-cert-verify: true
+  ip-version: dual
+  tfo: true
+proxy-groups:
+- name: Auto-UrlTest
+  type: url-test
+  disable-udp: false
+  proxies:
+  - JP-TENCENT
+  - HK-ALIYUN
+  - SG-ALIYUN
+  url: https://cp.cloudflare.com/generate_204
+  interval: '600'
+  tolerance: '150'
+- name: Auto-Fallback
+  type: fallback
+  disable-udp: false
+  proxies:
+  - US-W-AZURE-KCPTUN
+  - US-E-AZURE-KCPTUN
+  - US-W-AZURE
+  - US-E-AZURE
+  - US-HK-PROXY
+  - US-SG-PROXY
+  url: https://cp.cloudflare.com/generate_204
+  interval: '300'
+- name: PROXY
+  type: select
+  disable-udp: false
+  proxies:
+  - Auto-UrlTest
+  - Auto-Fallback
+  - DIRECT
+  - US-W-AZURE-KCPTUN
+  - US-E-AZURE-KCPTUN
+  - US-W-AZURE
+  - US-E-AZURE
+  - HK-ALIYUN
+  - SG-ALIYUN
+  - JP-TENCENT
+- name: ChatGPT
+  type: select
+  disable-udp: false
+  proxies:
+  - Auto-Fallback
+  - Auto-UrlTest
+  - DIRECT
+  - REJECT
+  - US-W-AZURE-KCPTUN
+  - US-E-AZURE-KCPTUN
+  - US-W-AZURE
+  - US-E-AZURE
+  - JP-TENCENT
+  - US-HK-PROXY
+  - US-SG-PROXY
+- name: Crypto
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - DIRECT
+  - PROXY
+  - Auto-Fallback
+  - Auto-UrlTest
+  - JP-TENCENT
+  - HK-ALIYUN
+- name: Mining
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - DIRECT
+  - PROXY
+  - Auto-Fallback
+  - Auto-UrlTest
+- name: SpeedTest
+  type: select
+  disable-udp: false
+  proxies:
+  - PROXY
+  - DIRECT
+  - Auto-UrlTest
+  - Auto-Fallback
+  - US-W-AZURE-KCPTUN
+  - US-E-AZURE-KCPTUN
+  - US-W-AZURE
+  - US-E-AZURE
+  - US-HK-PROXY
+  - US-SG-PROXY
+tunnels:
+rules:
+- GEOIP,LAN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,PROXY
+secret: AMTls3MdqMWYc8n5
+external-ui: "/usr/share/openclash/ui"
+ipv6: false
+experimental:
+  sniff-tls-sni: true
+rule-providers:
+  Reject:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Reject.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    interval: 86400
+  iCloud:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/iCloud.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Apple.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    interval: 86400
+  Google:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Google.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    interval: 86400
+  Direct:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Direct.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    interval: 86400
+  Private:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Private.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    path: "./rule_provider/Telegram.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    interval: 86400
+  ChatGPT:
+    type: http
+    behavior: classical
+    format: text
+    path: "./rule_provider/ChatGPT.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    interval: 86400
+  Crypto:
+    type: http
+    behavior: classical
+    format: text
+    path: "./rule_provider/Crypto.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Crypto.list
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Proxy.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    interval: 86400
+  GFW:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/GFW.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    interval: 86400
+  Greatfire:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/Greatfire.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
+    interval: 86400
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    path: "./rule_provider/ChinaIP.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    interval: 86400
+  NotChina:
+    type: http
+    behavior: domain
+    format: yaml
+    path: "./rule_provider/NotChina.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    interval: 86400
+  LAN:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    path: "./rule_provider/LAN.yaml"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    interval: 86400
