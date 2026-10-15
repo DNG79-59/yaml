@@ -228,6 +228,22 @@ proxy-groups:
       - US-FallBack
       - US-LoadBalance
     filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+  - name: TaiWan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    proxies:
+      - TW-Auto
+      - TW-FallBack
+      - TW-LoadBalance
+    filter: ^(?!.*emby).*(?i)台|新北|彰化|TW|Taiwan
+  - name: Japan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    proxies:
+      - JP-Auto
+      - JP-FallBack
+      - JP-LoadBalance
+    filter: ^(?!.*emby).*(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
 
   - name: AllServer
     type: select
@@ -267,6 +283,24 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     proxies:
       - leaf
+  - name: TW-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    proxies:
+      - leaf
+  - name: JP-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    proxies:
+      - leaf
 
   - name: HK-FallBack
     type: fallback
@@ -289,6 +323,20 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+  - name: TW-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+  - name: JP-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
@@ -308,6 +356,20 @@ proxy-groups:
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    strategy: consistent-hashing
+    interval: 300
+  - name: TW-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    strategy: consistent-hashing
+    interval: 300
+  - name: JP-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     strategy: consistent-hashing
     interval: 300
   - name: leaf-Auto

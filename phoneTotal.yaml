@@ -637,6 +637,10 @@ rules:
   - DOMAIN,matrix.313445.xyz,embyTemp
   - RULE-SET,Emby,Emby
   - RULE-SET,Games,Games
+  # Sentry 遥测：ChatGPT/Claude 等 AI 应用的上报域名，部分规则作者未收录进 category-ai-!cn，手动补齐
+  - DOMAIN-SUFFIX,ingest.sentry.io,AI
+  - DOMAIN-SUFFIX,ingest.us.sentry.io,AI
+  - DOMAIN-SUFFIX,ingest.de.sentry.io,AI
   - RULE-SET,AI,AI
   - GEOSITE,geolocation-!cn@cn,DIRECT
   - GEOSITE,geolocation-!cn,Proxy

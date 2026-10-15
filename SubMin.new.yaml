@@ -36,7 +36,7 @@ proxies:
   servername: qwenpaw-8080.dngh.space
 - name: 69yun | 香港 2× IPLC 01
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 30923
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -45,7 +45,7 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 香港 2× IPLC 02
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 30933
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -54,7 +54,7 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 香港 2× IPLC 03
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 41447
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -63,7 +63,7 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 香港 2× IPLC 04
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 41453
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -72,7 +72,7 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 香港 2× IPLC 05
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 41463
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -81,7 +81,7 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 香港 2× IPLC 06
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 41593
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -90,21 +90,21 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 香港 2× IPLC 07
   type: ss
-  server: 54.169.112.175
+  server: 18.143.174.184
   port: 35361
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 香港 2× IPLC 08
   type: ss
-  server: 54.169.112.175
+  server: 18.143.174.184
   port: 35315
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 美国 2× IPLC 01
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 42473
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -113,58 +113,67 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 美国 2× IPLC 02
   type: vless
-  server: 35.78.91.128
-  port: 41473
+  server: 54.250.81.24
+  port: 52223
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
   tls: true
   network: tcp
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 美国 2× IPLC 03
-  type: ss
-  server: 54.169.112.175
-  port: 54463
-  cipher: aes-256-gcm
-  password: ZXY6maaJ86Fxsy0n
+  type: vless
+  server: 54.250.81.24
+  port: 41473
+  uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
+  tls: true
+  network: tcp
+  servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 美国 2× IPLC 04
   type: ss
-  server: 54.169.112.175
-  port: 53362
+  server: 18.143.174.184
+  port: 54463
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 美国 2× IPLC 05
   type: ss
-  server: 54.169.112.175
-  port: 53762
+  server: 18.143.174.184
+  port: 53362
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 美国 2× IPLC 06
   type: ss
-  server: 54.169.112.175
-  port: 53365
+  server: 18.143.174.184
+  port: 53762
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 美国 2× IPLC 07
   type: ss
-  server: 54.169.112.175
+  server: 18.143.174.184
+  port: 53365
+  cipher: aes-256-gcm
+  password: ZXY6maaJ86Fxsy0n
+  udp: true
+- name: 69yun | 美国 2× IPLC 08
+  type: ss
+  server: 18.143.174.184
   port: 58363
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 香港 2× Fam 01
   type: ss
-  server: 54.169.112.175
+  server: 18.143.174.184
   port: 20511
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 新加坡 2× IPLC 01
   type: vless
-  server: 35.78.91.128
+  server: 54.250.81.24
   port: 41483
   uuid: 768ace59-f7ab-3857-8171-134f97e4ceb8
   udp: true
@@ -173,14 +182,14 @@ proxies:
   servername: bgpvless-2342ss.834928.xyz
 - name: 69yun | 新加坡 2× IPLC 02
   type: ss
-  server: 54.169.112.175
+  server: 18.143.174.184
   port: 21381
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
   udp: true
 - name: 69yun | 香港 01
   type: ss
-  server: 61.239.182.218
+  server: 119.246.40.113
   port: 20513
   cipher: aes-256-gcm
   password: ZXY6maaJ86Fxsy0n
@@ -319,7 +328,7 @@ proxies:
   udp: true
 - name: ldy | 新加坡 IPLC 01
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23724
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: vip.bilibili.com
@@ -331,7 +340,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 02
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23716
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.bilibili.com
@@ -343,7 +352,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 03
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23706
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: search.bilibili.com
@@ -355,7 +364,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 04
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23713
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: h.bilibili.com
@@ -367,7 +376,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 05
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23714
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: vc.bilibili.com
@@ -379,7 +388,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 06
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23729
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: i2.hdslb.com
@@ -391,7 +400,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 07
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23704
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: s2.hdslb.com
@@ -403,7 +412,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 08
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23734
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: s3.hdslb.com
@@ -415,7 +424,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 IPLC 09
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23700
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: static.hdslb.com
@@ -427,7 +436,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 IPLC 01
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23717
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: space.bilibili.com
@@ -439,7 +448,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 IPLC 02
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23728
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: activity.hdslb.com
@@ -451,7 +460,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 IPLC 03
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23705
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: t.bilibili.com
@@ -463,7 +472,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 IPLC 04
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23722
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: passport.bilibili.com
@@ -475,7 +484,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 IPLC 05
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23723
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: account.bilibili.com
@@ -487,7 +496,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 01
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23735
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: bangumi.bilibili.com
@@ -499,7 +508,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 02
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26022
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -511,7 +520,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 03
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26023
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -523,7 +532,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 04
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26024
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -535,7 +544,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 05
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26009
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -547,7 +556,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 06
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26010
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -559,7 +568,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 07
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26011
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -571,7 +580,7 @@ proxies:
   - http/1.1
 - name: ldy | 美国 08
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26012
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -583,7 +592,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 01
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23712
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: live.bilibili.com
@@ -595,7 +604,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 02
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23725
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: api.live.bilibili.com
@@ -607,7 +616,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 03
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23711
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: api.vc.bilibili.com
@@ -619,7 +628,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 04
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23710
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: mall.bilibili.com
@@ -631,7 +640,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 05
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23709
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: m.bilibili.com
@@ -643,7 +652,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 06
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23708
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: api.bilibili.com
@@ -655,7 +664,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 07
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23707
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: app.bilibili.com
@@ -667,7 +676,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 IPLC 08
   type: anytls
-  server: 137.175.71.22
+  server: 137.175.71.21
   port: 23701
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: i0.hdslb.com
@@ -679,7 +688,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 01
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26019
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -691,7 +700,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 02
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26020
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -703,7 +712,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 03
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26021
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -715,7 +724,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 04
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26002
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -727,7 +736,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 05
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26003
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -739,7 +748,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 06
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26004
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -751,7 +760,7 @@ proxies:
   - http/1.1
 - name: ldy | 新加坡 07
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26005
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -763,7 +772,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 01
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26006
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -775,7 +784,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 02
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26007
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -787,7 +796,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 03
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26008
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -799,7 +808,7 @@ proxies:
   - http/1.1
 - name: ldy | 香港 04
   type: anytls
-  server: 198.200.37.87
+  server: 198.2.231.77
   port: 26016
   password: 3382aab5-e8f1-3f61-bbe3-695014c09dee
   sni: www.apple.com
@@ -1040,6 +1049,22 @@ proxy-groups:
   - US-LoadBalance
   filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United
     States
+- name: TaiWan
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+  proxies:
+  - TW-Auto
+  - TW-FallBack
+  - TW-LoadBalance
+  filter: ^(?!.*emby).*(?i)台|新北|彰化|TW|Taiwan
+- name: Japan
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  proxies:
+  - JP-Auto
+  - JP-FallBack
+  - JP-LoadBalance
+  filter: ^(?!.*emby).*(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
 - name: AllServer
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
@@ -1076,6 +1101,24 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   proxies:
   - leaf
+- name: TW-Auto
+  type: url-test
+  hidden: true
+  include-all: true
+  filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+  interval: 300
+  url: http://www.gstatic.com/generate_204
+  proxies:
+  - leaf
+- name: JP-Auto
+  type: url-test
+  hidden: true
+  include-all: true
+  filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+  interval: 300
+  url: http://www.gstatic.com/generate_204
+  proxies:
+  - leaf
 - name: HK-FallBack
   type: fallback
   hidden: true
@@ -1097,6 +1140,20 @@ proxy-groups:
   filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
   interval: 300
   url: http://www.gstatic.com/generate_204
+- name: TW-FallBack
+  type: fallback
+  hidden: true
+  include-all: true
+  filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+  interval: 300
+  url: http://www.gstatic.com/generate_204
+- name: JP-FallBack
+  type: fallback
+  hidden: true
+  include-all: true
+  filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+  interval: 300
+  url: http://www.gstatic.com/generate_204
 - name: HK-LoadBalance
   type: load-balance
   hidden: true
@@ -1116,6 +1173,20 @@ proxy-groups:
   hidden: true
   include-all: true
   filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+  strategy: consistent-hashing
+  interval: 300
+- name: TW-LoadBalance
+  type: load-balance
+  hidden: true
+  include-all: true
+  filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+  strategy: consistent-hashing
+  interval: 300
+- name: JP-LoadBalance
+  type: load-balance
+  hidden: true
+  include-all: true
+  filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
   strategy: consistent-hashing
   interval: 300
 - name: leaf-Auto
@@ -1166,6 +1237,9 @@ rules:
 - RULE-SET,emby,emby,no-resolve
 - GEOSITE,category-ads,REJECT
 - DOMAIN-SUFFIX,opencode.ai,AI
+- DOMAIN-SUFFIX,ingest.sentry.io,AI
+- DOMAIN-SUFFIX,ingest.us.sentry.io,AI
+- DOMAIN-SUFFIX,ingest.de.sentry.io,AI
 - GEOSITE,category-ai-!cn,AI
 - GEOSITE,Telegram,Telegram
 - GEOSITE,YouTube,YouTube

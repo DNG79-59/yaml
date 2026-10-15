@@ -649,6 +649,10 @@ rules:
   - RULE-SET,category-ads-all,REJECT
   - RULE-SET,个人代理,Proxy
   - RULE-SET,个人直连,DIRECT
+  # Sentry 遥测：ChatGPT/Claude 等 AI 应用的上报域名，部分规则作者未收录进 category-ai-!cn，手动补齐
+  - DOMAIN-SUFFIX,ingest.sentry.io,AI
+  - DOMAIN-SUFFIX,ingest.us.sentry.io,AI
+  - DOMAIN-SUFFIX,ingest.de.sentry.io,AI
   - RULE-SET,AI,AI
   - RULE-SET,Apple@cn,DIRECT
   - RULE-SET,AppleService,Apple,no-resolve

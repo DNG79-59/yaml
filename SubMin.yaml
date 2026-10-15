@@ -86,7 +86,6 @@ proxies:
   - {"name":"ldy | 香港 02","type":"anytls","server":"198.2.231.77","port":26007,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 香港 03","type":"anytls","server":"198.2.231.77","port":26008,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
   - {"name":"ldy | 香港 04","type":"anytls","server":"198.2.231.77","port":26016,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"www.apple.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"type":"vless","name":"qwpaw | 新加坡","server":"bestcf.top","port":443,"uuid":"1b6e8823-6c9b-4582-8b3d-6ee5ca6d8113","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"network":"ws","ws-opts":{"headers":{"Host":"qwenpaw-8080.dngh.space"},"path":"/70daf11d0d071d4171be1164d6c565fc"},"servername":"qwenpaw-8080.dngh.space"}
 proxy-groups:
   - name: Final
     type: select
@@ -317,6 +316,22 @@ proxy-groups:
       - US-FallBack
       - US-LoadBalance
     filter: ^(?!.*emby).*(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+  - name: TaiWan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    proxies:
+      - TW-Auto
+      - TW-FallBack
+      - TW-LoadBalance
+    filter: ^(?!.*emby).*(?i)台|新北|彰化|TW|Taiwan
+  - name: Japan
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    proxies:
+      - JP-Auto
+      - JP-FallBack
+      - JP-LoadBalance
+    filter: ^(?!.*emby).*(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
 
   - name: AllServer
     type: select
@@ -356,6 +371,24 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
     proxies:
       - leaf
+  - name: TW-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    proxies:
+      - leaf
+  - name: JP-Auto
+    type: url-test
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+    proxies:
+      - leaf
 
   - name: HK-FallBack
     type: fallback
@@ -378,6 +411,20 @@ proxy-groups:
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
     interval: 300
     url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+  - name: TW-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
+  - name: JP-FallBack
+    type: fallback
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
+    interval: 300
+    url: 'http://www.gstatic.com/generate_204' # 检查用 URL
   - name: HK-LoadBalance
     type: load-balance
     hidden: true
@@ -397,6 +444,20 @@ proxy-groups:
     hidden: true
     include-all: true
     filter: ^(?!.*emby).*(?i)美|🇺🇲|US|(?i)States|American
+    strategy: consistent-hashing
+    interval: 300
+  - name: TW-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan
+    strategy: consistent-hashing
+    interval: 300
+  - name: JP-LoadBalance
+    type: load-balance
+    hidden: true
+    include-all: true
+    filter: ^(?!.*emby).*(?i)日|🇯🇵|东京|JP|(?i)Japan
     strategy: consistent-hashing
     interval: 300
   - name: leaf-Auto
@@ -447,6 +508,10 @@ rules:
   - RULE-SET,emby,emby,no-resolve
   - GEOSITE,category-ads,REJECT
   - DOMAIN-SUFFIX,opencode.ai,AI
+  # Sentry 遥测：ChatGPT/Claude 等 AI 应用的上报域名，部分 geosite 作者未收录进 category-ai-!cn，手动补齐
+  - DOMAIN-SUFFIX,ingest.sentry.io,AI
+  - DOMAIN-SUFFIX,ingest.us.sentry.io,AI
+  - DOMAIN-SUFFIX,ingest.de.sentry.io,AI
   - GEOSITE,category-ai-!cn,AI
   - GEOSITE,Telegram,Telegram
   - GEOSITE,YouTube,YouTube
