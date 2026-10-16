@@ -741,7 +741,7 @@ rules:
   - GEOSITE,GitHub,Proxy
   - GEOSITE,Google,Google
   - GEOSITE,Microsoft,Microsoft
-  - RULE-SET,apple-cn,DIRECT
+  - RULE-SET,apple-cn,DIRECT,no-resolve
   - GEOSITE,apple,Apple
 # 媒体
   - GEOSITE,YouTube,YouTube
@@ -771,10 +771,10 @@ rules:
   - GEOIP,JP,Japan,no-resolve
   - GEOIP,SG,Singapore,no-resolve
   - GEOIP,US,America,no-resolve
-  - GEOIP,CN,DIRECT
-  - GEOIP,LAN,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,privatecidr,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,privatecidr,DIRECT,no-resolve
   - MATCH,Final
 rule-providers:
   private:
