@@ -56,14 +56,6 @@ proxies:
     dialer-proxy: ldy | 美国 IPLC 01
       
 proxy-groups:
-  - name: leaf | hy2 dialer
-    type: fallback
-    url: 'http://www.gstatic.com/generate_204'
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-    proxies:
-      - ldy | 美国 IPLC 01
-      - ky69yun | 美国 2× IPLC 01
-      - ky69yun | 美国 2× IPLC 05
   - name: Proxy
     type: fallback
     url: 'http://www.gstatic.com/generate_204'
