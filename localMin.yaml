@@ -53,7 +53,7 @@ proxies:
     up: "50 Mbps"
     down: "200 Mbps"
     fast-open: true
-    dialer-proxy: leaf | hy2 dialer
+    dialer-proxy: ldy | 美国 IPLC 01
       
 proxy-groups:
   - name: leaf | hy2 dialer
