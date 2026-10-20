@@ -3,7 +3,7 @@ log-level: warning
 ipv6: false
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   cache-algorithm: arc
@@ -15,56 +15,66 @@ dns:
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  
-  # 强制走 Fake-IP 的域名（防止内网/特殊域名失效）
-  fake-ip-filter:
-    - '*.lan'
-    - '*.local'
-    - 'geosite:private'
 
   # 默认使用的 Nameserver（必须是能够直接建立 TCP/TLS 连接的 IP 或加密 DoH 链接）
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-    - 223.5.5.5
-    - 119.29.29.29
 
-  # 代理服务器域名走 DoH 直解，不进 fake-ip、不进规则
-  proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
 
 proxies:
-  - {"type":"vless","name":"leaf | US v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
-  - {"name":"leaf | US cdn","type":"vless","server":"leaf.dngh.space","port":8443,"uuid":"1673661d-9643-492b-a4f4-8adb319b429e","network":"ws","tls":true,"ws-opts":{"path":"/sudhgs","Host":"leaf.dngh.space"},"servername":"leaf.dngh.space"}
-  - {"type":"hysteria2","name":"leaf | US hy2","server":"192.129.211.150","port":45636,"ports":"20000-50000","hop-interval":30,"password":"f9cea999","sni":"www.apple.com","skip-cert-verify":true,"alpn":["h3"]}
+  - {"type":"vless","name":"leaf-v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
+  - {"name":"leaf-cdn","type":"vless","server":"leaf.dngh.space","port":8443,"uuid":"1673661d-9643-492b-a4f4-8adb319b429e","network":"ws","tls":true,"ws-opts":{"path":"/sudhgs","Host":"leaf.dngh.space"},"servername":"leaf.dngh.space"}
+  - {"type":"hysteria2","name":"leaf-hy2","server":"192.129.211.150","port":45636,"ports":"20000-50000","hop-interval":30,"password":"f9cea999","sni":"www.apple.com","skip-cert-verify":true,"alpn":["h3"]}
 
-  - {"name":"ldy | 美国 IPLC 01","type":"anytls","server":"v2ab.allidns.com","port":23717,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"space.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
-  - {"name":"ky69yun | 美国 2× IPLC 01","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":42473,"uuid":"1f4d44f1-feb6-32ff-bc1e-880cfb05baaf","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
-  - {"name":"ky69yun | 美国 2× IPLC 05","type":"ss","server":"general-live-13877.holphappyeveryday.com","port":54463,"cipher":"aes-256-gcm","password":"RbYU0EvHCTph0Y41","udp":true}
+  - {"name":"ldy-美国-IPLC-01","type":"anytls","server":"v2ab.allidns.com","port":23717,"password":"3382aab5-e8f1-3f61-bbe3-695014c09dee","sni":"space.bilibili.com","skip-cert-verify":true,"client-fingerprint":"chrome","udp":true,"alpn":["h2","http/1.1"]}
+  - {"name":"ky69yun-美国-2×IPLC-01","type":"vless","server":"bgpvless-2342ss.834928.xyz","port":42473,"uuid":"1f4d44f1-feb6-32ff-bc1e-880cfb05baaf","udp":true,"tls":true,"network":"tcp","servername":"bgpvless-2342ss.834928.xyz"}
+  - {"name":"ky69yun-美国-2×IPLC-05","type":"ss","server":"general-live-13877.holphappyeveryday.com","port":54463,"cipher":"aes-256-gcm","password":"RbYU0EvHCTph0Y41","udp":true}
+  - name: HK-ALIYUN
+    type: trojan
+    server: 8.218.223.233
+    port: 443
+    password: DTtFqdKAh6tXGiFh
+    udp: false
+    skip-cert-verify: true
+    ip-version: dual
+    tfo: true
 
-  - name: leaf | US hy2 IPLC
+  - name: leaf-hy2-IPLC
     type: hysteria2
     server: 192.129.211.150
     port: 45636
     password: f9cea999
     sni: www.bing.com
     skip-cert-verify: true
-    up: "50 Mbps"
+    up: "100 Mbps"
     down: "200 Mbps"
     fast-open: true
-    dialer-proxy: ldy | 美国 IPLC 01
+    dialer-proxy: leaf-dialer
       
 proxy-groups:
+  - name: leaf-dialer
+    type: fallback
+    url: 'http://www.gstatic.com/generate_204'
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    proxies:
+      - ldy-美国-IPLC-01
+      - ky69yun-美国-2×IPLC-01
+      - ky69yun-美国-2×IPLC-05
+      - HK-ALIYUN
   - name: Proxy
     type: fallback
     url: 'http://www.gstatic.com/generate_204'
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
-      - leaf | US hy2 IPLC
-      - leaf | US hy2
-      - leaf | US v+r
-      - leaf | US cdn
+      - leaf-hy2-IPLC
+      - leaf-hy2
+      - leaf-v+r
+      - leaf-cdn
+      - ldy-美国-IPLC-01
+      - ky69yun-美国-2×IPLC-01
+      - ky69yun-美国-2×IPLC-05
+      - HK-ALIYUN
   - name: GLOBAL
     type: select
     hidden: true
@@ -73,7 +83,74 @@ proxy-groups:
       - DIRECT
 
 rules:
-  - GEOSITE,cn,DIRECT
-  - GEOIP,CN,DIRECT
-  - GEOIP,LAN,DIRECT
+  - RULE-SET,个人代理,Proxy,no-resolve
+  - RULE-SET,个人直连,DIRECT,no-resolve
+  - RULE-SET,emby,Proxy,no-resolve
+
+  - GEOSITE,category-ads,REJECT
+
+  - GEOSITE,category-games@cn,DIRECT
+  - RULE-SET,Steam@cn,DIRECT,no-resolve
+  
+  - RULE-SET,apple-cn,DIRECT,no-resolve
+
+  - GEOSITE,geolocation-!cn,Proxy
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOIP,LAN,DIRECT,no-resolve
+  - RULE-SET,private,DIRECT,no-resolve
+  - RULE-SET,privatecidr,DIRECT,no-resolve
   - MATCH,Proxy
+
+rule-providers:
+  个人直连:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    path: ./ruleset/personnelDirect.yaml
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelDirect.txt
+  个人代理:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    path: ./ruleset/personnelProxy.txt
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/personnelProxy.txt
+  emby:
+    behavior: domain
+    format: text
+    interval: 86400
+    type: http
+    path: ./ruleset/emby.txt
+    url: https://raw.githubusercontent.com/DNG79-59/yaml/refs/heads/main/emby.txt
+
+  Steam@cn:
+    type: http
+    behavior: classical
+    format: text
+    path: ./ruleset/SteamCN.list
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    interval: 86400
+
+  apple-cn:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./ruleset/apple-cn.yaml
+    url: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/apple@cn.yaml
+    interval: 86400
+  
+  private:
+    type: http
+    format: yaml
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+  privatecidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
+    path: ./ruleset/privatecidr.yaml
+    interval: 86400

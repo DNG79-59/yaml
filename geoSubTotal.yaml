@@ -1,7 +1,3 @@
-script:
-  shortcuts:
-    quic: network == 'udp' and dst_port == 443
-
 mode: rule
 log-level: warning
 ipv6: false
