@@ -14,7 +14,6 @@ updates.cdn-apple.com
 +.huoshi.cloud
 +.vicp.fun
 +.checkhere.top
-+.vicp.fun
 +.time.windows.com
 +.duolingo.cn
 +.taobao.com

@@ -95,11 +95,13 @@ rules:
   
   - RULE-SET,apple-cn,DIRECT,no-resolve
 
-  - GEOSITE,geolocation-!cn,Proxy
+  - GEOSITE,private,DIRECT
+  - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - GEOIP,LAN,DIRECT,no-resolve
   - RULE-SET,private,DIRECT,no-resolve
   - RULE-SET,privatecidr,DIRECT,no-resolve
+  - RULE-SET,proxy,PROXY,no-resolve
   - MATCH,Proxy
 
 rule-providers:
@@ -154,4 +156,10 @@ rule-providers:
     behavior: ipcidr
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt"
     path: ./ruleset/privatecidr.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
     interval: 86400
