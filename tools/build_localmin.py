@@ -54,9 +54,24 @@ def main() -> None:
     airport_sub = [p for u in urls(ROOT / "providers-by-two.yaml") for p in fetch(u)]
     airport_sub = [p for p in airport_sub if not str(p["name"]).lower().startswith("leaf")]
 
+    # A dialer-proxy group is resolved to one member for each connection.
+    # Create one independent hy2 chain per airport node so a load-balance
+    # group can actually spread traffic across all airport links.
+    chain_templates = [p for p in leaf_nodes if p.get("name") == "leaf-hy2-IPLC"
+                       and p.get("dialer-proxy") == "leaf-dialer"]
+    chain_nodes = []
+    for template in chain_templates:
+        for airport in airport_sub + friend_nodes:
+            node = dict(template)
+            node["name"] = f"{template['name']} | {airport['name']}"
+            node["dialer-proxy"] = airport["name"]
+            chain_nodes.append(node)
+    if chain_templates:
+        leaf_nodes = [p for p in leaf_nodes if p not in chain_templates]
+
     merged = []
     seen = set()
-    for node in leaf_nodes + friend_nodes + leaf_sub + airport_sub:
+    for node in leaf_nodes + friend_nodes + leaf_sub + airport_sub + chain_nodes:
         if node["name"] not in seen:
             seen.add(node["name"])
             merged.append(node)
@@ -64,9 +79,25 @@ def main() -> None:
 
     groups = config.get("proxy-groups", [])
     names = {p["name"] for p in merged}
+    if chain_nodes:
+        chain_group = next((g for g in groups if g.get("name") == "leaf-hy2-load-balance"), None)
+        if chain_group is None:
+            chain_group = {"name": "leaf-hy2-load-balance", "type": "load-balance",
+                           "strategy": "consistent-hashing",
+                           "url": "http://www.gstatic.com/generate_204", "proxies": []}
+            groups.insert(0, chain_group)
+        chain_group["type"] = "load-balance"
+        chain_group["strategy"] = "consistent-hashing"
+        chain_group["proxies"] = [p["name"] for p in chain_nodes]
+        names.add(chain_group["name"])
+    config["proxy-groups"] = groups
     for group in groups:
         if group.get("name") == "leaf-dialer":
             group["proxies"] = [p["name"] for p in airport_sub + friend_nodes]
+        elif group.get("name") == "Proxy":
+            # Keep every concrete node available as a selectable fallback.
+            group["type"] = "select"
+            group["proxies"] = (["leaf-hy2-load-balance"] if chain_nodes else []) + [p["name"] for p in merged]
         elif isinstance(group.get("proxies"), list):
             group["proxies"] = [p for p in group["proxies"] if p in names or p in {g.get("name") for g in groups} or p in {"DIRECT", "REJECT"}]
     OUTPUT.write_text(yaml.safe_dump(config, allow_unicode=True, sort_keys=False), encoding="utf-8")
