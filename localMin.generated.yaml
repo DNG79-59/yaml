@@ -152,14 +152,14 @@ proxies:
   tls: true
   network: tcp
   servername: bgpvless-2342ss.834928.xyz
-- name: gc69yun | 美国 2× IPLC 05
+- name: gc69yun | 美国 2× IPLC 06
   type: ss
   server: general-live-13877.holphappyeveryday.com
   port: 54463
   cipher: aes-256-gcm
   password: imIp8qCShhZqnZvG
   udp: true
-- name: gc69yun | 美国 2× IPLC 06
+- name: gc69yun | 美国 2× IPLC 07
   type: ss
   server: general-live-13877.holphappyeveryday.com
   port: 53362
@@ -347,17 +347,6 @@ proxies:
   down: 200 Mbps
   fast-open: true
   dialer-proxy: gc69yun | 美国 2× IPLC 02
-- name: leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 05
-  type: hysteria2
-  server: 192.129.211.150
-  port: 45636
-  password: f9cea999
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 100 Mbps
-  down: 200 Mbps
-  fast-open: true
-  dialer-proxy: gc69yun | 美国 2× IPLC 05
 - name: leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 06
   type: hysteria2
   server: 192.129.211.150
@@ -369,6 +358,17 @@ proxies:
   down: 200 Mbps
   fast-open: true
   dialer-proxy: gc69yun | 美国 2× IPLC 06
+- name: leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 07
+  type: hysteria2
+  server: 192.129.211.150
+  port: 45636
+  password: f9cea999
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 100 Mbps
+  down: 200 Mbps
+  fast-open: true
+  dialer-proxy: gc69yun | 美国 2× IPLC 07
 - name: leaf-hy2-IPLC | gc69yun | 香港 01
   type: hysteria2
   server: 192.129.211.150
@@ -502,8 +502,8 @@ proxy-groups:
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 08
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 01
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 02
-  - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 05
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 06
+  - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 07
   - leaf-hy2-IPLC | gc69yun | 香港 01
   - leaf-hy2-IPLC | ldy | 美国 IPLC 01
   - leaf-hy2-IPLC | ldy | 美国 IPLC 02
@@ -527,8 +527,8 @@ proxy-groups:
   - gc69yun | 香港 2× IPLC 08
   - gc69yun | 美国 2× IPLC 01
   - gc69yun | 美国 2× IPLC 02
-  - gc69yun | 美国 2× IPLC 05
   - gc69yun | 美国 2× IPLC 06
+  - gc69yun | 美国 2× IPLC 07
   - gc69yun | 香港 01
   - ldy | 美国 IPLC 01
   - ldy | 美国 IPLC 02
@@ -559,8 +559,8 @@ proxy-groups:
   - gc69yun | 香港 2× IPLC 08
   - gc69yun | 美国 2× IPLC 01
   - gc69yun | 美国 2× IPLC 02
-  - gc69yun | 美国 2× IPLC 05
   - gc69yun | 美国 2× IPLC 06
+  - gc69yun | 美国 2× IPLC 07
   - gc69yun | 香港 01
   - ldy | 美国 IPLC 01
   - ldy | 美国 IPLC 02
@@ -577,8 +577,8 @@ proxy-groups:
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 08
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 01
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 02
-  - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 05
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 06
+  - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 07
   - leaf-hy2-IPLC | gc69yun | 香港 01
   - leaf-hy2-IPLC | ldy | 美国 IPLC 01
   - leaf-hy2-IPLC | ldy | 美国 IPLC 02
@@ -604,11 +604,13 @@ rules:
 - GEOSITE,category-games@cn,DIRECT
 - RULE-SET,Steam@cn,DIRECT,no-resolve
 - RULE-SET,apple-cn,DIRECT,no-resolve
-- GEOSITE,geolocation-!cn,Proxy
+- GEOSITE,private,DIRECT
+- GEOSITE,cn,DIRECT
 - GEOIP,CN,DIRECT,no-resolve
 - GEOIP,LAN,DIRECT,no-resolve
 - RULE-SET,private,DIRECT,no-resolve
 - RULE-SET,privatecidr,DIRECT,no-resolve
+- RULE-SET,proxy,PROXY,no-resolve
 - MATCH,Proxy
 rule-providers:
   个人直连:
@@ -659,4 +661,10 @@ rule-providers:
     behavior: ipcidr
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/clash/ipcidr/private.txt
     path: ./ruleset/privatecidr.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
     interval: 86400
