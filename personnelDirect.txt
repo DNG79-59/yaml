@@ -11,6 +11,7 @@ steamcdn-a.akamaihd.net
 updates.cdn-apple.com
 +.aihuoshi.net
 +.hsmap.com
++.huoshi.cloud
 +.vicp.fun
 +.checkhere.top
 +.vicp.fun
