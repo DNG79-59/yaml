@@ -610,7 +610,7 @@ rules:
 - GEOIP,LAN,DIRECT,no-resolve
 - RULE-SET,private,DIRECT,no-resolve
 - RULE-SET,privatecidr,DIRECT,no-resolve
-- RULE-SET,proxy,PROXY,no-resolve
+- RULE-SET,proxy,Proxy,no-resolve
 - MATCH,Proxy
 rule-providers:
   个人直连:
