@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import base64
+import re
 import urllib.request
 from pathlib import Path
 import yaml
@@ -45,6 +46,27 @@ def urls(path: Path) -> list[str]:
             if line.strip() and not line.lstrip().startswith("#")]
 
 
+def region(name: str) -> str:
+    """Extract a stable geographic bucket from common airport node names."""
+    for value in ("香港", "台湾", "日本", "韩国", "新加坡", "美国", "英国", "德国", "法国", "土耳其", "俄罗斯", "澳大利亚", "加拿大"):
+        if value in name:
+            return value
+    parts = [p for p in re.split(r"\s*[|｜-]\s*", name) if p]
+    return parts[1] if len(parts) > 1 else "unknown"
+
+
+def limit_airport_nodes(nodes: list[dict], limit: int = 2) -> list[dict]:
+    counts: dict[tuple[str, str], int] = {}
+    kept = []
+    for node in nodes:
+        key = (str(node.get("server", "")), region(str(node["name"])))
+        if counts.get(key, 0) >= limit:
+            continue
+        counts[key] = counts.get(key, 0) + 1
+        kept.append(node)
+    return kept
+
+
 def main() -> None:
     config = read_yaml(TEMPLATE)
     manual = config.get("proxies", [])
@@ -53,6 +75,7 @@ def main() -> None:
     leaf_sub = [p for u in urls(ROOT / "providers-by-one.yaml") for p in fetch(u)]
     airport_sub = [p for u in urls(ROOT / "providers-by-two.yaml") for p in fetch(u)]
     airport_sub = [p for p in airport_sub if not str(p["name"]).lower().startswith("leaf")]
+    airport_sub = limit_airport_nodes(airport_sub)
 
     # A dialer-proxy group is resolved to one member for each connection.
     # Create one independent hy2 chain per airport node so a load-balance
