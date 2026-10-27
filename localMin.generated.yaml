@@ -6,8 +6,8 @@ dns:
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  cache-algorithm: arc
   fake-ip-range-v6: fc00::/18
+  cache-algorithm: arc
   listen: :53
   default-nameserver:
   - 223.5.5.5
