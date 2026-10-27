@@ -1,15 +1,16 @@
 mode: rule
 log-level: warning
-ipv6: false
+ipv6: true
 dns:
   enable: true
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-range-v6: fc00::/18
   cache-algorithm: arc
   
   # 监听本地端口
-  listen: 0.0.0.0:53
+  listen: :53
 
   # 自举 DNS：纯 IP，不依赖任何上游，DNS 环的终点（缺这段 Stash 会报环路）
   default-nameserver:
