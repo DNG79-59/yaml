@@ -93,16 +93,16 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
-      - Manual-select
-      - America
-      - Proxy
       - leaf
+      - Proxy
+      - America
       - HongKong
       - TaiWan
       - Japan
       - Korea
       - Singapore
       - UnitedKingdom
+      - Manual-select
       - Auto-select
       - Fall-Back
       - DIRECT
@@ -236,8 +236,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
       - leaf
-      - HongKong
       - Proxy
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -269,9 +269,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
+      - HongKong
       - Proxy
       - leaf
-      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -294,8 +294,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
       - Fall-Back
-      - Auto-select
       - leaf
+      - Auto-select
       - HongKong
       - TaiWan
       - Japan
