@@ -121,6 +121,24 @@ proxies:
   tls: true
   network: tcp
   servername: bgpvless-2342ss.834928.xyz
+- name: gc69yun | 香港 2× IPLC 03
+  type: vless
+  server: g-002.holphappyeveryday.com
+  port: 41447
+  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  udp: true
+  tls: true
+  network: tcp
+  servername: bgpvless-2342ss.834928.xyz
+- name: gc69yun | 香港 2× IPLC 04
+  type: vless
+  server: g-002.holphappyeveryday.com
+  port: 41453
+  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  udp: true
+  tls: true
+  network: tcp
+  servername: bgpvless-2342ss.834928.xyz
 - name: gc69yun | 香港 2× IPLC 07
   type: ss
   server: general-live-13877.holphappyeveryday.com
@@ -153,6 +171,15 @@ proxies:
   tls: true
   network: tcp
   servername: bgpvless-2342ss.834928.xyz
+- name: gc69yun | 美国 2× IPLC 05
+  type: vless
+  server: g-002.holphappyeveryday.com
+  port: 41473
+  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  udp: true
+  tls: true
+  network: tcp
+  servername: bgpvless-2342ss.834928.xyz
 - name: gc69yun | 美国 2× IPLC 06
   type: ss
   server: general-live-13877.holphappyeveryday.com
@@ -169,7 +196,7 @@ proxies:
   udp: true
 - name: gc69yun | 新加坡 2× IPLC 01
   type: vless
-  server: bgpvless-2342ss.834928.xyz
+  server: g-002.holphappyeveryday.com
   port: 41483
   uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
   udp: true
@@ -185,7 +212,7 @@ proxies:
   udp: true
 - name: gc69yun | 日本 2× IPLC 01
   type: vless
-  server: bgpvless-2342ss.834928.xyz
+  server: g-002.holphappyeveryday.com
   port: 41193
   uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
   udp: true
@@ -432,6 +459,28 @@ proxies:
   down: 200 Mbps
   fast-open: true
   dialer-proxy: gc69yun | 香港 2× IPLC 02
+- name: leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 03
+  type: hysteria2
+  server: 192.129.211.150
+  port: 45636
+  password: f9cea999
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 100 Mbps
+  down: 200 Mbps
+  fast-open: true
+  dialer-proxy: gc69yun | 香港 2× IPLC 03
+- name: leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 04
+  type: hysteria2
+  server: 192.129.211.150
+  port: 45636
+  password: f9cea999
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 100 Mbps
+  down: 200 Mbps
+  fast-open: true
+  dialer-proxy: gc69yun | 香港 2× IPLC 04
 - name: leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 07
   type: hysteria2
   server: 192.129.211.150
@@ -476,6 +525,17 @@ proxies:
   down: 200 Mbps
   fast-open: true
   dialer-proxy: gc69yun | 美国 2× IPLC 02
+- name: leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 05
+  type: hysteria2
+  server: 192.129.211.150
+  port: 45636
+  password: f9cea999
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 100 Mbps
+  down: 200 Mbps
+  fast-open: true
+  dialer-proxy: gc69yun | 美国 2× IPLC 05
 - name: leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 06
   type: hysteria2
   server: 192.129.211.150
@@ -759,10 +819,13 @@ proxy-groups:
   proxies:
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 01
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 02
+  - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 03
+  - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 04
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 07
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 08
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 01
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 02
+  - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 05
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 06
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 07
   - leaf-hy2-IPLC | gc69yun | 新加坡 2× IPLC 01
@@ -796,10 +859,13 @@ proxy-groups:
   proxies:
   - gc69yun | 香港 2× IPLC 01
   - gc69yun | 香港 2× IPLC 02
+  - gc69yun | 香港 2× IPLC 03
+  - gc69yun | 香港 2× IPLC 04
   - gc69yun | 香港 2× IPLC 07
   - gc69yun | 香港 2× IPLC 08
   - gc69yun | 美国 2× IPLC 01
   - gc69yun | 美国 2× IPLC 02
+  - gc69yun | 美国 2× IPLC 05
   - gc69yun | 美国 2× IPLC 06
   - gc69yun | 美国 2× IPLC 07
   - gc69yun | 新加坡 2× IPLC 01
@@ -840,10 +906,13 @@ proxy-groups:
   - leaf | US hy2
   - gc69yun | 香港 2× IPLC 01
   - gc69yun | 香港 2× IPLC 02
+  - gc69yun | 香港 2× IPLC 03
+  - gc69yun | 香港 2× IPLC 04
   - gc69yun | 香港 2× IPLC 07
   - gc69yun | 香港 2× IPLC 08
   - gc69yun | 美国 2× IPLC 01
   - gc69yun | 美国 2× IPLC 02
+  - gc69yun | 美国 2× IPLC 05
   - gc69yun | 美国 2× IPLC 06
   - gc69yun | 美国 2× IPLC 07
   - gc69yun | 新加坡 2× IPLC 01
@@ -870,10 +939,13 @@ proxy-groups:
   - ldy | 日本 02
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 01
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 02
+  - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 03
+  - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 04
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 07
   - leaf-hy2-IPLC | gc69yun | 香港 2× IPLC 08
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 01
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 02
+  - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 05
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 06
   - leaf-hy2-IPLC | gc69yun | 美国 2× IPLC 07
   - leaf-hy2-IPLC | gc69yun | 新加坡 2× IPLC 01
