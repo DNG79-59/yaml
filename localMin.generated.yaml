@@ -107,7 +107,7 @@ proxies:
   type: vless
   server: bgpvless-2342ss.834928.xyz
   port: 30923
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -116,7 +116,7 @@ proxies:
   type: vless
   server: bgpvless-2342ss.834928.xyz
   port: 30933
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -125,7 +125,7 @@ proxies:
   type: vless
   server: g-002.holphappyeveryday.com
   port: 41447
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -134,7 +134,7 @@ proxies:
   type: vless
   server: g-002.holphappyeveryday.com
   port: 41453
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -144,20 +144,20 @@ proxies:
   server: general-live-13877.holphappyeveryday.com
   port: 35361
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: gc69yun | 香港 2× IPLC 08
   type: ss
   server: general-live-13877.holphappyeveryday.com
   port: 35315
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: gc69yun | 美国 2× IPLC 01
   type: vless
   server: bgpvless-2342ss.834928.xyz
   port: 42473
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -166,7 +166,7 @@ proxies:
   type: vless
   server: bgpvless-2342ss.834928.xyz
   port: 42473
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -175,7 +175,7 @@ proxies:
   type: vless
   server: g-002.holphappyeveryday.com
   port: 41473
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -185,20 +185,20 @@ proxies:
   server: general-live-13877.holphappyeveryday.com
   port: 54463
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: gc69yun | 美国 2× IPLC 07
   type: ss
   server: general-live-13877.holphappyeveryday.com
   port: 53362
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: gc69yun | 新加坡 2× IPLC 01
   type: vless
   server: g-002.holphappyeveryday.com
   port: 41483
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -208,13 +208,13 @@ proxies:
   server: general-live-13877.holphappyeveryday.com
   port: 21381
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: gc69yun | 日本 2× IPLC 01
   type: vless
   server: g-002.holphappyeveryday.com
   port: 41193
-  uuid: db7a9c6b-aa9b-3cc1-9134-d8a62ac35e3e
+  uuid: 643c2c34-da95-31ec-a445-e95889842f4f
   udp: true
   tls: true
   network: tcp
@@ -224,14 +224,14 @@ proxies:
   server: general-live-13877.holphappyeveryday.com
   port: 55327
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: gc69yun | 香港 01
   type: ss
   server: hk-nat-toys-ddns.337979.xyz
   port: 20513
   cipher: aes-256-gcm
-  password: imIp8qCShhZqnZvG
+  password: 6mtv9cnPV7UMRbMv
   udp: true
 - name: ldy | 新加坡 IPLC 01
   type: anytls
