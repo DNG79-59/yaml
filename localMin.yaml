@@ -26,6 +26,7 @@ dns:
   fake-ip-filter:
     - geosite:cn
     - "+.aihuoshi.net"
+    - "+.huoshi.cloud"
 
 proxies:
   - {"type":"vless","name":"leaf-v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
