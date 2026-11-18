@@ -15,6 +15,9 @@ dns:
   nameserver:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
+  fake-ip-filter:
+  - geosite:cn
+  - +.aihuoshi.net
 proxies:
 - type: vless
   name: leaf-v+r
