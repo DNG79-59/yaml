@@ -18,6 +18,7 @@ dns:
   fake-ip-filter:
   - geosite:cn
   - +.aihuoshi.net
+  - +.huoshi.cloud
 proxies:
 - type: vless
   name: leaf-v+r
