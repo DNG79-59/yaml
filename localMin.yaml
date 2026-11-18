@@ -21,7 +21,11 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-
+    
+# fake-ip-filter：命中的域名直接返回真实IP，不走fake-ip
+  fake-ip-filter:
+    - geosite:cn
+    - "+.aihuoshi.net"
 
 proxies:
   - {"type":"vless","name":"leaf-v+r","server":"192.129.211.150","port":443,"uuid":"8786eb4c-fea5-4f12-c07b-4229fa702c7b","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"xudp":true,"reality-opts":{"public-key":"AdRsOpscVUqnEJiOqA4LeM3VE9X50xg2FMjFp-CxQSs","short-id":"887ffd18"},"network":"tcp","encryption":"none","servername":"download.lenovo.com"}
