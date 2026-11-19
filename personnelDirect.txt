@@ -1,4 +1,4 @@
-steamcdn-a.akamaihd.net
++.steamcdn-a.akamaihd.net
 +.api.steampowered.com
 +.cm.steampowered.com
 +.steamserver.net
@@ -8,7 +8,7 @@ steamcdn-a.akamaihd.net
 +.battleofballs.com
 +.59wanmei.com
 +.17wanxiao.com
-updates.cdn-apple.com
++.updates.cdn-apple.com
 +.aihuoshi.net
 +.hsmap.com
 +.huoshi.cloud
