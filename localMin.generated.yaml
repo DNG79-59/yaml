@@ -17,8 +17,27 @@ dns:
   - https://doh.pub/dns-query
   fake-ip-filter:
   - geosite:cn
+  - geosite:private
+  - +.steamcdn-a.akamaihd.net
+  - +.api.steampowered.com
+  - +.cm.steampowered.com
+  - +.steamserver.net
+  - +.api.wizconnected.cn
+  - +.sodalife.xyz
+  - +.hnnx.com
+  - +.battleofballs.com
+  - +.59wanmei.com
+  - +.17wanxiao.com
+  - +.updates.cdn-apple.com
   - +.aihuoshi.net
+  - +.hsmap.com
   - +.huoshi.cloud
+  - +.vicp.fun
+  - +.checkhere.top
+  - +.time.windows.com
+  - +.duolingo.cn
+  - +.taobao.com
+  - +.dngh.space
 proxies:
 - type: vless
   name: leaf-v+r
