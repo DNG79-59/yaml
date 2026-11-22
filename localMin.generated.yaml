@@ -70,7 +70,7 @@ proxies:
 - type: hysteria2
   name: leaf-hy2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   ports: 20000-50000
   hop-interval: 30
   password: f9cea999
@@ -118,7 +118,7 @@ proxies:
 - type: hysteria2
   name: leaf | US hy2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   ports: 20000-50000
   hop-interval: 30
   password: f9cea999
@@ -463,7 +463,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 新加坡 IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -474,7 +474,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 新加坡 IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -485,7 +485,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 美国 IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -496,7 +496,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 美国 IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -507,7 +507,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 美国 IPLC 03
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -518,7 +518,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 美国 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -529,7 +529,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 美国 03
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -540,7 +540,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 日本 IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -551,7 +551,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 日本 IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -562,7 +562,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 香港 IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -573,7 +573,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 香港 IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -584,7 +584,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 新加坡 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -595,7 +595,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 新加坡 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -606,7 +606,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 香港 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -617,7 +617,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 香港 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -628,7 +628,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 日本 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -639,7 +639,7 @@ proxies:
 - name: leaf-hy2-IPLC | ldy | 日本 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -650,7 +650,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 2× IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -661,7 +661,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 2× IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -672,7 +672,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 2× IPLC 03
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -683,7 +683,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 2× IPLC 04
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -694,7 +694,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 2× IPLC 07
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -705,7 +705,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 2× IPLC 08
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -716,7 +716,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 美国 2× IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -727,7 +727,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 美国 2× IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -738,7 +738,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 美国 2× IPLC 05
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -749,7 +749,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 美国 2× IPLC 06
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -760,7 +760,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 美国 2× IPLC 07
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -771,7 +771,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 新加坡 2× IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -782,7 +782,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 新加坡 2× IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -793,7 +793,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 日本 2× IPLC 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -804,7 +804,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 日本 2× IPLC 02
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -815,7 +815,7 @@ proxies:
 - name: leaf-hy2-IPLC | 69yun | 香港 01
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
@@ -826,7 +826,7 @@ proxies:
 - name: leaf-hy2-IPLC | HK-ALIYUN
   type: hysteria2
   server: 192.129.211.150
-  port: 45636
+  port: 443
   password: f9cea999
   sni: www.bing.com
   skip-cert-verify: true
