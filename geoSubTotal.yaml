@@ -27,9 +27,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     proxies:
-      - leaf
-      - Manual-select
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -37,6 +36,7 @@ proxy-groups:
       - Singapore
       - America
       - UnitedKingdom
+      - Manual-select
       - Auto-select
       - Fall-Back
 
@@ -75,9 +75,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
-      - HongKong
       - Proxy
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -87,33 +87,31 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
 
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     proxies:
-      - leaf
       - Proxy
-      - America
+      - leaf
       - HongKong
       - TaiWan
       - Japan
       - Korea
       - Singapore
+      - America
       - UnitedKingdom
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
 
   - name: Linkedin
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Linkedin.png
     proxies:
-      - HongKong
       - Proxy
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -128,27 +126,26 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Media.png
     proxies:
-      - Singapore
       - Proxy
       - leaf
       - HongKong
       - TaiWan
       - Japan
       - Korea
+      - Singapore
       - America
       - UnitedKingdom
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
 
   - name: Meta
     type: select
     icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Meta-2.png
     proxies:
-      - HongKong
       - Proxy
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -158,7 +155,6 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
 
   - name: Microsoft
     type: select
@@ -182,9 +178,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Hawaiine/Oasisic-Icons/main/icons/Social/Messenger.png
     proxies:
-      - HongKong
       - Proxy
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -194,37 +190,35 @@ proxy-groups:
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
 
   - name: Spotify
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     proxies:
-      - Singapore
       - Proxy
       - leaf
       - HongKong
       - TaiWan
       - Japan
       - Korea
+      - Singapore
       - America
       - UnitedKingdom
       - Manual-select
       - Auto-select
       - Fall-Back
-      - DIRECT
 
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     proxies:
-      - Singapore
       - Proxy
       - leaf
       - HongKong
       - TaiWan
       - Japan
       - Korea
+      - Singapore
       - America
       - UnitedKingdom
       - Manual-select
@@ -235,8 +229,8 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     proxies:
-      - leaf
       - Proxy
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -252,11 +246,11 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png
     proxies:
-      - Japan
       - Proxy
       - leaf
       - HongKong
       - TaiWan
+      - Japan
       - Korea
       - Singapore
       - America
@@ -269,9 +263,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
-      - HongKong
       - Proxy
       - leaf
+      - HongKong
       - TaiWan
       - Japan
       - Korea
@@ -294,8 +288,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     proxies:
       - Fall-Back
-      - leaf
       - Auto-select
+      - leaf
       - HongKong
       - TaiWan
       - Japan
@@ -314,8 +308,8 @@ proxy-groups:
     lazy: true
     filter: ^(?=.*(.))(?!.*((?i)群|邀请|emby|重新|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
     proxies:
-      - Fall-Back-1
       - leaf
+      - Fall-Back-1
   - name: Fall-Back-1
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Loop.png
     type: fallback
@@ -353,9 +347,9 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
     proxies:
+      - leaf-Auto
       - leaf-FallBack
       - leaf-LoadBalance
-      - leaf-Auto
     filter: ^(?!.*emby).*$
     use:
       - leaf3
