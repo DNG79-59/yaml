@@ -118,7 +118,7 @@ proxies:
 - type: hysteria2
   name: leaf | US hy2
   server: 192.129.211.150
-  port: 443
+  port: 45636
   ports: 20000-50000
   hop-interval: 30
   password: f9cea999
